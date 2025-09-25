@@ -1,0 +1,36 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    /* overflow-x: visible; */
+}
+
+
+* {
+    box-sizing: border-box;
+    /* outline: 1px solid red; */
+
+}
+
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.flex, .nav-main-item{
+    flex-grow: 1;
+    flex-basis: 16rem;
+
+}
+
+.grid{
+    display: grid;
+}
+
+
+
+
+
+
+/* The star selector selects everything */
+
