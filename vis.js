@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         bar.addEventListener('mouseleave', () => {
-            tooltipBox.textContent = "Hover over a bar"; // reset text
+            tooltipBox.textContent = "Hover over a bar to see why I am sighing"; // reset text
         });
     });
 });

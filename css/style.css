@@ -16,13 +16,6 @@
     border-top-color: #E3D0CC;
 }
 
-.divider {
-  padding: -1rem;
-  border-top-width: 0.15rem;
-  border-top-style: solid;
-  border-top-color: #E3D0CC;
-}
-
 h1{
   display: flex;
   font-family: "orpheuspro", serif;
@@ -56,6 +49,8 @@ h1{
   transform: translate(0%, 25%);
   left: 0%;
 }
+
+
 
 #about {
   min-height: 100vh;
@@ -218,7 +213,6 @@ nav {
   background-color: #DDDDDD;
   border: 2px solid #0a0a0a;
   border-radius: 30px;
-  animation: slide-in 1s ease-out;
 }
 
 nav ul {
@@ -228,6 +222,10 @@ nav ul {
   margin: 0;
   padding: 0 30px;
   list-style-type: none;
+  align-items: center;
+  justify-content:  center;
+  text-align: center;
+
 }
 
 nav ul li {
@@ -260,29 +258,59 @@ ul li:hover a {
   color: #f9f8fd; 
 }
 
+/* Hamburger button hidden by default */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* --- Mobile styles --- */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 10px;
+}
+
+/* Small screens (<600px) */
+@media (max-width: 600px) {
+  nav {
+    width: 100%;
+    bottom: auto;
+    top: 0;
+    left: 0;
+    border-radius: 0;
+    transform: none;
+  }
+
+  .menu-toggle {
+    display: block;
+    background: #ddd;
+    border-bottom: 2px solid #0a0a0a;
+    text-align: left;
+  }
+
+  nav ul {
+    display: none; /* hidden by default */
+    flex-direction: column;
+    background: #ddd;
+    width: 100%;
+    padding: 0;
+  }
+
+  nav ul.show {
+    display: flex; /* show when .show class is toggled */
+  }
+
+  nav ul li {
+    text-align: center;
+    border-bottom: 1px solid #aaa;
+  }
+}
+
 .blank{
-  padding-top: 4rem;
-}
-
-.column{
-  max-width: fit-content;
-}
-
-svg{
-  border: 1px solid black;
-}
-
-#visualisations-container {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-}
-
-#graph-title{
-  display: flex;
-  justify-content: center; 
-  font-size: 2.5rem;
-  align-content: center;
+  padding-top: 5rem;
 }
 
 #tooltip-bg {
@@ -304,6 +332,27 @@ svg{
   border: 1px solid #333;
   background-color: lightyellow;
   margin-left: 20px;
+}
+
+.column{
+  max-width: fit-content;
+}
+
+svg{
+  border: 1px solid black;
+}
+
+#visualisations-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+#graph-title{
+  display: flex;
+  justify-content: center; 
+  font-size: 2.5rem;
+  align-content: center;
 }
 
 #randomGrid {
@@ -342,4 +391,28 @@ svg{
   font-weight: 500;
   font-size: 3rem;
   padding-left: 2.5rem;  
+  margin-top: -10px;
+}
+
+
+@media only screen and (max-width <= 600px) {
+  .card{
+  transform: scale(50%);
+  padding-bottom: 600px;
+  }
+
+  .button-rows{
+      position: absolute;
+      display: flex;
+      /* justify-content: flex-end; */
+      gap: 1rem;
+      z-index: 5;
+      /* left: 2.5%; */
+      /* align-items: center; */
+    
+  }
+
+  .button{
+    padding-top: 300px;
+  }
 }
