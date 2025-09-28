@@ -51,7 +51,6 @@ h1{
 }
 
 
-
 #about {
   min-height: 100vh;
   padding-bottom: 50px;
@@ -325,12 +324,14 @@ ul li:hover a {
 }
 
 #tooltip-box {
+  font-family: "url(../fonts/NeueHaasUnica-Regular.ttf)", sans-serif;
+
   display: flex;
   justify-content: center;
   width: 200px;
   padding: 10px;
   border: 1px solid #333;
-  background-color: lightyellow;
+  background-color: rgb(224, 251, 255);
   margin-left: 20px;
 }
 
@@ -343,6 +344,8 @@ svg{
 }
 
 #visualisations-container {
+  font-family: "url(../fonts/NeueHaasUnica-Regular.ttf)", sans-serif;
+  fill: #086af2;
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -379,7 +382,7 @@ svg{
 .h1-viz{
   font-family: "orpheuspro", serif;
   font-weight: 700;
-  font-size: 6rem;
+  font-size: 4rem;
   margin-bottom: -1rem;
   justify-content: flex-start;
   padding-left: 2rem;
@@ -391,7 +394,8 @@ svg{
   font-weight: 500;
   font-size: 3rem;
   padding-left: 2.5rem;  
-  margin-top: -10px;
+  padding-bottom: 1rem;
+  /* margin-top: -10px; */
 }
 
 
