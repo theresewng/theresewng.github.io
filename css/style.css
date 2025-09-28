@@ -16,6 +16,11 @@
     border-top-color: #E3D0CC;
 }
 
+html{
+  scroll-behavior: smooth;
+
+}
+
 h1{
   display: flex;
   font-family: "orpheuspro", serif;
@@ -264,16 +269,10 @@ ul li:hover a {
   cursor: pointer;
 }
 
-/* --- Mobile styles --- */
-.menu-toggle {
-  display: none;
-  cursor: pointer;
-  font-size: 1.5rem;
-  padding: 10px;
-}
+
 
 /* Small screens (<600px) */
-@media (max-width: 600px) {
+@media (max-width <= 600px) {
   nav {
     width: 100%;
     bottom: auto;
@@ -395,6 +394,8 @@ svg{
   font-size: 3rem;
   padding-left: 2.5rem;  
   padding-bottom: 1rem;
+  width: 100vw;
+
   /* margin-top: -10px; */
 }
 
@@ -419,4 +420,60 @@ svg{
   .button{
     padding-top: 300px;
   }
+
+  nav {
+    width: 100%;
+    bottom: auto;
+    top: 0;
+    left: 0;
+    border-radius: 0;
+    transform: none;
+  }
+
+  .menu-toggle {
+    display: block;
+    background: #ddd;
+    border-bottom: 2px solid #0a0a0a;
+    text-align: left;
+  }
+
+  nav ul {
+    display: none; /* hidden by default */
+    flex-direction: column;
+    background: #ddd;
+    width: 100%;
+    padding: 0;
+  }
+
+  nav ul.show {
+    display: flex; /* show when .show class is toggled */
+  }
+
+  nav ul li {
+    text-align: center;
+    border-bottom: 1px solid #aaa;
+  }
+
+
+  .h1-viz{
+    font-family: "orpheuspro", serif;
+    font-weight: 700;
+    font-size: 4rem;
+    margin-bottom: -1rem;
+    justify-content: flex-start;
+    padding-left: 2rem;
+    padding-top: 0.5rem;
+  }
+  
+  .h2-title{
+    font-family: "url(../fonts/NeueHaasUnica-Regular.ttf)", sans-serif;
+    font-weight: 500;
+    font-size: 3rem;
+    padding-left: 2.5rem;  
+    padding-bottom: 1rem;
+    width: 100vw;
+  
+    /* margin-top: -10px; */
+  }
+  
 }
