@@ -456,13 +456,13 @@ svg {
     scale: 60%;
     align-items: flex-start;
     justify-content: flex-start;
-    transform: translate(-25%, -30%);
+    transform: translate(-30%, -30%);
   }
 
   #visualisations-container {
     flex-direction: column;
     align-items: flex-start;
-    gap: 0;
+    column-gap: -10px;
   }
 
   #tooltip-box {
