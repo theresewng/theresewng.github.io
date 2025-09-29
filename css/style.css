@@ -6,22 +6,22 @@
   unique things get IDs class is for the same family
 */
 
-.container{
+.container {
   display: flex;
 }
 
 .element {
-    border-top-width: 0.15rem;
-    border-top-style: solid;
-    border-top-color: #E3D0CC;
+  border-top-width: 0.15rem;
+  border-top-style: solid;
+  border-top-color: #E3D0CC;
 }
 
-html{
+html {
   scroll-behavior: smooth;
 
 }
 
-h1{
+h1 {
   display: flex;
   font-family: "orpheuspro", serif;
   font-weight: 700;
@@ -29,7 +29,7 @@ h1{
   padding-right: 2rem;
 }
 
-.h1-intro{
+.h1-intro {
   font-size: 6rem;
   max-width: 100vw;
   margin-top: 1rem;
@@ -38,17 +38,18 @@ h1{
   justify-content: flex-start;
 }
 
-.h2-scroll{
-  font-size: 3rem; 
+.h2-scroll {
+  font-size: 3rem;
   margin-top: 1rem;
   font-style: normal;
-  padding-bottom: 2rem;;
+  padding-bottom: 2rem;
+  ;
 }
 
 /* Card CSS: https://codepen.io/alvarotrigo/pen/GREdmKW */
 #card {
-	max-width: 100vw;
-	padding-top: 2.6em;
+  max-width: 100vw;
+  padding-top: 2.6em;
   min-height: 100vh;
   padding-left: 2rem;
   transform: translate(0%, 25%);
@@ -62,7 +63,7 @@ h1{
   padding-left: 2rem;
 }
 
-.scroll{
+.scroll {
   font-size: 3.55rem;
   font-weight: bold;
   padding-top: 1rem;
@@ -84,89 +85,97 @@ h1{
   font-weight: bold;
 }
 
-.scrolling-text > div {
+.scrolling-text>div {
   position: absolute;
   top: 0;
   animation: slide 10s infinite;
   font-weight: bold;
-} 
+}
 
 @keyframes slide {
   0% {
     top: 0.3;
   }
+
   20% {
     top: -1.2em;
   }
+
   40% {
     top: -2.4em;
   }
+
   60% {
     top: -3.6em;
   }
+
   80% {
     top: -4.8em;
   }
+
   100% {
     top: -6em;
   }
 }
 
-h2{
+h2 {
   font-family: "url(../fonts/NeueHaasUnica-Regular.ttf)", sans-serif;
   font-weight: 500;
   font-size: 3rem;
-  padding-right: 2rem;  
+  padding-right: 2rem;
 }
 
-h3{
+h3 {
   font-family: "url(../fonts/NeueHaasUnica-Regular.ttf)", sans-serif;
   font-weight: 400;
-  font-style: normal; 
-  padding-right: 2rem;  
+  font-style: normal;
+  padding-right: 2rem;
 }
 
-p, li{
+p,
+li {
   font-family: "url(../fonts/NeueHaasUnica-Regular.ttf)", sans-serif;
   font-weight: 400;
-  font-style: normal; 
-  padding-right: 2rem;  
+  font-style: normal;
+  padding-right: 2rem;
   padding-left: 4rem;
 }
 
-.hero-paragraph{
+.hero-paragraph {
   font-family: "url(../fonts/NeueHaasUnica-Regular.ttf)", sans-serif;
   font-weight: 400;
-  font-style: normal; 
+  font-style: normal;
   padding-left: 0rem;
 }
 
-.caption{
+.caption {
   font-family: "url(../fonts/NeueHaasUnica-Regular.ttf)", sans-serif;
   font-weight: 400;
-  font-style: normal; 
+  font-style: normal;
   padding-left: 0rem;
 }
 
-a{
+a {
   font-family: "url(../fonts/NeueHaasUnica-Regular.ttf)", sans-serif;
   font-weight: 400;
-  font-style: normal; 
+  font-style: normal;
   text-decoration: none;
   color: #000000;
 }
 
-.content h4{
+.content h4 {
   font-family: "url(../fonts/NeueHaasUnica-Regular.ttf)", sans-serif;
 }
 
-.content p, ul, li{
+.content p,
+ul,
+li {
   font-family: "url(../fonts/NeueHaasUnica-Regular.ttf)", sans-serif;
 }
 
 img {
-	height: auto; 
-	max-width: 100%;
+  height: auto;
+  max-width: 100%;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -176,7 +185,7 @@ img {
 .button {
   background-color: transparent;
   cursor: pointer;
-  display:block;
+  display: block;
   font-size: 1.4rem;
 }
 
@@ -194,7 +203,7 @@ img {
   transform: translateY(0);
 }
 
-.button-rows{
+.button-rows {
   position: absolute;
   display: flex;
   justify-content: flex-end;
@@ -204,12 +213,13 @@ img {
   top: 40%;
   align-items: center;
 }
+
 /* End of Button CSS */
 
 /* Nav bar CSS: https://codepen.io/cassidoo/pen/bGbVoJQ */
 /* Navigation */
 nav {
-  position:fixed;
+  position: fixed;
   bottom: 5vh;
   left: 50%;
   transform: translateX(-50%);
@@ -227,9 +237,8 @@ nav ul {
   padding: 0 30px;
   list-style-type: none;
   align-items: center;
-  justify-content:  center;
+  justify-content: center;
   text-align: center;
-
 }
 
 nav ul li {
@@ -255,11 +264,11 @@ nav ul li:hover {
   border: 2px solid #086af2;
   border-right: 2px solid #086af2;
   border-bottom: 2px solid #086af2;
-  color: #f9f8fd; 
+  color: #f9f8fd;
 }
 
 ul li:hover a {
-  color: #f9f8fd; 
+  color: #f9f8fd;
 }
 
 /* Hamburger button hidden by default */
@@ -269,62 +278,23 @@ ul li:hover a {
   cursor: pointer;
 }
 
-
-
-/* Small screens (<600px) */
-@media (max-width <= 600px) {
-  nav {
-    width: 100%;
-    bottom: auto;
-    top: 0;
-    left: 0;
-    border-radius: 0;
-    transform: none;
-  }
-
-  .menu-toggle {
-    display: block;
-    background: #ddd;
-    border-bottom: 2px solid #0a0a0a;
-    text-align: left;
-  }
-
-  nav ul {
-    display: none; /* hidden by default */
-    flex-direction: column;
-    background: #ddd;
-    width: 100%;
-    padding: 0;
-  }
-
-  nav ul.show {
-    display: flex; /* show when .show class is toggled */
-  }
-
-  nav ul li {
-    text-align: center;
-    border-bottom: 1px solid #aaa;
-  }
-}
-
-.blank{
+.blank {
   padding-top: 5rem;
 }
 
 #tooltip-bg {
-  fill: lightyellow; 
-  opacity: 0.9;    
-  stroke: black; 
+  fill: lightyellow;
+  opacity: 0.9;
+  stroke: black;
   stroke-width: 1;
 }
 
 #tooltip-text {
-  fill: black; 
+  fill: black;
 }
 
 #tooltip-box {
   font-family: "url(../fonts/NeueHaasUnica-Regular.ttf)", sans-serif;
-
   display: flex;
   justify-content: center;
   width: 200px;
@@ -334,11 +304,11 @@ ul li:hover a {
   margin-left: 20px;
 }
 
-.column{
+.column {
   max-width: fit-content;
 }
 
-svg{
+svg {
   border: 1px solid black;
 }
 
@@ -350,9 +320,9 @@ svg{
   justify-content: center;
 }
 
-#graph-title{
+#graph-title {
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   font-size: 2.5rem;
   align-content: center;
 }
@@ -366,7 +336,7 @@ svg{
 #random-grid {
   transform: rotate(var(--r)) scale(1);
   transform-origin: var(--ox) var(--oy);
-  animation: reveal 1s cubic-bezier(0,0,0,1) 1;
+  animation: reveal 1s cubic-bezier(0, 0, 0, 1) 1;
   will-change: trasnform;
 }
 
@@ -378,7 +348,7 @@ svg{
   }
 }
 
-.h1-viz{
+.h1-viz {
   font-family: "orpheuspro", serif;
   font-weight: 700;
   font-size: 4rem;
@@ -388,39 +358,47 @@ svg{
   padding-top: 0.5rem;
 }
 
-.h2-title{
+.h2-title {
   font-family: "url(../fonts/NeueHaasUnica-Regular.ttf)", sans-serif;
   font-weight: 500;
   font-size: 3rem;
-  padding-left: 2.5rem;  
+  padding-left: 2.5rem;
   padding-bottom: 1rem;
   width: 100vw;
-
-  /* margin-top: -10px; */
 }
 
+@media (width <=600px) {
 
-@media only screen and (max-width <= 600px) {
-  .card{
-  transform: scale(50%);
-  padding-bottom: 600px;
+  .h1-intro {
+    font-size: 3rem;
+    max-width: 100vw;
+    margin-top: 1rem;
+    padding-right: 2rem;
+    margin-bottom: 0rem;
+    justify-content: flex-start;
+  }
+  
+  .h2-scroll {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    font-style: normal;
+    padding-bottom: 2rem;
+    ;
   }
 
-  .button-rows{
-      position: absolute;
-      display: flex;
-      /* justify-content: flex-end; */
-      gap: 1rem;
-      z-index: 5;
-      /* left: 2.5%; */
-      /* align-items: center; */
-    
+  .card {
+    transform: translateY(-15%);
+    padding-bottom: 600px;
   }
 
-  .button{
-    padding-top: 300px;
+  .button-rows {
+    position: absolute;
+    display: flex;
+    z-index: 5;
+    left: 6.5%;
+    transform: translateY(-600%);
   }
-
+ 
   nav {
     width: 100%;
     bottom: auto;
@@ -438,7 +416,8 @@ svg{
   }
 
   nav ul {
-    display: none; /* hidden by default */
+    display: none;
+    /* hidden by default */
     flex-direction: column;
     background: #ddd;
     width: 100%;
@@ -446,16 +425,15 @@ svg{
   }
 
   nav ul.show {
-    display: flex; /* show when .show class is toggled */
+    display: flex;
+    /* show when .show class is toggled */
   }
 
   nav ul li {
     text-align: center;
-    border-bottom: 1px solid #aaa;
   }
 
-
-  .h1-viz{
+  .h1-viz {
     font-family: "orpheuspro", serif;
     font-weight: 700;
     font-size: 4rem;
@@ -464,16 +442,33 @@ svg{
     padding-left: 2rem;
     padding-top: 0.5rem;
   }
-  
-  .h2-title{
+
+  .h2-title {
     font-family: "url(../fonts/NeueHaasUnica-Regular.ttf)", sans-serif;
     font-weight: 500;
-    font-size: 3rem;
-    padding-left: 2.5rem;  
+    font-size: 2rem;
     padding-bottom: 1rem;
-    width: 100vw;
-  
-    /* margin-top: -10px; */
+    width: auto;
   }
-  
+
+  #bar-chart {
+    padding-left: 0;
+    scale: 60%;
+    align-items: flex-start;
+    justify-content: flex-start;
+    transform: translate(-25%, -30%);
+  }
+
+  #visualisations-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+
+  #tooltip-box {
+    font-size: 0.8rem;
+    padding-top: -70%;
+    transform: translateY(-100%);
+
+  }
 }
