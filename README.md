@@ -1,4 +1,4 @@
-# theresewng.github.io - This file should explain the purpose of the website, including what technologies are used and how the site can be navigated.
+# theresewng.github.io 
 
 This is my website for IAT 355, which will host a bunch of visualisations that I will be making for the Fall 2025 term. This website is built using HTML, CSS, and JavaScript and will integrate graphs created also with HTML, CSS, and JavaScript. 
 
