@@ -81,7 +81,7 @@ h1 {
   font-weight: bold;
 }
 
-.scrolling-text>div {
+.scrolling-text>span {
   position: absolute;
   top: 0;
   animation: slide 10s infinite;
