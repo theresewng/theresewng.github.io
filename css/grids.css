@@ -1,7 +1,6 @@
 html, body {
     margin: 0;
     padding: 0;
-    /* overflow-x: visible; */
 }
 
 * {
@@ -37,9 +36,6 @@ html, body {
         grid-template-columns: 1fr;
     }
 }
-
-
-
 
 /* The star selector selects everything */
 

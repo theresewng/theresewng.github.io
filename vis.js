@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     bars.forEach(bar => {
         bar.addEventListener('mouseenter', () => {
             const label = bar.getAttribute('data-label') || '';
-            tooltipBox.textContent = label;  // update the side box
+            tooltipBox.textContent = label;  // update the tool tip box
         });
 
         bar.addEventListener('mouseleave', () => {

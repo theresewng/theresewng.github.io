@@ -245,7 +245,6 @@ nav ul {
 
 nav ul li {
   border: 2px solid transparent;
-  /* border-radius: 5px; */
   padding: 10px;
   transition: background-colour 0.2s;
 }
@@ -439,7 +438,6 @@ svg {
 
   nav ul.show {
     display: flex;
-    /* show when .show class is toggled */
   }
 
   nav ul li {
