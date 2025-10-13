@@ -13,7 +13,7 @@
 .element {
   border-top-width: 0.15rem;
   border-top-style: solid;
-  border-top-color: #000b49;
+  border-top-color: #e8ecff;
   margin-top: 2rem;
 }
 
@@ -132,8 +132,7 @@ p {
   font-optical-sizing: auto;
   font-style: normal;
   padding-right: 3rem;
-  padding-left: 3rem;
-  margin-top: -1.5rem;
+  padding-left: 2.25rem;
 }
 
 li {
@@ -336,6 +335,7 @@ svg {
   display: flex;
   align-items: flex-start;
   justify-content: center;
+  max-width: 100vw;
 }
 
 #graph-title {
