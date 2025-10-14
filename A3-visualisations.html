@@ -19,19 +19,10 @@
     <div class="element"></div>
 
     <h2 class="h2-title">First, A Look At The Data</h2>
-    <p>Action is the most popular genre, with 13,004 games available and Puzzle being the least popular with 2280
-        available games. This gives us a very large range of 10,724, a median of 4,998, and a mean of 5,430.33.</p>
-
-    <p>I am not surprised that Puzzle is the least popular genre. I feel like the last puzzle game I ever played was
-        <i>Unblock Me</i> on the iPad 2 (2011)! I personally don't like playing action games (I wasn't allowed to play
-        violent games growing up), but I am not surprised by its popularity, especially when you have memes such as
-        <i>We got XYZ before GTA 6!</i>
-    </p>
-
-    <p>I was surprised by the popularity of the Sports games genre. However, I believe that within the next few years,
-        other genres, especially role playing and simulation games, will surpass the Sports genre. It seems
-        unsustainable how every year there is a new NBA or Madden NFL game that costs $60, with roughly the same
-        gameplay, just different music.</p>
+    <p>Action is the most popular genre, with 13.004 million games sold and Puzzle being the least popular with 2.280
+        million
+        games sold. This gives us a very large range of 10.724 million, a median of 4.998 million, and a mean of 5.430
+        million.</p>
 
     <div id="visualisations-container">
         <div id="observablehq-intro-210259f9"></div>
@@ -45,23 +36,16 @@
         </script>
     </div>
 
-    <h2 class="h2-title">Visualization 1: Global Sales by Genre and Platform</h2>
+    <h2 class="h2-title">Visualisation 1: Global Sales by Genre and Platform</h2>
 
     <p>To create this visualisation, I used a bar graph to quickly compare and effectively communicate the data between
-        platforms easily. To further breakdown the information, I colour coded the genres so understand what are the
-        most popular genres within each plaform. Looking at the graph above, action games are quite prominent across the
-        board, though other genres, such as sports, being a popular genre for platforms such as PlayStation, Wii, and
-        XBox360 also doesn't surprise me as it shows the trends within the gaming community around the times these
-        platforms were at its popularity.</p>
+        platforms easily.</p>
 
-    <p>According to the data, DS is the most popular platform with [x], with the PS2 coming in just under at [x], a mere
-        difference of [x] sales. Given that data is from 2020, I wonder how this graph would look with the inclusion of
-        the Nintendo Switch compared to the DS, and with the Wii and Wii U not in production / very few modern day TVs
-        able to support the Wii's resolution/necessary inputs.</p>
+    <p>According to the data, DS is the most popular platform with 8.524 million sales, with the PS2 coming in just
+        under at 8.508 million, a mere difference of 0.016 million or 0.1% in sales. Given that data is from 2020, I
+        wonder how this graph would look with the inclusion of the Nintendo Switch, which ultimately took over for the
+        DS.</p>
 
-    <p>I am not surprised by the high popularity for PlayStation platforms as while PlayStations and XBox have
-        relatively similar performance, its partnership with Microsoft has been... interesting, with have critics
-        calling the XBox360 the last best console released.</p>
 
     <div id="visualisations-container">
         <div id="observablehq-GlobalSalesGenrePlatform-f21471f5"></div>
@@ -76,9 +60,10 @@
         </script>
     </div>
 
-    <h2 class="h2-title">Visualization 2: Sales Over Time by Platform and Genre</h2>
-    <p>2009 had the most sales with [x] number of games sold, with 2008 being the second most popular year with [x]
-        amount of games sold. Both years, DS was the most popular platform</p>
+    <h2 class="h2-title">Visualisation 2: Sales Over Time by Platform and Genre</h2>
+
+    <p>To experiment with how I can storytell with Obsevable, I created this whimsy graph showing sales of each
+        platforms using an area chart and sales of the genre using shapes.</p>
     <div id="visualisations-container">
         <div id="observablehq-SalesPlatformGenre-46acba26"></div>
 
@@ -91,18 +76,28 @@
             });
         </script>
     </div>
+
+    <p>That being said, this might not be the most accessible way to read data, so I also split the data into two
+        separate graphs. I used a line graph to show the genre sales over time to understand the continuous ups and
+        downs of sales in a continuous sales over the years, and a point and colour graph to see the platform sales as
+        there are a lot of various platforms and I noticed that the standard colour palette was quite limited,
+        therefore, by using both shape and colour, I can get a better understanding of what is what </p>
+
+    <p>2009 was a popular year for action games, with 1.088 million games sold. On the other hand, platform games were
+        the least popular with 116 million platform games sold. </p>
+
     <div class="grid two-column">
         <div>
 
             <div id="visualisations-container">
-                <div id="observablehq-SalesGenre-fa58cf66"></div>
+                <div id="observablehq-SalesGenre-bbac9e01"></div>
 
                 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
                 <script type="module">
                     import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-                    import define from "https://api.observablehq.com/d/f9cc6e9dc3d1d7f2@1224.js?v=4";
+                    import define from "https://api.observablehq.com/d/f9cc6e9dc3d1d7f2@1518.js?v=4";
                     new Runtime().module(define, name => {
-                        if (name === "SalesGenre") return new Inspector(document.querySelector("#observablehq-SalesGenre-fa58cf66"));
+                        if (name === "SalesGenre") return new Inspector(document.querySelector("#observablehq-SalesGenre-bbac9e01"));
                     });
                 </script>
             </div>
@@ -123,30 +118,32 @@
         </div>
     </div>
 
-    <h2 class="h2-title">Visualization 3: Regional Sales vs. Platform</h2>
-    <p>Overall, the PS2 was the most popular platform internationally, with North America being its major supporter.
-        Overall for the most part, North Americans bought the most video game platforms, with the exception of the PS4
-        and PC, of which were more popular within the European population, and the Nintendo 3DS and SNES being more
-        popular amongst Japanese people.</p>
+    <h2 class="h2-title">Visualisation 3: Regional Sales vs. Platform</h2>
 
-    <p>However, in my opinion, this graph is a bit more biased against Japanese people as they are roughly a fifth the
-        size of North America's population and a seventh of Europe, resulting in them having "the least sales" compared
-        to other regions. I wonder how visualisation would look if we included more of the Asian population. That being
-        said, their support for Nintendo products is relatively strong.</p>
+    <p>For this visualisation, I created a group bar chart as I wanted to easily compare sales across regions per
+        platform instead of creating separate graphs. </p>
 
-    <div id="observablehq-AllSales-28b45755"></div>
+    <p>Overall, the most popular platforms across the globe were the PS2 and the XBox360, with North America being its major supporter.</p>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
-    <script type="module">
-        import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-        import define from "https://api.observablehq.com/d/f9cc6e9dc3d1d7f2@1147.js?v=4";
-        new Runtime().module(define, name => {
-            if (name === "AllSales") return new Inspector(document.querySelector("#observablehq-AllSales-28b45755"));
-        });
-    </script>
+    <p>In order, Europe's most popular platforms are the PS3, PS2, and the XBox360</p>
+    <p>North Americans mostly bought the XBox360, PS2, and the Wii</p>
+    <p>Japan's most popular platforms were the DS, PS, and the PS2</p>
+    <div id="visualisations-container">
+
+        <div id="observablehq-AllSales-28b45755"></div>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+        <script type="module">
+            import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+            import define from "https://api.observablehq.com/d/f9cc6e9dc3d1d7f2@1147.js?v=4";
+            new Runtime().module(define, name => {
+                if (name === "AllSales") return new Inspector(document.querySelector("#observablehq-AllSales-28b45755"));
+            });
+        </script>
+    </div>
     </div>
 
-    <h2 class="h2-title">Visualization 4: Tell Us a Visual Story</h2>
+    <h2 class="h2-title">Visualisation 4: All About The Top Ten Publishers</h2>
     <p>Insert Reflection here</p>
     <div id="visualisations-container">
         <iframe width="100%" height="604" frameborder="0"
