@@ -84,7 +84,9 @@
         therefore, by using both shape and colour, I can get a better understanding of what is what </p>
 
     <p>2009 was a popular year for action games, with 1.088 million games sold. On the other hand, platform games were
-        the least popular with 116 million platform games sold. </p>
+        the least popular with 116 million platform games sold. While on one hand, I find it strange that 2009 sold less
+        games than 2008, I believe it might be because of Christmas/Birthday gifts following the surge in sales the year
+        prior. </p>
 
     <div class="grid two-column">
         <div>
@@ -104,14 +106,14 @@
         </div>
         <div>
             <div id="visualisations-container">
-                <div id="observablehq-SalesPlatform-a68e3511"></div>
+                <div id="observablehq-SalesPlatform-430fcde4"></div>
 
                 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
                 <script type="module">
                     import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-                    import define from "https://api.observablehq.com/d/f9cc6e9dc3d1d7f2@1225.js?v=4";
+                    import define from "https://api.observablehq.com/d/f9cc6e9dc3d1d7f2@1776.js?v=4";
                     new Runtime().module(define, name => {
-                        if (name === "SalesPlatform") return new Inspector(document.querySelector("#observablehq-SalesPlatform-a68e3511"));
+                        if (name === "SalesPlatform") return new Inspector(document.querySelector("#observablehq-SalesPlatform-430fcde4"));
                     });
                 </script>
             </div>
@@ -144,14 +146,65 @@
     </div>
     </div>
 
-    <h2 class="h2-title">Visualisation 4: All About The Top Ten Publishers</h2>
-    <p>Insert Reflection here</p>
-    <div id="visualisations-container">
-        <iframe width="100%" height="604" frameborder="0"
-            src="https://observablehq.com/embed/f9cc6e9dc3d1d7f2@808?cells=Publishers"></iframe>
+    <h2 class="h2-title">Visualisation 4: The Top Ten Publishers</h2>
+    <h3>4.1: Who Are the Top Ten Publishers? How Many Games Did They Sell?</h3>
 
-        <iframe width="100%" height="719" frameborder="0"
-            src="https://observablehq.com/embed/f9cc6e9dc3d1d7f2@809?cells=PublishersScatterplot"></iframe>
+    <p> [why bar chart] Electronic Arts dominates the market with 5.356 million games. Take-Two Interactive has the
+        least number of sales with 1.648 million games. That is a range of 3.708 million games. This gives us an average
+        of 3.243 million games per publisher and a median of 3.070 million.
+
+        Of the games, Electronic Arts creates mostly sports games, at 2.216 million total games, which make sense
+        because they are the ones behind Madden NFL, NHL Games, and FIFA. Konami created the second most amount of
+        sports games at 1.116 million games. Puzzle was the least popular genre with 796 million games sold, with
+        Nintendo producing the most puzzle games out of the ten, which I can understand since their platforms such as
+        Wii is made with co-op playing in mind.</p>
+    <div id="visualisations-container">
+        <div id="observablehq-topTen-e24aed3f"></div>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+        <script type="module">
+            import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+            import define from "https://api.observablehq.com/d/f9cc6e9dc3d1d7f2@1776.js?v=4";
+            new Runtime().module(define, name => {
+                if (name === "topTen") return new Inspector(document.querySelector("#observablehq-topTen-e24aed3f"));
+            });
+        </script>
+    </div>
+
+    <h3>4.2: What Platform Are Their Customers Mainly Using?</h3>
+
+    <p> [why cell chart] ]I think what makes this interesting to look at, is that 4 of the top ten largest publishers
+        are Japanese-based companies. A country is a fifth of the North American population is creating roughly 40% of
+        all the games that everyday people are playing, showing the impressive reach and influence they have on other
+        consumers.</p>
+    <div id="visualisations-container">
+        <div id="observablehq-cellChart-46ac659b"></div>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+        <script type="module">
+            import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+            import define from "https://api.observablehq.com/d/f9cc6e9dc3d1d7f2@1776.js?v=4";
+            new Runtime().module(define, name => {
+                if (name === "cellChart") return new Inspector(document.querySelector("#observablehq-cellChart-46ac659b"));
+            });
+        </script>
+    </div>
+
+    <h3>4.3: What Were Their Top Five Selling Games?</h3>
+
+    <p> [why this chart] The fact that Nintendo has the most total sales even though they overall did not produce that
+        many games is wild to me, especially when we put it up against the games created by Electronic Arts. </p>
+    <div id="visualisations-container">
+        <div id="observablehq-heatMap-f14b2cf2"></div>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+        <script type="module">
+            import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+            import define from "https://api.observablehq.com/d/f9cc6e9dc3d1d7f2@1776.js?v=4";
+            new Runtime().module(define, name => {
+                if (name === "heatMap") return new Inspector(document.querySelector("#observablehq-heatMap-f14b2cf2"));
+            });
+        </script>
     </div>
 
     <div class="blank"></div>
