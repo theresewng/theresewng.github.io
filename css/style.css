@@ -149,8 +149,8 @@ a {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-  text-decoration: none;
-  color: #000000;
+  text-decoration: underline;
+  color: #001aff;
 }
 
 h4 {
