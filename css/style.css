@@ -200,6 +200,7 @@ img {
   cursor: pointer;
   display: block;
   font-size: 1.4rem;
+  padding-bottom: 2rem;
 }
 
 .button:disabled {
@@ -208,17 +209,17 @@ img {
 
 .button:hover {
   padding-top: 1px;
-  border-bottom: 2px solid #1A1A1A;
+  /* border-bottom: 2px solid #1A1A1A; */
 }
 
 .button:active {
   box-shadow: none;
-  transform: translateY(0);
+  transform: translateY(3);
 }
 
 .button-rows {
   position: absolute;
-  display: flex;
+  display: table-column;
   justify-content: flex-end;
   gap: 1rem;
   z-index: 5;
@@ -228,6 +229,16 @@ img {
 }
 
 /* End of Button CSS */
+
+.toc{
+  padding-left: 3rem;
+padding-top: 2rem;
+column-gap: 3rem;
+  display: flex;
+        flex-direction: column; /* This stacks the items vertically */
+        gap: 10px; /* Adds space between the buttons */
+        text-decoration: none;
+}
 
 /* Nav bar CSS: https://codepen.io/cassidoo/pen/bGbVoJQ */
 /* Navigation */
