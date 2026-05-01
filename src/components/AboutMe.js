@@ -1,6 +1,6 @@
 import React from "react";
 import thereseImg from "../images/therese.png";
-import "/Users/theresewng/Downloads/Portfolio2026/portfolio/src/index.css";
+import "../index.css";
 
 function AboutMe() {
   //   const navigate = useNavigate();
