@@ -1,0 +1,330 @@
+/* --- Base & Layout --- */
+body {
+  margin: 0;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  background-color: #000000;
+}
+
+.homepage-container {
+  max-width: 95vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding-left: 49.15px;
+}
+
+.content-wrapper {
+  width: 100%;
+  max-width: 1350px;
+  display: flex;
+  flex-direction: column;
+}
+
+.two-column-layout {
+  display: grid;
+  align-items: start;
+  width: 100%;
+  grid-template-columns: calc(40% - 0.9rem) calc(60% - 0.6rem);
+  gap: 1.5rem;
+}
+
+.left-panel {
+  width: 100%;
+  position: sticky;
+  top: 20px; /* Added top for sticky behavior */
+}
+
+.right-panel {
+  width: 100%;
+}
+
+/* --- Typography & Elements --- */
+
+h2 {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  color: white;
+  font-size: 80px;
+  width: 100%;
+}
+
+.h2-homepage {
+  color: white;
+  font-size: 80px;
+  width: 100%;
+}
+
+p {
+  color: white;
+  font-size: 24px;
+  width: 80%;
+}
+
+/* --- Navigation --- */
+.nav-container {
+  width: 100%;
+  height: 150px;
+  background: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-content {
+  width: 100%;
+  max-width: 1240px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 49.15px;
+}
+
+.nav-name {
+  color: white;
+  font-size: 40px;
+  font-family: "Inter", sans-serif;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: "Inter", sans-serif;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.nav-link:hover {
+  opacity: 1;
+}
+
+.nav-divider {
+  width: calc(100% - 98.3px);
+  height: 1px;
+  background: white;
+  margin-top: 40px;
+}
+
+/* --- Project Cards --- */
+.projct-card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+  align-items: center;
+}
+
+.card-link-wrapper {
+  text-decoration: none;
+  display: block;
+  width: 100%;
+}
+
+.project-card {
+  position: relative;
+  width: 1250px;
+  height: 698px;
+  background: white;
+  border-radius: 12.934px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  box-shadow: 0px 10px 30px rgba(255, 255, 255, 0.1);
+}
+
+.card-year,
+.card-title,
+.card-category {
+  position: absolute;
+  color: black;
+  font-family: "Inter", sans-serif;
+}
+
+.card-year {
+  left: 49.15px;
+  top: 34.27px;
+  font-size: 20.694px;
+}
+.card-category {
+  color: black;
+  right: 49.15px;
+  top: 34.27px;
+  font-size: 20.694px;
+}
+
+.card-title {
+  left: 49.15px;
+  top: 82.78px;
+  font-size: 62.083px;
+}
+
+.card-line {
+  position: absolute;
+  top: 71.14px;
+  left: 49.15px;
+  width: 1151.7px;
+  height: 1px;
+  background: black;
+}
+
+.card-image-placeholder {
+  position: absolute;
+  left: 49.15px;
+  top: 169.43px;
+  width: 1151.7px;
+  height: 472.086px;
+  background: #d9d9d9;
+}
+
+.card-arrow {
+  position: absolute;
+  right: 49.15px;
+  top: 96.36px;
+  width: 66.609px;
+  height: 47.855px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.project-card:hover .card-arrow {
+  transform: rotate(-45deg);
+}
+
+/* --- Buttons --- */
+.button-wrapper {
+  width: 100%;
+  display: flex;
+  margin: 50px 0;
+}
+
+.button {
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #f0f0f0;
+}
+
+.button-text {
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: black;
+  padding-right: 15px;
+}
+
+.button-arrow {
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.button:hover .button-arrow {
+  transform: rotate(-45deg);
+}
+
+/* --- Project Detail Page --- */
+.project-detail-layout {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  gap: 1.5rem;
+  width: 100%;
+  padding-top: 208px;
+}
+
+.project-detail-banner {
+  position: absolute;
+  top: 208px;
+  left: 0;
+  width: 100%;
+  height: 520px;
+  background: white;
+  opacity: 0.3;
+  z-index: 0;
+}
+
+.project-detail-left {
+  position: relative;
+  z-index: 1;
+}
+
+.project-detail-title {
+  color: white;
+  font-size: 75px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 0 0 80px 0;
+  line-height: 1;
+}
+
+.project-detail-body {
+  color: white;
+  font-size: 40px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+
+.project-detail-section {
+  margin-bottom: 40px;
+}
+
+.project-detail-label {
+  display: block;
+  color: white;
+  font-size: 40px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.project-detail-value {
+  color: white;
+  font-size: 40px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  margin: 0;
+}
+
+.project-detail-right {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  padding-left: 100px;
+}
+
+.project-detail-image {
+  width: 773px;
+  height: 472px;
+  background: #d9d9d9;
+}
+
+.project-detail-divider {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: white;
+  height: 980px;
+}
