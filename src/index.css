@@ -137,6 +137,7 @@ p {
   margin-bottom: 0;
   height: auto;
   margin-top: 40px;
+  align-content: top;
 }
 
 .projct-card-container {
@@ -155,7 +156,6 @@ p {
   width: 100%;
   height: 455px;
   align-items: center;
-  margin-bottom: 40px;
 }
 
 .card-link-wrapper {
@@ -380,4 +380,16 @@ p {
   width: 1px;
   background: white;
   height: 980px;
+}
+
+.banner-placeholder {
+  width: 100%;
+  height: 520px;
+  position: absolute;
+  top: 0;
+  background: #d9d9d9;
+}
+
+.project-detail-layout{
+  /* padding: 0; */
 }

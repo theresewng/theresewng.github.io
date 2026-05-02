@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import { projectData } from "../data/projectData";
+import Banner from "../components/banner";
 
 function ProjectDetail() {
   const { slug } = useParams();
@@ -12,7 +13,9 @@ function ProjectDetail() {
       <div className="content-wrapper">
         <div className="project-detail-layout">
           {/* Banner Image */}
-          <div className="project-detail-banner"></div>
+          <div className="project-detail-banner">
+            <Banner image={project.imageSrc} />
+          </div>
 
           {/* Left Panel - Project Info */}
           <div className="project-detail-left">
