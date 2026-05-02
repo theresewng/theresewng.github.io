@@ -1,7 +1,7 @@
-import AboutMe from "./components/AboutMe.js";
-import Homepage from "./components/Homepage.js";
-import Projects from "./components/Projects.js";
-import ProjectDetail from "./components/ProjectDetail.js";
+import AboutMe from "./pages/AboutMe.js";
+import Homepage from "./pages/Homepage.js";
+import Projects from "./pages/Projects.js";
+import ProjectDetail from "./pages/ProjectDetail.js";
 import NavigationBar from "./components/navbar.js";
 import { Routes, Route } from "react-router-dom";
 import "./index.css";

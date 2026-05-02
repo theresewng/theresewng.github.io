@@ -2,16 +2,15 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 // Added 'slug' to the props list here
-function ProjectCard({ year, title, category, imageSrc, slug }) {
+function ProjectCard({ year, title, category, imageSrc, size, slug }) {
   return (
     <Link to={`/project/${slug}`} className="card-link-wrapper">
-      <div className="project-card">
+      <div className={`project-card ${size === "small" ? "is-small" : ""}`}>
+        {" "}
         <div className="card-line" />
-
         <div className="card-year">{year}</div>
         <div className="card-title">{title}</div>
         <div className="card-category">{category}</div>
-
         <div className="card-arrow">
           <svg
             width="66.609px"
@@ -29,7 +28,6 @@ function ProjectCard({ year, title, category, imageSrc, slug }) {
             />
           </svg>
         </div>
-
         <div
           className="card-image-placeholder"
           style={{

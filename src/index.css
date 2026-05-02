@@ -62,6 +62,20 @@ p {
   width: 80%;
 }
 
+/* Styling for the description on the right */
+.project-description-box {
+  padding-top: 80px; /* Aligns roughly with the title in the card */
+  padding-left: 20px;
+}
+
+.project-description-text {
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 90%; /* Keeps the text from spanning too wide */
+}
+
 /* --- Navigation --- */
 .nav-container {
   width: 100%;
@@ -115,6 +129,16 @@ p {
 }
 
 /* --- Project Cards --- */
+.two-column-layout-project {
+  display: grid;
+  grid-template-columns: 60% 40%; /* Adjusted so the card has more room */
+  gap: 2rem;
+  width: 100%;
+  margin-bottom: 0;
+  height: auto;
+  margin-top: 40px;
+}
+
 .projct-card-container {
   display: flex;
   flex-direction: column;
@@ -123,69 +147,94 @@ p {
   align-items: center;
 }
 
+.projct-card-container-small {
+  display: flex;
+  flex-direction: column;
+  /* gap: 40px; */
+  margin: 0;
+  width: 100%;
+  height: 455px;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
 .card-link-wrapper {
   text-decoration: none;
   display: block;
   width: 100%;
 }
 
+/* Your original card styles stay the same */
 .project-card {
   position: relative;
-  width: 1250px;
-  height: 698px;
+  width: 1241.651px;
+  height: 698.428px;
   background: white;
   border-radius: 12.934px;
   overflow: hidden;
   cursor: pointer;
-  transition: box-shadow 0.3s ease;
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
 }
 
-.project-card:hover {
-  box-shadow: 0px 10px 30px rgba(255, 255, 255, 0.1);
+/* The Small Variation */
+.project-card.is-small {
+  transform: scale(0.65);
+  transform-origin: top left;
 }
 
-.card-year,
-.card-title,
-.card-category {
-  position: absolute;
-  color: black;
-  font-family: "Inter", sans-serif;
-}
-
+/* Apply styles to internal elements */
 .card-year {
-  left: 49.15px;
+  position: absolute;
+  left: 47.86px;
   top: 34.27px;
   font-size: 20.694px;
-}
-.card-category {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
   color: black;
-  right: 49.15px;
-  top: 34.27px;
-  font-size: 20.694px;
+  white-space: nowrap;
 }
 
 .card-title {
-  left: 49.15px;
+  position: absolute;
+  left: 44.62px;
   top: 82.78px;
   font-size: 62.083px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  color: black;
+  white-space: nowrap;
 }
 
 .card-line {
   position: absolute;
   top: 71.14px;
-  left: 49.15px;
-  width: 1151.7px;
+  left: calc(50% + 0.32px);
+  width: 1144px;
   height: 1px;
   background: black;
+  transform: translateX(-50%);
 }
 
 .card-image-placeholder {
   position: absolute;
   left: 49.15px;
   top: 169.43px;
-  width: 1151.7px;
+  width: 1144px;
   height: 472.086px;
   background: #d9d9d9;
+}
+
+.card-category {
+  position: absolute;
+  right: 49.15px;
+  top: 34.27px;
+  font-size: 20.694px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  color: black;
+  white-space: nowrap;
 }
 
 .card-arrow {
@@ -195,6 +244,10 @@ p {
   width: 66.609px;
   height: 47.855px;
   transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .project-card:hover .card-arrow {

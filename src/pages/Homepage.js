@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
-import ProjectCard from "./projectcard.js";
-import Button from "./button.js";
+import ProjectCard from "../components/projectcard.js";
+import Button from "../components/button.js";
 import { projectData } from "../data/projectData.js";
 
 function Homepage() {
