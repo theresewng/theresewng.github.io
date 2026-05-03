@@ -14,7 +14,6 @@ function ProjectDetail() {
       <div className="project-full-bleed-banner">
         <Banner image={project.imageSrc} />
         <h2 className="project-detail-title">{project.title}</h2>
-
         {/* If Banner component doesn't handle the image directly, use a placeholder/img here */}
       </div>
 
@@ -23,14 +22,22 @@ function ProjectDetail() {
         <div className="project-detail-layout">
           {/* Left Panel */}
           <div className="panel-left">
-            {/* <h2 className="project-detail-title">{project.title}</h2> */}
-            {/* ... rest of your labels and body ... */}
+            <h3>Duration:</h3>
+            <p>{project.year}</p>
+            <h3>Tools:</h3>
+            <p>{project.tools}</p>
+            <h3>Design Focuses:</h3>
+            <p>{project.category}</p>
+
+            {/* ... rest of your labels  body ... */}
+            <div className="project-detail-divider"></div>
           </div>
-          <div className="project-detail-divider"></div>
 
           {/* Right Panel */}
           <div className="panel-right">
-            <div className="project-detail-image">
+            <h3>{project.description}</h3>
+
+            <div className="image-placeholder">
               <img src={project.imageSrc} alt={project.title} />
             </div>
           </div>

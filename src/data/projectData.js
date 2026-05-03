@@ -6,6 +6,7 @@ export const projectData = [
     category: "CO-OP | Graphic Design | Motion Design | Brand Design | Web Design",
     description: "Digital branding and skincare product analysis.",
     image: "/images/neon.png",
+    tools: "Adobe Creative Suite, Figma, Webflow",
   },
   {
     slug: "accessible-navigation",

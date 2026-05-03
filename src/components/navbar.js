@@ -1,33 +1,47 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-// import { useNavigate } from "react-router-dom";
+import { projectData } from "../data/projectData";
 
 function Navigation() {
-//   const navigate = useNavigate();
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <nav className="nav-container">
       <div className="nav-content">
-        {/* Name */}
         <div className="nav-name">
           <Link to="/" className="nav-link">
             Therese Wong
           </Link>
         </div>
 
-        {/* Navigation Links */}
         <div className="nav-links">
-          <Link to="/projects" className="nav-link">
-            projects
-          </Link>
+          {/* Dropdown Wrapper */}
+          <div
+            className="dropdown-wrapper"
+            onMouseEnter={() => setIsOpen(true)}
+            onMouseLeave={() => setIsOpen(false)}
+          >
+            <Link to="/projects" className="nav-link">
+              projects {isOpen ? "▴" : "▾"}
+            </Link>
+
+            {isOpen && (
+              <ul className="dropdown-menu">
+                {projectData.map((project) => (
+                  <li key={project.slug}>
+                    <Link to={`/project/${project.slug}`}>{project.title}</Link>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+
           <Link to="/about" className="nav-link">
             about
           </Link>
-
           <a
-            href="https://www.linkedin.com/in/therese-wong/"
+            href="https://linkedin.com/..."
             target="_blank"
-            rel="noopener noreferrer"
             className="nav-link"
           >
             linkedin
@@ -36,8 +50,6 @@ function Navigation() {
           <span className="nav-link">email</span>
         </div>
       </div>
-
-      {/* Divider Line */}
       <div className="nav-divider" />
     </nav>
   );
