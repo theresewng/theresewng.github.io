@@ -4,63 +4,34 @@ import Banner from "../components/banner";
 
 function ProjectDetail() {
   const { slug } = useParams();
-
   const project = projectData.find((p) => p.slug === slug);
+
   if (!project) return <div>Project not found!</div>;
 
   return (
-    <div className="homepage-container">
-      <div className="content-wrapper">
+    <div className="project-detail-page">
+      {/* 1. Full Bleed Banner - Outside the layout grid */}
+      <div className="project-full-bleed-banner">
+        <Banner image={project.imageSrc} />
+        <h2 className="project-detail-title">{project.title}</h2>
+
+        {/* If Banner component doesn't handle the image directly, use a placeholder/img here */}
+      </div>
+
+      {/* 2. Content Wrapper - For centered/padded content */}
+      <div className="homepage-container">
         <div className="project-detail-layout">
-          {/* Banner Image */}
-          <div className="project-detail-banner">
-            <Banner image={project.imageSrc} />
+          {/* Left Panel */}
+          <div className="panel-left">
+            {/* <h2 className="project-detail-title">{project.title}</h2> */}
+            {/* ... rest of your labels and body ... */}
           </div>
+          <div className="project-detail-divider"></div>
 
-          {/* Left Panel - Project Info */}
-          <div className="project-detail-left">
-            <h2 className="project-detail-title">{project.title}</h2>
-            
-            <div className="project-detail-section">
-              <span className="project-detail-label">ROLE</span>
-              <p className="project-detail-value">
-                {project.role || "Design Lead"}
-              </p>
-            </div>
-
-            <div className="project-detail-body">
-              <p>{project.description}</p>
-            </div>
-
-            <div className="project-detail-section">
-              <span className="project-detail-label">TIMELINE</span>
-              <p className="project-detail-value">{project.year}</p>
-            </div>
-
-            <div className="project-detail-section">
-              <span className="project-detail-label">TOOLS USED</span>
-              <p className="project-detail-value">Figma, React, CSS</p>
-            </div>
-
-            <div className="project-detail-section">
-              <span className="project-detail-label">DESIGN FOCUSES</span>
-              <p className="project-detail-value">
-                UX Research, UI Design, Accessibility
-              </p>
-            </div>
-          </div>
-
-          {/* Right Panel - Project Image */}
-          <div className="project-detail-right">
-            <div className="project-detail-divider"></div>
+          {/* Right Panel */}
+          <div className="panel-right">
             <div className="project-detail-image">
-              {project.imageSrc && (
-                <img 
-                  src={project.imageSrc} 
-                  alt={project.title}
-                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                />
-              )}
+              <img src={project.imageSrc} alt={project.title} />
             </div>
           </div>
         </div>
@@ -70,21 +41,3 @@ function ProjectDetail() {
 }
 
 export default ProjectDetail;
-
-//             <div className="project-detail-section">
-//               <span className="project-detail-label">DESIGN FOCUSES</span>
-//               <p className="project-detail-value">
-//                 UX Research, UI Design, Accessibility
-//               </p>
-//             </div>
-//           </div>
-//           <div className="right-panel">
-//             {/* <div className="card-image-placeholder"></div> */}
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default ProjectDetail;
