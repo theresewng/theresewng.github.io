@@ -38,14 +38,14 @@ function ProjectDetail(imageSrc) {
             <h3>{project.description}</h3>
 
             <div className="image-placeholder">
-              <div
+              {/* <div
                 className="card-image-placeholder"
                 style={{
                   backgroundImage: `url(${imageSrc})`,
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                 }}
-              />
+              /> */}
             </div>
           </div>
         </div>
