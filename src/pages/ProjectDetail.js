@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { projectData } from "../data/projectData";
 import Banner from "../components/banner";
 
-function ProjectDetail() {
+function ProjectDetail(imageSrc) {
   const { slug } = useParams();
   const project = projectData.find((p) => p.slug === slug);
 
@@ -38,7 +38,14 @@ function ProjectDetail() {
             <h3>{project.description}</h3>
 
             <div className="image-placeholder">
-              <img src={project.imageSrc} alt={project.title} />
+              <div
+                className="card-image-placeholder"
+                style={{
+                  backgroundImage: `url(${imageSrc})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              />
             </div>
           </div>
         </div>

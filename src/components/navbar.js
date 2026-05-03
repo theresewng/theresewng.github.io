@@ -40,8 +40,9 @@ function Navigation() {
             about
           </Link>
           <a
-            href="https://linkedin.com/..."
+            href="https://www.linkedin.com/in/therese-wong/"
             target="_blank"
+            rel="noopener noreferrer" // <--- Add this line
             className="nav-link"
           >
             linkedin
