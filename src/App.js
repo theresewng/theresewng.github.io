@@ -3,6 +3,7 @@ import Homepage from "./pages/Homepage.js";
 import Projects from "./pages/Projects.js";
 import ProjectDetail from "./pages/ProjectDetail.js";
 import NavigationBar from "./components/navbar.js";
+import Footer from "./components/footer.js";
 import { Routes, Route } from "react-router-dom";
 import "./index.css";
 
@@ -24,6 +25,7 @@ function App() {
           <Route path="/project/:slug" element={<ProjectDetail />} />{" "}
         </Routes>
       </main>
+      <Footer />
     </div>
   );
 }

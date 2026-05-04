@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 import { projectData } from "../data/projectData";
 
 function Navigation() {
-  const [isOpen, setIsOpen] = useState(false);
-
   return (
     <nav className="nav-container">
+      <div className="nav-divider" />
+
       <div className="nav-content">
         <div className="nav-name">
           <Link to="/" className="nav-link">
@@ -15,26 +15,9 @@ function Navigation() {
         </div>
 
         <div className="nav-links">
-          {/* Dropdown Wrapper */}
-          <div
-            className="dropdown-wrapper"
-            onMouseEnter={() => setIsOpen(true)}
-            onMouseLeave={() => setIsOpen(false)}
-          >
-            <Link to="/projects" className="nav-link">
-              projects {isOpen ? "▴" : "▾"}
-            </Link>
-
-            {isOpen && (
-              <ul className="dropdown-menu">
-                {projectData.map((project) => (
-                  <li key={project.slug}>
-                    <Link to={`/project/${project.slug}`}>{project.title}</Link>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </div>
+          <Link to="/projects" className="nav-link">
+            projects
+          </Link>
 
           <Link to="/sandbox" className="nav-link">
             sandbox
@@ -46,7 +29,7 @@ function Navigation() {
           <a
             href="https://www.linkedin.com/in/therese-wong/"
             target="_blank"
-            rel="noopener noreferrer" // <--- Add this line
+            rel="noopener noreferrer"
             className="nav-link"
           >
             linkedin
@@ -55,7 +38,7 @@ function Navigation() {
           <span className="nav-link">email</span>
         </div>
       </div>
-      <div className="nav-divider" />
+      <p>Therese Wong © 2026 | Designed & Developed by Therese Wong</p>
     </nav>
   );
 }
