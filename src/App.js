@@ -5,6 +5,7 @@ import ProjectDetail from "./pages/ProjectDetail.js";
 import NavigationBar from "./components/navbar.js";
 import Footer from "./components/footer.js";
 import { Routes, Route } from "react-router-dom";
+import { projectData } from "./data/projectData";
 import "./index.css";
 
 function App() {
@@ -22,7 +23,17 @@ function App() {
           <Route path="/" element={<Homepage />} />
           <Route path="/about" element={<AboutMe />} />
           <Route path="/projects" element={<Projects />} />{" "}
-          <Route path="/project/:slug" element={<ProjectDetail />} />{" "}
+          {projectData.map((project) => {
+            const SpecificPageLayout = project.component;
+            return (
+              <Route
+                key={project.slug}
+                path={project.path}
+                element={<SpecificPageLayout />}
+              />
+            );
+          })}
+          {/* <Route path="/project/:slug" element={<ProjectDetail />} />{" "} */}
         </Routes>
       </main>
       <Footer />

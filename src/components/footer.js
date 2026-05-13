@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { projectData } from "../data/projectData";
 
-function Navigation() {
+function Footer() {
   return (
     <nav className="nav-container">
       <div className="nav-divider" />
@@ -43,4 +43,4 @@ function Navigation() {
   );
 }
 
-export default Navigation;
+export default Footer;

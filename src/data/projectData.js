@@ -1,19 +1,27 @@
+import AppnovationCaseStudy from "../pages/case-studies/Appnovation.js";
+// import AccessibleNavCaseStudy from "../pages/AccessibleNavCaseStudy";
+
 export const projectData = [
   {
     slug: "appnovation",
+    path: "/projects/appnovation",
+    component: AppnovationCaseStudy,
     title: "Appnovation Technologies",
+    description: "UX/UI design for a global digital consultancy.",
     year: "2024 - 2025",
-    category: "CO-OP | Graphic Design | Motion Design | Brand Design | Web Design",
-    description: "Digital branding and skincare product analysis.",
-    image: "/images/neon.png",
+    category: "UX Research | Service Design | Mobile Design",
+    image: "",
     tools: "Adobe Creative Suite, Figma, Webflow",
   },
   {
     slug: "accessible-navigation",
+    path: "/projects/accessible-navigation",
+    // component: AccessibleNavCaseStudy,
     title: "Reimagining Accessible Navigation",
-    year: "2025 -2026 (Currently Ongoing)",
+    year: "2025 - 2026",
     category: "UX Research | Service Design | Mobile Design",
     description: "UX research on urban navigation barriers.",
     image: "/images/nav.png",
+    tools: "Figma, Miro",
   },
 ];

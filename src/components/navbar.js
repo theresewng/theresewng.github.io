@@ -9,48 +9,31 @@ function Navigation() {
     <nav className="nav-container">
       <div className="nav-content">
         <div className="nav-name">
-          <Link to="/" className="nav-link">
-            Therese Wong
-          </Link>
+          <Link to="/" className="nav-link">Therese Wong</Link>
         </div>
 
         <div className="nav-links">
-          {/* Dropdown Wrapper */}
-          <div
+          {/* Dropdown Link Trigger Group */}
+          <div 
             className="dropdown-wrapper"
             onMouseEnter={() => setIsOpen(true)}
             onMouseLeave={() => setIsOpen(false)}
           >
-            <Link to="/projects" className="nav-link">
-              projects {isOpen ? "▴" : "▾"}
-            </Link>
+            <Link to="/projects" className="nav-link">projects</Link>
 
             {isOpen && (
               <ul className="dropdown-menu">
-                {projectData.map((project) => (
-                  <li key={project.slug}>
-                    <Link to={`/project/${project.slug}`}>{project.title}</Link>
+                {projectData.map((projects) => (
+                  <li key={projects.slug}>
+                    <Link to={projects.path}>{projects.title}</Link>
                   </li>
                 ))}
               </ul>
             )}
           </div>
 
-          <Link to="/sandbox" className="nav-link">
-            sandbox
-          </Link>
-
-          <Link to="/about" className="nav-link">
-            about
-          </Link>
-          <a
-            href="https://www.linkedin.com/in/therese-wong/"
-            target="_blank"
-            rel="noopener noreferrer" // <--- Add this line
-            className="nav-link"
-          >
-            linkedin
-          </a>
+          <Link to="/about" className="nav-link">about</Link>
+          <a href="https://www.linkedin.com/in/therese-wong/" target="_blank" rel="noopener noreferrer" className="nav-link">linkedin</a>
           <span className="nav-link">resume</span>
           <span className="nav-link">email</span>
         </div>

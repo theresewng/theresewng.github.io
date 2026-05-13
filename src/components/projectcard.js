@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 // Added 'slug' to the props list here
 function ProjectCard({ year, title, category, imageSrc, size, slug }) {
   return (
-    <Link to={`/project/${slug}`} className="card-link-wrapper">
+    <Link to={`/projects/${slug}`} className="card-link-wrapper">
       <div className={`project-card ${size === "small" ? "is-small" : ""}`}>
         {" "}
         <div className="card-line" />

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import ProjectCard from "../components/projectcard.js";
 import { projectData } from "../data/projectData.js";
 
@@ -8,21 +9,17 @@ function Projects() {
         <div className="h2-homepage">projects</div>
 
         {projectData.map((project) => (
-          <div
-            className="two-column-layout-project"
-          >
-            {/* Left Panel: The Interactive Card */}
+          <div className="two-column-layout-project" key={project.slug}>
+            {/* Left Panel: Scaled Card Wrapper Link */}
             <div className="left-panel">
               <div className="projct-card-container-small">
-                <ProjectCard
-                  key={project.slug}
-                  {...project}
-                  size="small"
-                />{" "}
+                <Link to={project.path} className="card-link-wrapper">
+                  <ProjectCard {...project} size="small" />
+                </Link>
               </div>
             </div>
 
-            {/* Right Panel: The Description Text */}
+            {/* Right Panel: Side Descriptions */}
             <div className="right-panel">
               <div className="project-description-box">
                 <p className="project-description-text">
