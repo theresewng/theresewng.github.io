@@ -21,17 +21,15 @@ function Navigation() {
             onMouseEnter={() => setIsOpen(true)}
             onMouseLeave={() => setIsOpen(false)}
           >
-            {/* Dynamically swaps the caret character depending on menu state */}
-            <Link to="/projects" className="nav-link">
-              projects {isOpen ? "▴" : "▾"}
-            </Link>
+            {/* Kept cleanly on one line to ensure no layout wrapping shifts */}
+            <Link to="/projects" className="nav-link">{`projects ${isOpen ? "▴" : "▾"}`}</Link>
 
             {isOpen && (
               <ul className="dropdown-menu">
                 {projectData.map((project) => (
                   <li key={project.slug}>
                     <Link to={project.path} className="dropdown-link-item">
-                      {project.title} 
+                      {project.title} <span>▸</span>
                     </Link>
                   </li>
                 ))}

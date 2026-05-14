@@ -5,6 +5,7 @@ import { projectData } from "../data/projectData";
 function Footer() {
   return (
     <nav className="nav-container">
+      <div className="nav-divider" />
       <div className="footer-content">
         <div>
           <p className="copyright">Therese Wong © 2026</p>

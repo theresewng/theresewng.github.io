@@ -1,5 +1,4 @@
 import React from "react";
-import { projectData } from "/Users/theresewng/Downloads/theresewng.github.io/src/data/projectData.js";
 
 function TLDR({ role, timeline, toolsUsed, designFocuses }) {
   return (
