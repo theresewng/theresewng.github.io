@@ -5,16 +5,16 @@ import { projectData } from "../data/projectData";
 function Footer() {
   return (
     <nav className="nav-container">
-      <div className="nav-divider" />
-
-      <div className="nav-content">
-        <div className="nav-name">
-          <Link to="/" className="nav-link">
-            Therese Wong
-          </Link>
+      <div className="footer-content">
+        <div>
+          <p className="copyright">Therese Wong © 2026</p>
+          <p className="microcopy">Designed & Developed by Therese Wong</p>
         </div>
 
         <div className="nav-links">
+          <Link to="/" className="nav-link">
+            home
+          </Link>
           <Link to="/projects" className="nav-link">
             projects
           </Link>
@@ -38,7 +38,6 @@ function Footer() {
           <span className="nav-link">email</span>
         </div>
       </div>
-      <p>Therese Wong © 2026 | Designed & Developed by Therese Wong</p>
     </nav>
   );
 }

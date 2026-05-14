@@ -57,10 +57,29 @@ h2 {
   width: 100%;
 }
 
+.h2-project-subtitle {
+  color: white;
+  font-size: 50px;
+  width: 100%;
+  margin-top: 0;
+}
+
 p {
   color: white;
   font-size: 24px;
   width: 80%;
+}
+
+.project-copy {
+  color: white;
+  font-size: 24px;
+  min-width: 80%;
+}
+
+.microcopy {
+  color: white;
+  font-size: 14px;
+  width: 100%;
 }
 
 h3 {
@@ -86,7 +105,9 @@ h3 {
 /* --- Navigation --- */
 .nav-container {
   width: 100%;
-  height: 208px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  /* height: auto; */
   background: black;
   display: flex;
   flex-direction: column;
@@ -108,6 +129,7 @@ h3 {
   color: white;
   font-size: 40px;
   font-family: "Inter", sans-serif;
+  width: 100%
 }
 
 .nav-links {
@@ -137,6 +159,22 @@ h3 {
   width: 1235px;
   height: 1px;
   background: white;
+}
+
+/* Footer */
+
+.footer-content {
+  width: 100%;
+  max-width: 1240px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.copyright {
+  color: white;
+  font-size: 24px;
+  margin: 0;
+  width: 100%;
 }
 
 /* Container to keep the menu aligned to the link */
@@ -409,16 +447,17 @@ h3 {
 /* Correcting the divider */
 .project-detail-divider {
   position: absolute;
-  left: 0; /* Aligns to the start of the right panel */
-  top: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateX(50%);
   width: 1px;
-  background: rgba(255, 255, 255, 0.3);
   height: 100%;
+  background: white;
 }
 
 .project-detail-label {
   font-family: "Inter", sans-serif;
-  font-size: 40px;
+  font-size: 25px;
   color: white;
   font-weight: 400;
   margin-bottom: 10px;
@@ -427,7 +466,7 @@ h3 {
 
 .project-detail-value {
   font-family: "Inter", sans-serif;
-  font-size: 40px;
+  font-size: 20px;
   color: white;
   font-weight: 400;
   margin-bottom: 20px;
@@ -439,4 +478,70 @@ h3 {
   color: white;
   font-weight: 400;
   line-height: normal;
+}
+
+/* Case Study Page */
+
+.project-page-container {
+  padding-left: 70px;
+}
+
+.two-column-layout-case-study {
+  display: grid;
+  grid-template-columns: 20% 80%; /* Adjusted so the card has more room */
+  /* gap: 2rem; */
+  /* width: 100vw; */
+  margin-top: 109px;
+  margin-bottom: 0;
+  height: auto;
+  align-content: top;
+}
+
+.case-study-left {
+  position: sticky;
+  /* This defines how far from the top of the screen the panel stops */
+  top: 100px;
+  /* Optional: keeps the panel from growing taller than the screen */
+  max-height: calc(100vh - 120px);
+  max-width: 20vw;
+  overflow-y: auto;
+  padding-right: 40px;
+  padding-left: 0;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.case-study-right {
+  padding-left: 40px;
+  padding-right: 0;
+  max-width: 70vw;
+}
+
+/* Styling for your new vertical navigation links */
+.vertical-nav-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 40px;
+}
+
+.vertical-nav-link {
+  color: white;
+  text-decoration: none;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  opacity: 0.6;
+  text-transform: uppercase;
+  transition: opacity 0.3s ease;
+}
+
+.vertical-nav-link:hover {
+  opacity: 1;
+}
+
+/* Spacing out the right panel sections so the scrolling feels natural */
+.case-study-section {
+  min-height: 50vh; /* Just to give sections enough room to scroll during testing */
+  padding-bottom: 80px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }

@@ -1,51 +1,46 @@
 import React from "react";
-// Fixing the banner import path to use relative mapping rather than absolute disk paths
-import ProjectHero from "/Users/theresewng/Downloads/theresewng.github.io/src/components/banner.js"; 
 import { projectData } from "/Users/theresewng/Downloads/theresewng.github.io/src/data/projectData.js";
+import CaseStudyLayout from "/Users/theresewng/Downloads/theresewng.github.io/src/pages/CaseStudy.js";
 
 function AppnovationCaseStudy() {
   const data = projectData.find((p) => p.slug === "appnovation");
 
-  if (!data)
-    return <div style={{ color: "white" }}>Project data not found.</div>;
+  // Define the specific sidebar links for this project
+  const projectNavLinks = [
+    { id: "tldr", label: "TLDR" },
+    { id: "animationdesign", label: "ANIMATION DESIGN" },
+    { id: "brandpromotionaldesign", label: "BRAND & PROMOTIONAL DESIGN" },
+    { id: "graphicdesign", label: "GRAPHIC DESIGN" },
+    { id: "webdesign", label: "WEB DESIGN" },
+    { id: "learnings", label: "LEARNINGS" }
+  ];
 
   return (
-    <div className="project-page-layout">
-      {/* 1. Shared Modular Hero - Full Bleed at the top */}
-      <ProjectHero title={data.title} bannerImage={data.image} />
+    <CaseStudyLayout project={data} navLinks={projectNavLinks}>
+      
+      {/* Everything below this line automatically becomes the 'children' and gets placed in the right panel! */}
+      
+      <section id="tldr" className="case-study-section">
+        <h3 className="project-detail-label" style={{ marginBottom: "20px" }}>Overview</h3>
+        <p className="project-body-copy">
+          This is the introductory text explaining the core problem and goals of the Appnovation project.
+        </p>
+      </section>
 
-      {/* 2. Content Wrappers added here to match AboutMe layout alignment */}
-      <div className="homepage-container" style={{ paddingTop: "0px" }}>
-        <div className="content-wrapper">
-          
-          <div className="two-column-layout" style={{ marginTop: "109px" }}>
-            {/* Left Panel */}
-            <div className="left-panel">
-              <span className="project-detail-label">ROLE</span>
-              <p className="project-detail-value">UX Designer</p>
-              
-              <span className="project-detail-label">TIMELINE</span>
-              <p className="project-detail-value">{data.year}</p>
-              
-              <span className="project-detail-label">TOOLS USED</span>
-              <p className="project-detail-value">{data.tools}</p>
-              
-              <span className="project-detail-label">DESIGN FOCUSES</span>
-              {/* Cleaned up the broken nested double-p tags here */}
-              <p className="project-detail-value">{data.category}</p>
-            </div>
-            
-            {/* Right Panel */}
-            <div className="right-panel">
-              <div className="project-detail-divider"></div>
-              <p className="project-body-copy">body copy goes here</p>
-              <p className="project-body-copy">body copy goes here</p>
-            </div>
-          </div>
-
+      <section id="animationdesign" className="case-study-section">
+        <h3 className="project-detail-label" style={{ marginBottom: "20px" }}>Animation Design</h3>
+        <p className="project-body-copy">Details about the animated ad reel and motion design processes go here.</p>
+        <div style={{ height: "300px", background: "#333", marginTop: "20px" }}>
+          Animation Reel Placeholder
         </div>
-      </div>
-    </div>
+      </section>
+
+      <section id="learnings" className="case-study-section">
+        <h3 className="project-detail-label" style={{ marginBottom: "20px" }}>Learnings</h3>
+        <p className="project-body-copy">Final deliverables and reflections on what was learned.</p>
+      </section>
+
+    </CaseStudyLayout>
   );
 }
 
