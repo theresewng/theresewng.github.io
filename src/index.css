@@ -140,6 +140,7 @@ h3 {
 .nav-links {
   display: flex;
   gap: 24px;
+  width: 70vw;
 }
 
 .nav-link {
