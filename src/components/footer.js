@@ -1,10 +1,8 @@
-import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { projectData } from "../data/projectData";
 
 function Footer() {
   return (
-    <nav className="nav-container">
+    <nav className="footer-container">
       <div className="nav-divider" />
       <div className="footer-content">
         <div>
@@ -12,7 +10,7 @@ function Footer() {
           <p className="microcopy">Designed & Developed by Therese Wong</p>
         </div>
 
-        <div className="nav-links">
+        <div className="footer-links">
           <Link to="/" className="nav-link">
             home
           </Link>
