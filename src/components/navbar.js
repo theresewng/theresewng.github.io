@@ -9,17 +9,21 @@ function Navigation() {
     <nav className="nav-container">
       <div className="nav-content">
         <div className="nav-name">
-          <Link to="/" className="nav-link">Therese Wong</Link>
+          <Link to="/" className="nav-link">
+            Therese Wong
+          </Link>
         </div>
 
         <div className="nav-links">
           {/* Dropdown Link Trigger Group */}
-          <div 
+          <div
             className="dropdown-wrapper"
             onMouseEnter={() => setIsOpen(true)}
             onMouseLeave={() => setIsOpen(false)}
           >
-            <Link to="/projects" className="nav-link">projects</Link>
+            <Link to="/projects" className="nav-link">
+              projects
+            </Link>
 
             {isOpen && (
               <ul className="dropdown-menu">
@@ -32,8 +36,21 @@ function Navigation() {
             )}
           </div>
 
-          <Link to="/about" className="nav-link">about</Link>
-          <a href="https://www.linkedin.com/in/therese-wong/" target="_blank" rel="noopener noreferrer" className="nav-link">linkedin</a>
+          <Link to="/sandbox" className="nav-link">
+            sandbox
+          </Link>
+
+          <Link to="/about" className="nav-link">
+            about
+          </Link>
+          <a
+            href="https://www.linkedin.com/in/therese-wong/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="nav-link"
+          >
+            linkedin
+          </a>
           <span className="nav-link">resume</span>
           <span className="nav-link">email</span>
         </div>

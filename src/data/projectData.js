@@ -1,5 +1,5 @@
-import AppnovationCaseStudy from "../pages/case-studies/Appnovation.js";
-// import AccessibleNavCaseStudy from "../pages/AccessibleNavCaseStudy";
+import AppnovationCaseStudy from "../pages/case-studies/Appnovation";
+import AccessibleNavCaseStudy from "../pages/case-studies/AccessibleNavigation";
 
 export const projectData = [
   {
@@ -7,6 +7,7 @@ export const projectData = [
     path: "/projects/appnovation",
     component: AppnovationCaseStudy,
     title: "Appnovation Technologies",
+    role: "Creative Director",
     description: "UX/UI design for a global digital consultancy.",
     year: "2024 - 2025",
     category: "UX Research | Service Design | Mobile Design",
@@ -16,7 +17,8 @@ export const projectData = [
   {
     slug: "accessible-navigation",
     path: "/projects/accessible-navigation",
-    // component: AccessibleNavCaseStudy,
+    component: AccessibleNavCaseStudy,
+    role: "UX Researcher",
     title: "Reimagining Accessible Navigation",
     year: "2025 - 2026",
     category: "UX Research | Service Design | Mobile Design",

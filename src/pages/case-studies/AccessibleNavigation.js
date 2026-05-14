@@ -3,8 +3,8 @@ import { projectData } from "/Users/theresewng/Downloads/theresewng.github.io/sr
 import CaseStudyLayout from "/Users/theresewng/Downloads/theresewng.github.io/src/pages/CaseStudy.js";
 import TLDR from "/Users/theresewng/Downloads/theresewng.github.io/src/components/tldr.js";
 
-function AppnovationCaseStudy() {
-  const data = projectData.find((p) => p.slug === "appnovation");
+function AccessibleNavigationCaseStudy() {
+  const data = projectData.find((p) => p.slug === "accessible-navigation");
 
   // Define the specific sidebar links for this project
   const projectNavLinks = [
@@ -13,53 +13,36 @@ function AppnovationCaseStudy() {
     { id: "brandpromotionaldesign", label: "BRAND & PROMOTIONAL DESIGN" },
     { id: "graphicdesign", label: "GRAPHIC DESIGN" },
     { id: "webdesign", label: "WEB DESIGN" },
-    { id: "learnings", label: "LEARNINGS" },
+    { id: "learnings", label: "LEARNINGS" }
   ];
 
   return (
     <CaseStudyLayout project={data} navLinks={projectNavLinks}>
+      
       {/* Everything below this line automatically becomes the 'children' and gets placed in the right panel! */}
-
+      
       <section id="tldr" className="case-study-section">
-        <h3 className="project-detail-label" style={{ marginBottom: "20px" }}>
-          TLDR
-        </h3>
+        <h3 className="project-detail-label" style={{ marginBottom: "20px" }}>Overview</h3>
         <p className="project-body-copy">
-          Did a series of graphics, branding, animations and deck designs
-          supporting the Marketing, Business Development, Client Services, and
-          Partnership Teams
+          This is the introductory text explaining the core problem and goals of the Accessible Navigation project.
         </p>
-<TLDR 
-          role={data.role}
-          timeline={data.year}       
-          toolsUsed={data.tools}      
-          designFocuses={data.category} 
-        />
       </section>
 
       <section id="animationdesign" className="case-study-section">
-        <h3 className="project-detail-label" style={{ marginBottom: "20px" }}>
-          Animation Design
-        </h3>
-        <p className="project-body-copy">
-          Details about the animated ad reel and motion design processes go
-          here.
-        </p>
+        <h3 className="project-detail-label" style={{ marginBottom: "20px" }}>Animation Design</h3>
+        <p className="project-body-copy">Details about the animated ad reel and motion design processes go here.</p>
         <div style={{ height: "300px", background: "#333", marginTop: "20px" }}>
           Animation Reel Placeholder
         </div>
       </section>
 
       <section id="learnings" className="case-study-section">
-        <h3 className="project-detail-label" style={{ marginBottom: "20px" }}>
-          Learnings
-        </h3>
-        <p className="project-body-copy">
-          Final deliverables and reflections on what was learned.
-        </p>
+        <h3 className="project-detail-label" style={{ marginBottom: "20px" }}>Learnings</h3>
+        <p className="project-body-copy">Final deliverables and reflections on what was learned.</p>
       </section>
+
     </CaseStudyLayout>
   );
 }
 
-export default AppnovationCaseStudy;
+export default AccessibleNavigationCaseStudy;
