@@ -1,7 +1,7 @@
 import React from "react";
-import { projectData } from "/Users/theresewng/Downloads/theresewng.github.io/src/data/projectData.js";
-import CaseStudyLayout from "/Users/theresewng/Downloads/theresewng.github.io/src/pages/CaseStudy.js";
-import TLDR from "/Users/theresewng/Downloads/theresewng.github.io/src/components/tldr.js";
+import { projectData } from '../../data/projectData';
+import CaseStudyLayout from "../../pages/CaseStudy.js";
+import TLDR from "../../components/tldr.js";
 
 function AccessibleNavigationCaseStudy() {
   const data = projectData.find((p) => p.slug === "accessible-navigation");
@@ -9,11 +9,6 @@ function AccessibleNavigationCaseStudy() {
   // Define the specific sidebar links for this project
   const projectNavLinks = [
     { id: "tldr", label: "TLDR" },
-    { id: "animationdesign", label: "ANIMATION DESIGN" },
-    { id: "brandpromotionaldesign", label: "BRAND & PROMOTIONAL DESIGN" },
-    { id: "graphicdesign", label: "GRAPHIC DESIGN" },
-    { id: "webdesign", label: "WEB DESIGN" },
-    { id: "learnings", label: "LEARNINGS" }
   ];
 
   return (

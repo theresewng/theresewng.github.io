@@ -10,7 +10,9 @@ function ProjectCard({ year, title, category, imageSrc, size, slug }) {
         <div className="card-line" />
         <div className="card-year">{year}</div>
         <div className="card-title">{title}</div>
-        <div className="card-category">{category}</div>
+        <div className="card-category">
+          {Array.isArray(category) ? category.join(" | ") : category}
+        </div>{" "}
         <div className="card-arrow">
           <svg
             width="66.609px"

@@ -179,6 +179,7 @@ h3 {
   border: 1px solid #222222;
   border-radius: 6px;
   box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
 }
 
 /* Invisible helper bridge to prevent the menu from closing when mouse moves down */
@@ -491,17 +492,17 @@ h3 {
   display: block;
 }
 
-.project-detail-value {
+/* .project-detail-value {
   font-family: "Inter", sans-serif;
   font-size: 20px;
   color: white;
   font-weight: 400;
   margin-bottom: 20px;
-}
+} */
 
 .project-body-copy {
   font-family: "Inter", sans-serif;
-  font-size: 40px;
+  font-size: 20px;
   color: white;
   font-weight: 400;
   line-height: normal;

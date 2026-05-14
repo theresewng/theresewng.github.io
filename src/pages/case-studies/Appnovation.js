@@ -1,7 +1,7 @@
 import React from "react";
-import { projectData } from "/Users/theresewng/Downloads/theresewng.github.io/src/data/projectData.js";
-import CaseStudyLayout from "/Users/theresewng/Downloads/theresewng.github.io/src/pages/CaseStudy.js";
-import TLDR from "/Users/theresewng/Downloads/theresewng.github.io/src/components/tldr.js";
+import { projectData } from "../../data/projectData";
+import CaseStudyLayout from "../../pages/CaseStudy.js";
+import TLDR from "../../components/tldr.js";
 
 function AppnovationCaseStudy() {
   const data = projectData.find((p) => p.slug === "appnovation");
@@ -29,11 +29,11 @@ function AppnovationCaseStudy() {
           supporting the Marketing, Business Development, Client Services, and
           Partnership Teams
         </p>
-<TLDR 
+        <TLDR
           role={data.role}
-          timeline={data.year}       
-          toolsUsed={data.tools}      
-          designFocuses={data.category} 
+          timeline={data.year}
+          toolsUsed={data.tools}
+          designFocuses={data.category}
         />
       </section>
 
