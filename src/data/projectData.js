@@ -4,14 +4,20 @@ import AccessibleNavCaseStudy from "../pages/case-studies/AccessibleNavigation";
 export const projectData = [
   {
     slug: "appnovation",
-    path: "/projects/appnovation", 
+    path: "/projects/appnovation",
     component: AppnovationCaseStudy,
     title: "Appnovation Technologies",
     year: "2024 - 2025",
     // 1. Changed from a string to an array of individual disciplines
-    category: ["CO-OP", "Graphic Design", "Motion Design", "Brand Design", "Web Design"],
+    category: [
+      "CO-OP",
+      "Graphic Design",
+      "Motion Design",
+      "Brand Design",
+      "Web Design",
+    ],
     description: "Digital branding and skincare product analysis.",
-    image: "/images/neon.png",
+    image: "public/images/appnobanner.png",
     tools: ["Adobe Creative Suite", "Figma", "Webflow"],
   },
   {
