@@ -3,8 +3,8 @@ import { projectData } from "../../data/projectData";
 import CaseStudyLayout from "../../pages/CaseStudy.js";
 import TLDR from "../../components/tldr.js";
 
-function AccessibleNavigationCaseStudy() {
-  const data = projectData.find((p) => p.slug === "accessible-navigation");
+function DataVizCaseStudy() {
+  const data = projectData.find((p) => p.slug === "dataviz");
 
   // Define the specific sidebar links for this project
   const projectNavLinks = [{ id: "tldr", label: "TLDR" }];
@@ -31,4 +31,4 @@ function AccessibleNavigationCaseStudy() {
   );
 }
 
-export default AccessibleNavigationCaseStudy;
+export default DataVizCaseStudy;

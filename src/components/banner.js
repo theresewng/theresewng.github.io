@@ -8,7 +8,7 @@ function ProjectHero({ title, description, bannerImage }) {
           <img
             src={bannerImage}
             alt={`${title} Banner`}
-            style={{ width: "100%", height: "100%", objectFit: "cover" }}
+            // style={{ width: "100%", height: "100%", objectFit: "cover" }}
           />
         )}
         <div className="project-hero-text-wrapper">
