@@ -1,4 +1,4 @@
-import { useState } from "react"; 
+import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import ProjectCard from "../components/projectcard.js";
 import Button from "../components/button.js";
@@ -12,7 +12,7 @@ function Homepage() {
     setSelectedFilters((prev) =>
       prev.includes(category)
         ? prev.filter((c) => c !== category)
-        : [...prev, category]
+        : [...prev, category],
     );
   };
 
@@ -25,8 +25,8 @@ function Homepage() {
 
           return selectedFilters.some((filter) =>
             project.category.some(
-              (cat) => cat.toLowerCase() === filter.toLowerCase()
-            )
+              (cat) => cat.toLowerCase() === filter.toLowerCase(),
+            ),
           );
         });
 
@@ -35,7 +35,6 @@ function Homepage() {
   return (
     <div className="homepage-container">
       <div className="content-wrapper">
-        
         {/* Headline section */}
         <div className="h2-homepage">
           Therese Wong is a multidisciplinary designer specialising in UX
@@ -45,7 +44,6 @@ function Homepage() {
 
         {/* The Master Split Layout Container */}
         <div className="two-column-layout-homepage">
-          
           {/* Left Column: Fixed / Sticky Filters */}
           <aside className="left-panel-filters">
             <p className="filter-bar-label">Filter by:</p>
@@ -72,8 +70,9 @@ function Homepage() {
                 to={project.path}
                 className="card-link-wrapper"
               >
-                <ProjectCard {...project} size="small" />
+                <ProjectCard {...project} />
               </Link>
+              
             ))}
 
             {filteredProjects.length === 0 && (
@@ -82,7 +81,6 @@ function Homepage() {
               </p>
             )}
           </main>
-
         </div>
       </div>
     </div>

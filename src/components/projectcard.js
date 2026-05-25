@@ -47,98 +47,46 @@
 
 import React from "react";
 
-export default function ProjectCardFigma({
-  title = "Project Title",
-  year = "2024 - 2025",
-  category = "Branding + Identity",
-  description = "Short description",
-  imageSrc = "",
+export default function ProjectCard({
+  title,
+  year,
+  description,
+  category = [], // Defaults to an empty array to prevent crashes while DB loads
+  imageSrc,
 }) {
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "row",
-        gap: "40px", // Spacing between image and text
-        background: "#ffffff",
-        borderRadius: "12px",
-        padding: "30px", // Inner padding matching your screenshot
-        width: "100%",
-        maxWidth: "1000px", // Prevents it from stretching too far on giant screens
-        boxShadow: "0 4px 20px rgba(0,0,0,0.05)",
-        boxSizing: "border-box",
-        fontFamily: '"Inter", sans-serif',
-      }}
-    >
-      {/* Image Placeholder */}
-      <div
-        style={{
-          flex: "1 1 55%", // Takes up slightly more than half the width
-          minHeight: "400px", // Ensures it stays proportional
-          background: imageSrc ? `url(${imageSrc}) center/cover` : "#d9d9d9",
-          borderRadius: "8px",
-        }}
-      />
+    console.log("Categories data for", title, "is:", category),
+    <div className="project-card-wrapper">
+      
+      <div className="project-card">
+        {/* Left Side: Image */}
+        <div 
+          className="pc-image"
+          style={imageSrc ? { backgroundImage: `url(${imageSrc})` } : {}}
+        ></div>
 
-      {/* Content Column */}
-      <div
-        style={{
-          flex: "1 1 45%",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "flex-start",
-          paddingTop: "20px", // Pushes the text down slightly to align nicely with the image
-        }}
-      >
-        {/* Title */}
-        <h2
-          style={{
-            margin: "0 0 20px 0",
-            fontWeight: 400,
-            fontSize: "clamp(20px, 4vw, 30px)", // Scales smoothly based on screen size
-            color: "#000",
-            lineHeight: 1.1,
-          }}
-        >
-          {title}
-        </h2>
-
-        {/* Meta Info (Year / Category) */}
-        <div
-          style={{
-            display: "flex",
-            gap: "8px",
-            fontSize: "18px",
-            color: "#000",
-            marginBottom: "20px",
-          }}
-        >
-          <span>{year}</span>
-          <span>/</span>
-          <span>{category}</span>
+        {/* Right Side: Content */}
+        <div className="pc-content">
+          <p className="pc-meta">{year}</p>
+          <h2 className="pc-title">{title}</h2>
+          
+          <hr className="pc-divider" />
+          
+          <p className="pc-description">{description}</p>
+          
+          {/* Bottom Tags: Safely pulls from your database array */}
+          <div className="pc-tags">
+            {category && category.length > 0 ? (
+              category.map((category, index) => (
+                <span key={index} className="pc-tag">
+                  {category}
+                </span>
+              ))
+            ) : null}
+          </div>
+          
         </div>
 
-        {/* Divider Line (Native HTML instead of an external SVG) */}
-        <hr
-          style={{
-            width: "100%",
-            border: "none",
-            borderTop: "1px solid #000",
-            margin: "0 0 20px 0",
-          }}
-        />
-
-        {/* Description */}
-        <p
-          style={{
-            margin: 0,
-            fontSize: "18px",
-            color: "#000",
-            lineHeight: 1.5,
-          }}
-        >
-          {description}
-        </p>
       </div>
     </div>
   );

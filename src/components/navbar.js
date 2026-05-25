@@ -22,7 +22,9 @@ function Navigation() {
             onMouseLeave={() => setIsOpen(false)}
           >
             {/* Kept cleanly on one line to ensure no layout wrapping shifts */}
-            <Link to="/projects" className="nav-link">{`projects ${isOpen ? "▴" : "▾"}`}</Link>
+            <div className="nav-link">
+              {`projects ${isOpen ? "▴" : "▾"}`}
+            </div>
 
             {isOpen && (
               <ul className="dropdown-menu">

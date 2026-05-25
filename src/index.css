@@ -13,7 +13,7 @@ body {
 }
 
 .two-column-layout-homepage {
-  padding-top: 80px;
+  /* padding-top: 80px; */
   display: grid;
   align-items: start;
   align-content: center;
@@ -390,93 +390,102 @@ h3 {
 }
 
 /* Your original card styles stay the same */
-.project-card {
-  position: relative;
-  width: 1241.651px;
-  height: 698.428px;
-  background: rgb(213, 213, 213);
-  border-radius: 12.934px;
-  overflow: hidden;
-  cursor: pointer;
-  transition:
-    box-shadow 0.3s ease,
-    transform 0.3s ease;
-}
-
-/* The Small Variation */
-.project-card.is-small {
-  transform: scale(0.65);
-  transform-origin: top left;
-}
-
-/* Apply styles to internal elements */
-.card-year {
-  position: absolute;
-  left: 47.86px;
-  top: 34.27px;
-  font-size: 20.694px;
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-  color: black;
-  white-space: nowrap;
-}
-
-.card-title {
-  position: absolute;
-  left: 44.62px;
-  top: 82.78px;
-  font-size: 62.083px;
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-  color: black;
-  white-space: nowrap;
-}
-
-.card-line {
-  position: absolute;
-  top: 71.14px;
-  left: calc(50% + 0.32px);
-  width: 1144px;
-  height: 1px;
-  background: black;
-  transform: translateX(-50%);
-}
-
-.card-image-placeholder {
-  position: absolute;
-  left: 49.15px;
-  top: 169.43px;
-  width: 1144px;
-  height: 472.086px;
-  background: #d9d9d9;
-}
-
-.card-category {
-  position: absolute;
-  right: 49.15px;
-  top: 34.27px;
-  font-size: 20.694px;
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-  color: black;
-  white-space: nowrap;
-}
-
-.card-arrow {
-  position: absolute;
-  right: 49.15px;
-  top: 96.36px;
-  width: 66.609px;
-  height: 47.855px;
-  transition: transform 0.3s ease-in-out;
-  cursor: pointer;
+/* Container to hold the little label and the card */
+.project-card-wrapper {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+  font-family: "Inter", sans-serif;
+  width: 100%;
+  max-width: 1000px; /* Keeps the card from stretching infinitely */
 }
 
-.project-card:hover .card-arrow {
-  transform: rotate(-45deg);
+/* The actual white card */
+.project-card {
+  display: flex;
+  flex-direction: row; /* Forces left/right layout */
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 32px;
+  gap: 40px; /* Space between image and text */
+  box-sizing: border-box;
+}
+
+/* Left side: The gray image box */
+.pc-image {
+  flex: 0 0 55%; /* Takes up exactly 55% of the card width */
+  background-color: #d9d9d9;
+  min-height: 450px;
+  border-radius: 4px; /* Slight rounding on inner image */
+  background-size: cover;
+  background-position: center;
+}
+
+/* Right side: The text column */
+.pc-content {
+  flex: 1; /* Takes up remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Typography styles matching your screenshot exactly */
+.pc-title {
+  color: #000;
+  font-family: Inter;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 400;
+  margin: 0; /* Removes default spacing around h2 */
+  margin-bottom: 12px; /* Small space between title and meta */
+  /* line-height: normal; */
+}
+
+.pc-meta {
+  color: #000;
+  font-family: Inter;
+  font-size: 1.29338rem;
+  font-style: normal;
+  font-weight: 400;
+  margin: 0; /* Small space between title and meta */
+  margin-bottom: 12px; /* Space between meta and description */
+}
+
+/* The thin black line */
+.pc-divider {
+  width: 100%;
+  height: 1px;
+  background-color: #000000;
+  border: none;
+  margin: 0 0 20px 0;
+}
+
+.pc-description {
+  color: #000;
+  font-family: Inter;
+  font-size: 1.29338rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0; /* Removes default spacing around paragraphs */
+  /* line-height: 1.5; */
+}
+
+.pc-tags {
+  margin-top: auto; /* Forces the tags to the bottom of the container */
+  display: flex;
+  flex-wrap: wrap; /* Allows tags to wrap to the next line if they get too long */
+  gap: 12px;
+}
+
+.pc-tag {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  color: #000;
+  padding: 8px 18px;
+  border: 1px solid #000000;
+  border-radius: 9999px; /* Creates the perfect rounded pill shape */
+  white-space: nowrap;
 }
 
 /* --- Buttons --- */
@@ -641,10 +650,6 @@ h3 {
 
   /* 4. Optional: Add a gap to prevent content from touching */
   gap: 40px;
-}
-
-.case-study-section {
-  /* padding-bottom: 40px; */
 }
 
 .case-study-left {
