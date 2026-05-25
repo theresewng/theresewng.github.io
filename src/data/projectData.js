@@ -88,7 +88,7 @@ export const projectData = [
     component: CNY,
     title: "Chinese New Year Banking Feature",
     year: "February 2023",
-    category: ["Mobile Design"],
+    category: ["Mobile Design", "UI/UX Design", "Motion Design"],
     role: ["UI/UX Designer", "Motion Designer"],
     description:
       "A banking extension mockup that incorporates the traditional practice of giving and receiving red packets to family members when physically apart.",

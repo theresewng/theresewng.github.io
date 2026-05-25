@@ -17,8 +17,13 @@ function CNYCaseStudy() {
         <h3 className="project-detail-label" style={{ marginBottom: "20px" }}>
           TLDR
         </h3>
-        <p className="project-body-copy">
-          {data.description}
+        <p className="project-body-copy">{data.description}</p>
+        <p className="mini-text" style={{ marginTop: "20px" }}>
+          (Please note that this is just a hypothetical project. As a TD Bank
+          customer, I used their app as a reference to create this project and I
+          was not hired by TD Bank to work on this project. Additionally, in
+          order to protect the security of my accounts, I have not included any
+          dollar amounts on purpose)
         </p>
         <TLDR
           role={data.role}
