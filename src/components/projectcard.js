@@ -47,18 +47,31 @@
 
 import React from "react";
 
-export default function ProjectCard({
+// Keeping configuration maps outside the component is a best practice 
+// so they aren't completely recreated on every single re-render.
+const CATEGORY_COLORS = {
+  "Graphic Design": { bg: "#E3F2FD", border: "#2196F3", text: "#0D47A1" },
+  "Motion Design": { bg: "#F3E5F5", border: "#9C27B0", text: "#4A148C" },
+  "UX Research": { bg: "#E8F5E9", border: "#4CAF50", text: "#1B5E20" },
+  "Branding + Identity": { bg: "#FFF3E0", border: "#FF9800", text: "#E65100" }
+};
+const DEFAULT_COLOR = { bg: "transparent", border: "#000000", text: "#000000" };
+
+function ProjectCard({ 
   title,
   year,
   description,
-  category = [], // Defaults to an empty array to prevent crashes while DB loads
+  category = [], // Safely falls back to empty array if data is missing
   imageSrc,
 }) {
+
+  // Your console log lives safely here now, before the UI renders
+  console.log("Categories data for", title, "is:", category);
+
   return (
-    console.log("Categories data for", title, "is:", category),
     <div className="project-card-wrapper">
-      
       <div className="project-card">
+        
         {/* Left Side: Image */}
         <div 
           className="pc-image"
@@ -74,20 +87,34 @@ export default function ProjectCard({
           
           <p className="pc-description">{description}</p>
           
-          {/* Bottom Tags: Safely pulls from your database array */}
+          {/* Bottom Tags */}
           <div className="pc-tags">
             {category && category.length > 0 ? (
-              category.map((category, index) => (
-                <span key={index} className="pc-tag">
-                  {category}
-                </span>
-              ))
+              category.map((catName, index) => {
+                // Find the color match or fall back to black/transparent
+                const colors = CATEGORY_COLORS[catName] || DEFAULT_COLOR;
+                
+                return (
+                  <span 
+                    key={index} 
+                    className="pc-tag"
+                    style={{
+                      backgroundColor: colors.bg,
+                      borderColor: colors.border,
+                      color: colors.text
+                    }}
+                  >
+                    {catName}
+                  </span>
+                );
+              })
             ) : null}
           </div>
           
         </div>
-
       </div>
     </div>
   );
 }
+
+export default ProjectCard;

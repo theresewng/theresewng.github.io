@@ -1,12 +1,29 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import ProjectCard from "../components/projectcard.js";
 import Button from "../components/button.js";
 import { projectData } from "../data/projectData.js";
 
+// Keep color definitions outside the component function
+const CATEGORY_COLORS = {
+  "Graphic Design": { bg: "#E3F2FD", border: "#2196F3", text: "#0D47A1" },
+  "Motion Design": { bg: "#F3E5F5", border: "#9C27B0", text: "#4A148C" },
+  "UX Research": { bg: "#E8F5E9", border: "#4CAF50", text: "#1B5E20" },
+  "Branding + Identity": { bg: "#FFF3E0", border: "#FF9800", text: "#E65100" }
+};
+const DEFAULT_COLOR = { bg: "transparent", border: "#000000", text: "#000000" };
+
 function Homepage() {
   const navigate = useNavigate();
   const [selectedFilters, setSelectedFilters] = useState([]);
+
+  // Dynamically extract unique categories from your database
+  const categories = useMemo(() => {
+    const allCategories = projectData.flatMap(
+      (project) => project.category || [],
+    );
+    return [...new Set(allCategories)];
+  }, []);
 
   const toggleFilter = (category) => {
     setSelectedFilters((prev) =>
@@ -30,8 +47,6 @@ function Homepage() {
           );
         });
 
-  const categories = ["Graphic Design", "Motion Design", "UX Research"];
-
   return (
     <div className="homepage-container">
       <div className="content-wrapper">
@@ -48,17 +63,29 @@ function Homepage() {
           <aside className="left-panel-filters">
             <p className="filter-bar-label">Filter by:</p>
             <div className="filter-bar-buttons">
-              {categories.map((category) => (
-                <button
-                  key={category}
-                  className={`filter-bar-btn ${
-                    selectedFilters.includes(category) ? "active" : ""
-                  }`}
-                  onClick={() => toggleFilter(category)}
-                >
-                  {category}
-                </button>
-              ))}
+              {categories.map((category) => {
+                const isActive = selectedFilters.includes(category);
+                const colors = CATEGORY_COLORS[category] || DEFAULT_COLOR;
+
+                return (
+                  <button
+                    key={category}
+                    className={`filter-bar-btn ${isActive ? "active" : ""}`}
+                    style={
+                      isActive
+                        ? {
+                            backgroundColor: colors.bg,
+                            borderColor: colors.border,
+                            color: colors.text,
+                          }
+                        : {}
+                    }
+                    onClick={() => toggleFilter(category)}
+                  >
+                    {category}
+                  </button>
+                );
+              })}
             </div>
           </aside>
 
@@ -72,7 +99,6 @@ function Homepage() {
               >
                 <ProjectCard {...project} />
               </Link>
-              
             ))}
 
             {filteredProjects.length === 0 && (

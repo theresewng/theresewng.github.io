@@ -17,15 +17,22 @@ function DataVizCaseStudy() {
         <h3 className="project-detail-label" style={{ marginBottom: "20px" }}>
           TLDR
         </h3>
-        <p className="project-body-copy">
-          {data.description}
-        </p>
+        <p className="project-body-copy">{data.description}</p>
         <TLDR
           role={data.role}
           timeline={data.year}
           toolsUsed={data.tools}
           designFocuses={data.category}
         />
+      </section>
+
+      <section id="learnings" className="case-study-section">
+        <iframe
+          src="https://theresewng.github.io/brewlytics.github.io/"
+          width="100%"
+          height="500px"
+          title="Description of content"
+        ></iframe>
       </section>
     </CaseStudyLayout>
   );
