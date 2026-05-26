@@ -2,6 +2,7 @@ import React from "react";
 import { projectData } from "../../data/projectData";
 import CaseStudyLayout from "../../pages/CaseStudy.js";
 import TLDR from "../../components/tldr.js";
+import Carousel from "../../components/carousel.js";
 
 function Glyphly() {
   const data = projectData.find((p) => p.slug === "glyphly");
@@ -15,6 +16,25 @@ function Glyphly() {
     { id: "artdirection", label: "PART 2: ART DIRECTION" },
     { id: "making", label: "PART 3: MAKING THE APP" },
     { id: "learnings", label: "REFLECTION" },
+  ];
+
+  const images = [
+    {
+      url: "https://images.unsplash.com/photo-1531403009284-440f080d1e12",
+      caption:
+        "High-fidelity UI mockups focusing on inclusive color systems and dark mode scaling.",
+    },
+    {
+      url: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8",
+      caption:
+        "Interactive motion design testing microinteractions and viewport transition timing.",
+    },
+
+    {
+      url: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3",
+      caption:
+        "Initial UX wireframe detailing user journey maps and route architecture.",
+    }
   ];
 
   return (
@@ -73,8 +93,9 @@ function Glyphly() {
           app.
         </p>
 
-        <div style={{ height: "300px", background: "#333", marginTop: "20px" }}>
-          inspo placeholder{" "}
+        <div style={{}}>
+          {/* inspo placeholder put a slideshow here */}
+          <Carousel images={images} />
         </div>
       </section>
 
@@ -117,9 +138,8 @@ function Glyphly() {
           Stack Developer, working on both the front-end and the back-end. It
           gave me and idea of design-development handoffs and putting yourself
           in the developers' shoes when working in consulting roles as a UX
-          Designer. 
-          <br />
-          ​ Right now, Glyphly is still a proof of concept, but I hope
+          Designer.
+          <br />​ Right now, Glyphly is still a proof of concept, but I hope
           that one day I can launch it in the app store.
         </p>
       </section>

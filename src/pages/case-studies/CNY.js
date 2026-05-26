@@ -12,7 +12,14 @@ function CNYCaseStudy() {
   const data = projectData.find((p) => p.slug === "cny");
 
   // Define the specific sidebar links for this project
-  const projectNavLinks = [{ id: "tldr", label: "TLDR" }];
+  const projectNavLinks = [
+    { id: "tldr", label: "TLDR" },
+    { id: "intro", label: "Introduction" },
+    { id: "designprocess", label: "PART 1: THE CUSTOMER JOURNEY" },
+    { id: "designing", label: "PART 2: ART DIRECTION" },
+    { id: "theotherside", label: "PART 3: THE RECEIVING END" },
+    { id: "learnings", label: "LEARNINGS" },
+  ];
 
   return (
     <CaseStudyLayout project={data} navLinks={projectNavLinks}>
