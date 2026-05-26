@@ -70,7 +70,7 @@ function Homepage() {
                 return (
                   <button
                     key={category}
-                    className={`filter-bar-btn ${isActive ? "active" : ""}`}
+                    className={`pc-tag ${isActive ? "active" : ""}`}
                     style={
                       isActive
                         ? {

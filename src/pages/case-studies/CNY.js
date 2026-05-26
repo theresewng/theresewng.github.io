@@ -6,6 +6,7 @@ import TLDR from "../../components/tldr.js";
 import CustomerJourneyMap from "../../images/Customer Journey Map.png";
 import initialUIs from "../../images/initialUIs.png";
 import RedPackets from "../../images/redpackets.png";
+import WellWishes from "../../images/wellwishes.mov";
 
 function CNYCaseStudy() {
   const data = projectData.find((p) => p.slug === "cny");
@@ -98,23 +99,105 @@ function CNYCaseStudy() {
         </h3>
 
         <h2>RED PACKET DESIGNS</h2>
-        <p className="project-body-copy">
-          Red packets (红包) symbolize good luck, blessings, and wealth. To
-          honor this tradition, I designed a series of classic red envelopes in
-          Figma, including a Year of the Rabbit theme, for senders to choose
-          from. ​<br />
-          Traditionally given in pairs to represent both parents, I incorporated
-          an option to send two envelopes, either by splitting a total amount or
-          sending two envelopes of the same value.
-        </p>
 
-        <div>
-          <img
-            src={RedPackets}
-            alt="Red Packet Designs"
-            style={{ width: "100%", height: "auto", marginTop: "20px" }}
-          />
+        <div className="two-column-layout">
+          <div>
+            <p className="project-body-copy">
+              Red packets (红包) symbolize good luck, blessings, and wealth. To
+              honor this tradition, I designed a series of classic red envelopes
+              in Figma, including a Year of the Rabbit theme, for senders to
+              choose from. ​<br />
+              Traditionally given in pairs to represent both parents, I
+              incorporated an option to send two envelopes, either by splitting
+              a total amount or sending two envelopes of the same value.
+            </p>
+          </div>
+
+          <div>
+            <img
+              src={RedPackets}
+              alt="Red Packet Designs"
+              style={{ width: "100%", height: "auto" }}
+            />
+          </div>
         </div>
+
+        <h2>WELL WISHES</h2>
+
+        <div className="two-column-layout">
+          <div>
+            <p className="project-body-copy">
+              Another tradition is to express well-wishes for the year ahead. As
+              an option, the sendee is able to send the recipient well wishes
+              such as good grades, to grow taller, and to stay healthy that will
+              be sent with the transfer.
+            </p>
+          </div>
+
+          <div>
+            <img
+              src={WellWishes}
+              alt="Well Wishes Designs"
+              style={{ width: "100%", height: "auto" }}
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="theotherside" className="case-study-section">
+        <h3 className="project-detail-label" style={{ marginBottom: "20px" }}>
+          PART THREE
+        </h3>
+        <h2>THE RECEIVING END</h2>
+
+        <div className="two-column-layout">
+          <div>
+            <p className="project-body-copy">
+              On the receiving end, the recipient gets an email similar to an
+              e-transfer, but instead of auto-depositing, they’re prompted to
+              “Open My Red Packet,” which directs them to their banking app.
+              There, they can open the packet to reveal the amount and hear the
+              attached voice memo before the funds are deposited automatically.
+            </p>
+          </div>
+
+          <div>
+            <img
+              alt="Gif of etransfer"
+              style={{ width: "100%", height: "auto" }}
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="learnings" className="case-study-section">
+        <h3 className="project-detail-label" style={{ marginBottom: "20px" }}>
+          LEARNINGS
+        </h3>
+        <p className="project-body-copy">
+          This project was a fun opportunity to explore how digital design can
+          reimagine and preserve cultural traditions. It also made me think
+          about how we can use design to foster connection and celebration even
+          when physically apart.
+          <br />I have to thank my friend for saying that one sentence, a
+          sentence that started it all. While my more traditional parents found
+          the concept as non-traditional and confusing, the new generation
+          thought it was quirky idea. This concept came to me during a period of
+          extreme creative and mental burn out. Unlike all of my school projects
+          where I am following a brief, I got to do something self-directed,
+          which really helped me to restore myself from that creative burnout
+          and do a bit more motion design, something that I would say I have a
+          love/hate relationship with. And although this project isn't
+          affiliated with the TD Brand, it was fun trying playing within TD's
+          branding guidelines. <br />
+          On a more personal note, now that I am older, I recognise that money
+          isn’t the purpose of Lunar New Year, but it is to honour the history
+          of of our elders and really celebrate culture that has been cultivated
+          to what we know today. ​<br />
+          Given the short timeline I had with this project, I am overall pleased
+          with the end result. I have a lot to learn and I plan to revisit this
+          project when I have gained some more knowledge
+        </p>
       </section>
     </CaseStudyLayout>
   );

@@ -9,6 +9,7 @@ export const projectData = [
   {
     slug: "appnovation",
     path: "/work/appnovation",
+    imageSrc: "/images/appnologo.png",
     component: AppnovationCaseStudy,
     title: "Appnovation Technologies",
     year: "2024 - 2025",
@@ -33,6 +34,7 @@ export const projectData = [
   {
     slug: "accessible-navigation",
     path: "/work/accessible-navigation",
+    imageSrc: "/images/accessible.png",
     component: AccessibleNavCaseStudy,
     title: "Reimagining Accessible Navigation",
     year: "Ongoing",
@@ -40,12 +42,13 @@ export const projectData = [
     role: ["UX Designer"],
     description:
       "          Reimagined how navigation would look like if accessibility specifically accessibility for users in wheelchairs came first.",
-    tools: ["Figma", "Miro"],
+    tools: ["Figma"],
   },
 
   {
     slug: "modus",
     path: "/work/modus",
+    imageSrc: "/images/modus.png",
     component: Modus,
     title: "Modus Coffee Cards",
     year: "September - December 2024",
@@ -59,6 +62,7 @@ export const projectData = [
   {
     slug: "glyphly",
     path: "/work/glyphly",
+    imageSrc: "/images/glyphly.png",
     component: Glyphly,
     title: "Glyphly Mobile App",
     year: "February - April 2025",
@@ -72,6 +76,7 @@ export const projectData = [
   {
     slug: "dataviz",
     path: "/work/dataviz",
+    imageSrc: "/images/appnobanner2.png",
     component: DataViz,
     title: "An Overview of Vancouver's Restaurant Scene",
     year: "October - December 2025",
@@ -85,6 +90,7 @@ export const projectData = [
   {
     slug: "cny",
     path: "/work/cny",
+    imageSrc: "/images/cnyimg.png",
     component: CNY,
     title: "Chinese New Year Banking Feature",
     year: "February 2023",

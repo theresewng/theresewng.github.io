@@ -92,7 +92,7 @@ function AppnovationCaseStudy() {
           overseeing it from end-to-end, from design, to ordering, packing, and
           mailing it out.
         </p>
-        <div className="small-two-column-layout">
+        <div className="two-column-layout">
           <div>
             <img
               src={AppnoSwag}
@@ -113,7 +113,7 @@ function AppnovationCaseStudy() {
           </div>
         </div>
       </section>
-      
+
       <section id="graphicdesign" className="case-study-section">
         <h3 className="project-detail-label" style={{ marginBottom: "20px" }}>
           GRAPHIC DESIGN
