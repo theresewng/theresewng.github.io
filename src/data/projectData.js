@@ -8,7 +8,7 @@ import DataViz from "../pages/case-studies/DataViz";
 export const projectData = [
   {
     slug: "appnovation",
-    path: "/projects/appnovation",
+    path: "/work/appnovation",
     component: AppnovationCaseStudy,
     title: "Appnovation Technologies",
     year: "2024 - 2025",
@@ -32,7 +32,7 @@ export const projectData = [
 
   {
     slug: "accessible-navigation",
-    path: "/projects/accessible-navigation",
+    path: "/work/accessible-navigation",
     component: AccessibleNavCaseStudy,
     title: "Reimagining Accessible Navigation",
     year: "Ongoing",
@@ -45,7 +45,7 @@ export const projectData = [
 
   {
     slug: "modus",
-    path: "/projects/modus",
+    path: "/work/modus",
     component: Modus,
     title: "Modus Coffee Cards",
     year: "September - December 2024",
@@ -58,7 +58,7 @@ export const projectData = [
 
   {
     slug: "glyphly",
-    path: "/projects/glyphly",
+    path: "/work/glyphly",
     component: Glyphly,
     title: "Glyphly Mobile App",
     year: "February - April 2025",
@@ -71,7 +71,7 @@ export const projectData = [
 
   {
     slug: "dataviz",
-    path: "/projects/dataviz",
+    path: "/work/dataviz",
     component: DataViz,
     title: "An Overview of Vancouver's Restaurant Scene",
     year: "October - December 2025",
@@ -84,14 +84,14 @@ export const projectData = [
 
   {
     slug: "cny",
-    path: "/projects/cny",
+    path: "/work/cny",
     component: CNY,
     title: "Chinese New Year Banking Feature",
     year: "February 2023",
     category: ["Mobile Design", "UI/UX Design", "Motion Design"],
     role: ["UI/UX Designer", "Motion Designer"],
     description:
-      "A banking extension mockup that incorporates the traditional practice of giving and receiving red packets to family members when physically apart.",
+      "I designed an imaginary banking extension that incorporates the traditional practice of giving and receiving red packets to family members when physically apart.",
     tools: ["Figma", "After Effects", "Premiere Pro"],
   },
 ];

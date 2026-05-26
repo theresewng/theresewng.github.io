@@ -23,7 +23,7 @@ function Navigation() {
           >
             {/* Kept cleanly on one line to ensure no layout wrapping shifts */}
             <div className="nav-link">
-              {`projects ${isOpen ? "▴" : "▾"}`}
+              {`work ${isOpen ? "▴" : "▾"}`}
             </div>
 
             {isOpen && (

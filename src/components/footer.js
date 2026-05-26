@@ -14,8 +14,8 @@ function Footer() {
           <Link to="/" className="nav-link">
             home
           </Link>
-          <Link to="/projects" className="nav-link">
-            projects
+          <Link to="/work" className="nav-link">
+            work
           </Link>
 
           <Link to="/sandbox" className="nav-link">

@@ -21,7 +21,7 @@ function App() {
           */}
           <Route path="/" element={<Homepage />} />
           <Route path="/about" element={<AboutMe />} />
-          <Route path="/projects" element={<Projects />} />{" "}
+          <Route path="/work" element={<Projects />} />{" "}
           {projectData.map((project) => {
             const SpecificPageLayout = project.component;
             return (

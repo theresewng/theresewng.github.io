@@ -37,6 +37,7 @@ function AppnovationCaseStudy() {
           designFocuses={data.category}
         />
       </section>
+
       <section id="animationdesign" className="case-study-section">
         <h3 className="project-detail-label" style={{ marginBottom: "20px" }}>
           PROMOTIONAL REEL
@@ -74,6 +75,7 @@ function AppnovationCaseStudy() {
           </div>
         </div>
       </section>
+
       <section id="brandpromotionaldesign" className="case-study-section">
         <h3 className="project-detail-label" style={{ marginBottom: "20px" }}>
           APPNOSWAG: EXPANDING APPNOVATION'S BRAND LANGUAGE FOR PROMOTIONAL
@@ -111,6 +113,7 @@ function AppnovationCaseStudy() {
           </div>
         </div>
       </section>
+      
       <section id="graphicdesign" className="case-study-section">
         <h3 className="project-detail-label" style={{ marginBottom: "20px" }}>
           GRAPHIC DESIGN
