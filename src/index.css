@@ -643,6 +643,7 @@ h3 {
 
   /* 2. Vertically align items to the top (prevents stretching) */
   align-items: start;
+  align-content: top;
 
   /* 3. Spacing */
   margin-top: 109px;
@@ -664,6 +665,7 @@ h3 {
   padding-right: 40px;
   padding-left: 0;
   border-right: 1px solid rgba(46, 46, 46, 0.2);
+  align-content: top;
 }
 
 .case-study-right {
@@ -949,4 +951,13 @@ h3 {
   margin: 0;
   line-height: 1.4;
   max-width: 75%; /* Stops text from colliding with the navigation dots */
+}
+
+.image-caption {
+  font-family: "Inter", sans-serif;
+  font-size: 0.75rem;
+  width: 100%;
+  margin-top: 8px;
+  font-style: italic;
+  text-align: center; /* Aligns caption text to the left for better readability */
 }

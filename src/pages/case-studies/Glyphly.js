@@ -4,6 +4,14 @@ import CaseStudyLayout from "../../pages/CaseStudy.js";
 import TLDR from "../../components/tldr.js";
 import Carousel from "../../components/carousel.js";
 
+import imageOne from "../../../src/images/Pinterest.png";
+import imageTwo from "../../../src/images/Typewolf.png";
+import imageThree from "../../../src/images/FontsinUse.png";
+import DesignGuidelines from "../../../src/images/DesignGuidelines.png";
+import UXMap from "../../../src/images/GlyphlyArchitecture.png";
+import Mockups from "../../../src/images/AppSketches.png";
+import GlyphlyBanner from "../../../src/images/Glyphlybanner.png";
+
 function Glyphly() {
   const data = projectData.find((p) => p.slug === "glyphly");
 
@@ -20,21 +28,21 @@ function Glyphly() {
 
   const images = [
     {
-      url: "https://images.unsplash.com/photo-1531403009284-440f080d1e12",
+      url: imageOne,
       caption:
-        "High-fidelity UI mockups focusing on inclusive color systems and dark mode scaling.",
+        "We were inspired by the grid format that Pinterest's homepage presented, offering designers with a variety of different designs, as well as how the user could search for what you want, and the ability to save images.",
     },
     {
-      url: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8",
+      url: imageTwo,
       caption:
-        "Interactive motion design testing microinteractions and viewport transition timing.",
+        "We liked that Typewolf gave users a description about each font, offer font pairings and similar fonts, and how it looks like.",
     },
 
     {
-      url: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3",
+      url: imageThree,
       caption:
-        "Initial UX wireframe detailing user journey maps and route architecture.",
-    }
+        "We enjoyed how it showed fonts used in real-life contexts and the ability to filter by what kind of branding you want to do (Book Cover vs Movie Poster, etc.)",
+    },
   ];
 
   return (
@@ -77,8 +85,12 @@ function Glyphly() {
           were wondering if there was a similar app on the App Store.
         </p>
 
-        <div style={{ height: "300px", background: "#333", marginTop: "20px" }}>
-          GLYPHLY placeholder{" "}
+        <div>
+          <img
+            src={GlyphlyBanner}
+            alt="Glyphly Banner"
+            style={{ width: "100%", height: "100%", objectFit: "cover" }}
+          />
         </div>
       </section>
 
@@ -110,7 +122,12 @@ function Glyphly() {
           to follow mobile best practices.
         </p>
 
-        <div style={{ height: "300px", background: "#333", marginTop: "20px" }}>
+        <div>
+          <img
+            src={DesignGuidelines}
+            alt="Our Design Guidelines"
+            style={{ width: "100%", height: "auto" }}
+          />{" "}
           (show how we used material 3 to translate into our art direction){" "}
         </div>
       </section>
@@ -119,12 +136,26 @@ function Glyphly() {
         <h3 className="project-detail-label" style={{ marginBottom: "20px" }}>
           PART 3: MAKING THE APP
         </h3>
-        <div style={{ height: "300px", background: "#333", marginTop: "20px" }}>
-          UX Map
+        <div>
+          <img
+            src={UXMap}
+            alt="UX Map and Architecture of the app"
+            style={{ width: "100%", height: "auto", marginTop: "20px" }}
+          />
+          <p className="image-caption">
+            <i>Our UX Map and Architecture</i>
+          </p>
         </div>
 
-        <div style={{ height: "300px", background: "#333", marginTop: "20px" }}>
-          Mockups to code{" "}
+        <div>
+          <img
+            src={Mockups}
+            alt="Mockups of the app"
+            style={{ width: "100%", height: "auto", marginTop: "20px" }}
+          />
+          <p className="image-caption">
+            <i>Our Mockups</i>
+          </p>
         </div>
       </section>
 
@@ -139,7 +170,7 @@ function Glyphly() {
           gave me and idea of design-development handoffs and putting yourself
           in the developers' shoes when working in consulting roles as a UX
           Designer.
-          <br />​ Right now, Glyphly is still a proof of concept, but I hope
+          <br />​Right now, Glyphly is still a proof of concept, but I hope
           that one day I can launch it in the app store.
         </p>
       </section>
