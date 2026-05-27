@@ -51,12 +51,18 @@ function CNYCaseStudy() {
         </h3>
         <p className="project-body-copy">
           As a child, I eagerly awaited Lunar New Year for the red envelope,
-          which felt like my "yearly earnings." <br />
+          which felt like my "yearly earnings." </p>
+
+ <p className="project-body-copy">
+
           With e-transfers becoming common in Canada, my mom started putting
           Monopoly money in our envelopes, promising to transfer the real amount
           within 24–48 hours. This led me to joke that relatives abroad could
           just e-transfer directly. ​
-          <br />
+          </p>
+
+ <p className="project-body-copy">
+
           Talking with a friend who never received red packets made me consider
           how families could celebrate Lunar New Year together even when apart.
         </p>
@@ -113,7 +119,10 @@ function CNYCaseStudy() {
               Red packets (红包) symbolize good luck, blessings, and wealth. To
               honor this tradition, I designed a series of classic red envelopes
               in Figma, including a Year of the Rabbit theme, for senders to
-              choose from. ​<br />
+              choose from. ​</p>
+
+ <p className="project-body-copy">
+
               Traditionally given in pairs to represent both parents, I
               incorporated an option to send two envelopes, either by splitting
               a total amount or sending two envelopes of the same value.
@@ -186,7 +195,10 @@ function CNYCaseStudy() {
           reimagine and preserve cultural traditions. It also made me think
           about how we can use design to foster connection and celebration even
           when physically apart.
-          <br />I have to thank my friend for saying that one sentence, a
+          </p>
+
+ <p className="project-body-copy">
+I have to thank my friend for saying that one sentence, a
           sentence that started it all. While my more traditional parents found
           the concept as non-traditional and confusing, the new generation
           thought it was quirky idea. This concept came to me during a period of
@@ -196,11 +208,17 @@ function CNYCaseStudy() {
           and do a bit more motion design, something that I would say I have a
           love/hate relationship with. And although this project isn't
           affiliated with the TD Brand, it was fun trying playing within TD's
-          branding guidelines. <br />
+          branding guidelines. </p>
+
+ <p className="project-body-copy">
+
           On a more personal note, now that I am older, I recognise that money
           isn’t the purpose of Lunar New Year, but it is to honour the history
           of of our elders and really celebrate culture that has been cultivated
-          to what we know today. ​<br />
+          to what we know today. ​</p>
+
+ <p className="project-body-copy">
+
           Given the short timeline I had with this project, I am overall pleased
           with the end result. I have a lot to learn and I plan to revisit this
           project when I have gained some more knowledge

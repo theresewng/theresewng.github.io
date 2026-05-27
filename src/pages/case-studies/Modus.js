@@ -81,10 +81,14 @@ function Modus() {
         </h4>
         <p className="project-body-copy">
           1. Customers want to understand the menu before visiting the café.
-          <br />
+        </p>
+
+        <p className="project-body-copy">
           2. Customers are interested in trying new coffee profiles but feel
           overwhelmed by the menu.
-          <br />
+        </p>
+
+        <p className="project-body-copy">
           3. Customers value barista recommendations but want more confidence in
           their choices.
         </p>
@@ -183,7 +187,9 @@ function Modus() {
           journey mapping. It was also interesting to work on a project that was
           focused on education and discovery, which is something I haven’t had
           much experience with before.
-          <br />
+        </p>
+
+        <p className="project-body-copy">
           Overall, the client was pleased with the end product. This project
           taught me a lot about UX Consulting and I really enjoyed partnering
           with a real company to work on a solution together. It was very
@@ -195,9 +201,61 @@ function Modus() {
         <h4 className="project-detail-label" style={{ marginBottom: "20px" }}>
           KEY LEARNINGS
         </h4>
+
+        <div className="small-two-column-layout">
+          <div>
+            <h3 className="project-detail-label">Balancing Personal Biases</h3>
+            <p className="project-body-copy">
+              As a coffee drinker and someone who would consider themselves to
+              be a One Trick Pony, I had to maintain a balance of sharing
+              personal experiences and not jumping straight into a solution or
+              thinking that I know what the solution is from the start. I also
+              had to make sure my biases on all coffee shops that we did
+              ethnographic studies were neutral.
+            </p>
+            <p className="project-body-copy">
+              One example is when creating the Customer Journey Map for our
+              One-Trick Pony, I had to make sure that the map was inclusive of
+              all the data we gathered and disconnect myself from that persona
+              and journey map.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="project-detail-label">
+              The Importance of Direct User Interaction
+            </h3>
+            <p className="project-body-copy">
+              While this might seem obvious, talking to people has always been
+              scary for me. Stepping outside of my comfort zone and engaging
+              directly with strangers helped me build stronger research skills.
+              By asking spontaneous follow-up questions and digging deeper into
+              participants’ responses, I gained more meaningful insights than a
+              scripted interview alone could provide.
+            </p>
+
+            <p className="project-body-copy">
+              This was especially important during our client meetings when we
+              would meet and the team has a list of questions to ask but we did
+              not just want the meetings to just be a back and forth question
+              and answer session.
+            </p>
+          </div>
+        </div>
       </section>
     </CaseStudyLayout>
   );
 }
 
 export default Modus;
+
+// <div>
+//   <h3 className="project-detail-label">Designing for Discovery</h3>
+//   <p className="project-body-copy">
+//     This project was a great opportunity to practice designing for
+//     discovery, where the goal was to create an experience that would
+//     allow users to explore and learn about coffee in a meaningful way.
+//     I had to balance the need for education with the desire for an
+//     engaging and enjoyable experience.
+//   </p>
+// </div>

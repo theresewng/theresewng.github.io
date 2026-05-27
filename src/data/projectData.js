@@ -83,7 +83,7 @@ export const projectData = [
     category: ["Data Visualization"],
     role: ["Web Developer"],
     description:
-      "An data visualization on how the restaurant industry has changed over time in downtown Vancouver, looking at the changes in culture, economics and consumer habits.",
+      "A data visualization on how the restaurant industry has changed over time in downtown Vancouver, looking at the changes in culture, economics and consumer habits.",
     tools: ["Figma"],
   },
 

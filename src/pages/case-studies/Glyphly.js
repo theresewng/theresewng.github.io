@@ -170,8 +170,10 @@ function Glyphly() {
           gave me and idea of design-development handoffs and putting yourself
           in the developers' shoes when working in consulting roles as a UX
           Designer.
-          <br />​Right now, Glyphly is still a proof of concept, but I hope
-          that one day I can launch it in the app store.
+        </p>
+        <p className="project-body-copy">
+          ​Right now, Glyphly is still a proof of concept, but I hope that one
+          day I can launch it in the app store.
         </p>
       </section>
     </CaseStudyLayout>

@@ -92,7 +92,7 @@ function AppnovationCaseStudy() {
           overseeing it from end-to-end, from design, to ordering, packing, and
           mailing it out.
         </p>
-        <div className="two-column-layout">
+        <div className="small-two-column-layout">
           <div>
             <img
               src={AppnoSwag}

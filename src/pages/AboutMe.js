@@ -28,8 +28,14 @@ function AboutMe() {
               and Entrepreneurship which has allowed me to develop an interest
               in the intersection of Consulting and creating accessible User
               Experiences.
-              <br />
-              <br />
+              </p>
+
+ <p className="project-body-copy">
+
+              </p>
+
+ <p className="project-body-copy">
+
               Outside of designing, I have been working on a side project called
               Don't Look at Me! - a fashion exploration project designing
               clothes inspired by big fashion houses that is worn by the average
