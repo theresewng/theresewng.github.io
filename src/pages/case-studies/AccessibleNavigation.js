@@ -15,7 +15,11 @@ function AccessibleNavigationCaseStudy() {
   // Track which image asset object { src, alt } is currently blown up full screen
   const [activeExpandedImage, setActiveExpandedImage] = useState(null);
 
-  const projectNavLinks = [];
+  const projectNavLinks = [
+    { id: "tldr", label: "TLDR" },
+    { id: "posters", label: "SHOWCASE POSTERS" },
+    { id: "ugrs", label: "UGRS POSTER" },
+  ];
 
   const handleOpenImage = (src, alt) => {
     setActiveExpandedImage({ src, alt });
@@ -55,7 +59,7 @@ function AccessibleNavigationCaseStudy() {
         </p>
       </section>
       {/* Showcase Posters Section */}
-      <section id="Showcase Posters" className="case-study-section">
+      <section id="posters" className="case-study-section">
         <div className="four-column-layout">
           <div
             className="cs-gallery-item"
@@ -100,7 +104,7 @@ function AccessibleNavigationCaseStudy() {
         </div>
       </section>
       {/* UGRS Poster Section */}
-      <section id="UGRS Poster" className="case-study-section">
+      <section id="ugrs" className="case-study-section">
         <div
           className="cs-gallery-item standalone-poster-wrapper"
           onClick={() => handleOpenImage(UGRS, "UGRS Poster")}
