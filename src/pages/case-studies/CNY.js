@@ -7,6 +7,7 @@ import CustomerJourneyMap from "../../images/Customer Journey Map.png";
 import initialUIs from "../../images/initialUIs.png";
 import RedPackets from "../../images/redpackets.png";
 import WellWishes from "../../images/wellwishes.mov";
+import receiving from "../../images/receiving.gif";
 
 function CNYCaseStudy() {
   const data = projectData.find((p) => p.slug === "cny");
@@ -29,7 +30,8 @@ function CNYCaseStudy() {
   };
 
   return (
-    <CaseStudyLayout project={data} navLinks={projectNavLinks}>
+    <CaseStudyLayout       project={{ ...data, image: "/images/cnybanner.jpg" }}
+ navLinks={projectNavLinks}>
       {/* Everything below this line automatically becomes the 'children' and gets placed in the right panel! */}
 
       <section id="tldr" className="case-study-section">
@@ -58,7 +60,7 @@ function CNYCaseStudy() {
         </h3>
         <p className="project-body-copy">
           As a child, I eagerly awaited Lunar New Year for the red envelope,
-          which felt like my "yearly earnings." 
+          which felt like my "yearly earnings."
         </p>
         <p className="project-body-copy">
           With e-transfers becoming common in Canada, my mom started putting
@@ -85,9 +87,14 @@ function CNYCaseStudy() {
           experience of giving and receiving red packets into a digital context.
         </p>
 
-        <div 
-          className="cs-gallery-item standalone-image-wrapper" 
-          onClick={() => handleOpenImage(CustomerJourneyMap, "Lunar New Year Red Packet Customer Journey Map")}
+        <div
+          className="cs-gallery-item standalone-image-wrapper"
+          onClick={() =>
+            handleOpenImage(
+              CustomerJourneyMap,
+              "Lunar New Year Red Packet Customer Journey Map",
+            )
+          }
         >
           <img
             src={CustomerJourneyMap}
@@ -103,9 +110,14 @@ function CNYCaseStudy() {
             colour familiar to the tradition.
           </p>
 
-          <div 
-            className="cs-gallery-item standalone-image-wrapper" 
-            onClick={() => handleOpenImage(initialUIs, "Initial Mobile Interface Wireframes for Red Packets")}
+          <div
+            className="cs-gallery-item standalone-image-wrapper"
+            onClick={() =>
+              handleOpenImage(
+                initialUIs,
+                "Initial Mobile Interface Wireframes for Red Packets",
+              )
+            }
           >
             <img
               src={initialUIs}
@@ -138,14 +150,20 @@ function CNYCaseStudy() {
             </p>
           </div>
 
-          <div 
-            className="cs-gallery-item" 
-            onClick={() => handleOpenImage(RedPackets, "Figma Art Direction - Red Packet Visual Designs")}
+          <div
+            className="cs-gallery-item"
+            onClick={() =>
+              handleOpenImage(
+                RedPackets,
+                "Figma Art Direction - Red Packet Visual Designs",
+              )
+            }
           >
             <img
               src={RedPackets}
               alt="Red Packet Designs"
               className="cs-responsive-img"
+              style={{ width: "60%", height: "auto" }}
             />
           </div>
         </div>
@@ -164,10 +182,10 @@ function CNYCaseStudy() {
 
           <div>
             {/* Kept intact as a standard video item block */}
-            <video 
-              src={WellWishes} 
-              className="cs-responsive-img" 
-              controls 
+            <video
+              src={WellWishes}
+              className="cs-responsive-img"
+              controls
               muted
             />
           </div>
@@ -193,8 +211,27 @@ function CNYCaseStudy() {
 
           <div>
             {/* Empty source placeholder image hidden from lightbox array until source is defined */}
-            <div style={{ width: "100%", height: "200px", background: "#f5f5f7", borderRadius: "6px", display: "flex", alignItems: "center", justifyContent: "center", color: "#86868b" }}>
-              E-Transfer Animation Placeholder
+            <div
+              className="cs-gallery-item"
+              onClick={() =>
+                handleOpenImage(
+                  receiving,
+                  // "Figma Art Direction - Red Packet Visual Designs",
+                )
+              }
+            >
+              {" "}
+              <img
+                src={receiving}
+                alt="Receiving the red packet and opening it to reveal the amount and hear the attached voice memo"
+                className="cs-responsive-img"
+              />
+              <p className="image-caption" style={{ marginTop: "10px" }}>
+                <i>
+                  Animation showing the receiving end experience of opening the
+                  red packet
+                </i>
+              </p>
             </div>
           </div>
         </div>
@@ -211,17 +248,16 @@ function CNYCaseStudy() {
           when physically apart.
         </p>
         <p className="project-body-copy">
-          I have to thank my friend for saying that one sentence, a
-          sentence that started it all. While my more traditional parents found
-          the concept as non-traditional and confusing, the new generation
-          thought it was quirky idea. This concept came to me during a period of
-          extreme creative and mental burn out. Unlike all of my school projects
-          where I am following a brief, I got to do something self-directed,
-          which really helped me to restore myself from that creative burnout
-          and do a bit more motion design, something that I would say I have a
-          love/hate relationship with. And although this project isn't
-          affiliated with the TD Brand, it was fun trying playing within TD's
-          branding guidelines. 
+          I have to thank my friend for saying that one sentence, a sentence
+          that started it all. While my more traditional parents found the
+          concept as non-traditional and confusing, the new generation thought
+          it was quirky idea. This concept came to me during a period of extreme
+          creative and mental burn out. Unlike all of my school projects where I
+          am following a brief, I got to do something self-directed, which
+          really helped me to restore myself from that creative burnout and do a
+          bit more motion design, something that I would say I have a love/hate
+          relationship with. And although this project isn't affiliated with the
+          TD Brand, it was fun trying playing within TD's branding guidelines.
         </p>
         <p className="project-body-copy">
           On a more personal note, now that I am older, I recognise that money
@@ -238,11 +274,20 @@ function CNYCaseStudy() {
 
       {/* Universal Lightbox Modal Layer */}
       {activeExpandedImage && (
-        <div className="cs-lightbox" onClick={() => setActiveExpandedImage(null)}>
-          <button className="cs-close-btn" onClick={() => setActiveExpandedImage(null)}>
+        <div
+          className="cs-lightbox"
+          onClick={() => setActiveExpandedImage(null)}
+        >
+          <button
+            className="cs-close-btn"
+            onClick={() => setActiveExpandedImage(null)}
+          >
             &times;
           </button>
-          <div className="cs-lightbox-content" onClick={(e) => e.stopPropagation()}>
+          <div
+            className="cs-lightbox-content"
+            onClick={(e) => e.stopPropagation()}
+          >
             <img src={activeExpandedImage.src} alt={activeExpandedImage.alt} />
             <p className="cs-lightbox-meta">{activeExpandedImage.alt}</p>
           </div>
