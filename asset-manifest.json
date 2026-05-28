@@ -1,27 +1,43 @@
 {
   "files": {
-    "main.css": "/static/css/main.9ba6a5d1.css",
-    "main.js": "/static/js/main.91344e12.js",
+    "main.css": "/static/css/main.1422ea44.css",
+    "main.js": "/static/js/main.76f64e69.js",
+    "static/media/IMG_Two.png": "/static/media/IMG_Two.5302bc63040ce5896251.png",
+    "static/media/IMG_Three.png": "/static/media/IMG_Three.b9c00596815445f2643a.png",
+    "static/media/IMG_One.png": "/static/media/IMG_One.b35efa5c364e938eaf75.png",
+    "static/media/UGRS_Poster.png": "/static/media/UGRS_Poster.be2f97e546a4319ca380.png",
+    "static/media/cards.png": "/static/media/cards.61cb647e2da43aa78da3.png",
+    "static/media/customer journey.png": "/static/media/customer journey.8e55501972df010f0864.png",
     "static/media/Pinterest.png": "/static/media/Pinterest.643d97eb7ece86165ef8.png",
+    "static/media/PrecedentThree.png": "/static/media/PrecedentThree.f618e2d18a66b3c0ddbd.png",
     "static/media/Glyphlybanner.png": "/static/media/Glyphlybanner.8d94cede22baed9b7bc0.png",
+    "static/media/Tabloid2.png": "/static/media/Tabloid2.24529631408ca88780c6.png",
     "static/media/appnoswag.png": "/static/media/appnoswag.85ea29f61b0dc43818c6.png",
     "static/media/FontsinUse.png": "/static/media/FontsinUse.ecf6f2036d0a986c844a.png",
+    "static/media/Tabloid1.png": "/static/media/Tabloid1.cfe9eff364ba1d5bb23a.png",
     "static/media/card.png": "/static/media/card.ba147184b4f4a7e373b8.png",
+    "static/media/PrecedentOne.png": "/static/media/PrecedentOne.e266880070a908d45e8b.png",
+    "static/media/Tabloid4.png": "/static/media/Tabloid4.2e65932f0e448a5528fb.png",
+    "static/media/Tabloid3.png": "/static/media/Tabloid3.00b76f359245c7ebe49c.png",
     "static/media/AppSketches.png": "/static/media/AppSketches.18c7017d1c8d944d7fc6.png",
     "static/media/wellwishes.mov": "/static/media/wellwishes.94497ccb0da8f9372f6e.mov",
     "static/media/therese.png": "/static/media/therese.9abd651ede507371d222.png",
+    "static/media/PrecedentTwo.png": "/static/media/PrecedentTwo.8b58b96239b130de8392.png",
     "static/media/Customer Journey Map.png": "/static/media/Customer Journey Map.28250ec565a97d3486d8.png",
     "static/media/DesignGuidelines.png": "/static/media/DesignGuidelines.5788a5c9d6135cffb675.png",
+    "static/media/affinitydiagram.png": "/static/media/affinitydiagram.ce81add4e3bedc3b1316.png",
     "static/media/Typewolf.png": "/static/media/Typewolf.f3a6eaa0084f159e50f2.png",
+    "static/media/breakdown.png": "/static/media/breakdown.53dba84e33e4c5e5c04d.png",
     "static/media/GlyphlyArchitecture.png": "/static/media/GlyphlyArchitecture.80dd845551a706d8b463.png",
     "static/media/redpackets.png": "/static/media/redpackets.3e9ece17cc4c2ce1adaa.png",
     "static/media/initialUIs.png": "/static/media/initialUIs.056911d1da386211b943.png",
+    "static/media/customerdata.png": "/static/media/customerdata.0e1461a4348596ba816b.png",
     "index.html": "/index.html",
-    "main.9ba6a5d1.css.map": "/static/css/main.9ba6a5d1.css.map",
-    "main.91344e12.js.map": "/static/js/main.91344e12.js.map"
+    "main.1422ea44.css.map": "/static/css/main.1422ea44.css.map",
+    "main.76f64e69.js.map": "/static/js/main.76f64e69.js.map"
   },
   "entrypoints": [
-    "static/css/main.9ba6a5d1.css",
-    "static/js/main.91344e12.js"
+    "static/css/main.1422ea44.css",
+    "static/js/main.76f64e69.js"
   ]
 }
