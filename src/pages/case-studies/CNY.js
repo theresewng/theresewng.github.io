@@ -188,7 +188,7 @@ function CNYCaseStudy() {
 
       <section id="learnings" className="case-study-section">
         <h3 className="project-detail-label" style={{ marginBottom: "20px" }}>
-          LEARNINGS
+          REFLECTIONS
         </h3>
         <p className="project-body-copy">
           This project was a fun opportunity to explore how digital design can

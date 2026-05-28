@@ -49,7 +49,7 @@ function CaseStudy({ project, navLinks, children }) {
 
   return (
     <div className="project-page-layout">
-      {/* <ProjectHero title={project.title} bannerImage={project.image} /> */}
+      <ProjectHero title={project.title} bannerImage={project.image} />
 
       <div className="project-page-container" style={{ paddingTop: "0px" }}>
         <div className="content-wrapper">

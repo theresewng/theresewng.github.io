@@ -13,7 +13,6 @@ export const projectData = [
     component: AppnovationCaseStudy,
     title: "Appnovation Technologies",
     year: "2024 - 2025",
-    // 1. Changed from a string to an array of individual disciplines
     category: [
       "CO-OP",
       "Graphic Design",
@@ -69,8 +68,8 @@ export const projectData = [
     category: ["Mobile Design"],
     role: ["Mobile Designer", "Developer"],
     description:
-      "Inspired by websites such as FontsinUse and TypeWolf, me and my partner created the app Glyphly to look at font pairings and see how fonts are being used around the world.",
-    tools: ["Figma"],
+      "Inspired by websites such as FontsinUse and TypeWolf, me and my partner created this app to see how fonts are being used around the world.",
+    tools: ["Figma", "VS Code", "React Native", "Firebase"],
   },
 
   {

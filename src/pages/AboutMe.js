@@ -20,30 +20,34 @@ function AboutMe() {
             />
           </div>
           <div className="right-panel">
-            <p>
-              I'm currently in my fourth year at Simon Fraser University where I
-              am studying Interactive Arts and Technology concentrating in
-              Interaction Design and Web and Mobile Design and Development. In
-              addition, I have completed my Business certification in Innovation
-              and Entrepreneurship which has allowed me to develop an interest
-              in the intersection of Consulting and creating accessible User
-              Experiences.
+            <section>
+              <p>
+                I am a communicator, web accessibility specialist, and digital
+                designer with experience in IT and consulting spaces. I have a
+                degree in Interactive Arts and Technology with concentrations in
+                Interaction Design and Web and Mobile Design and Development. In
+                addition, I have completed my Business certification in
+                Innovation and Entrepreneurship which has allowed me to develop
+                an interest in the intersection of Consulting and creating
+                accessible User Experiences.
               </p>
 
- <p className="project-body-copy">
+              <p className="project-body-copy"></p>
 
+              <p className="project-body-copy">
+                Outside of designing, I have been working on a side project
+                called Don't Look at Me! - a fashion exploration project
+                designing clothes inspired by big fashion houses that is worn by
+                the average office worker, and attached with quiet distinct
+                branding (think RSVP from Paris, The Row, etc.).
               </p>
-
- <p className="project-body-copy">
-
-              Outside of designing, I have been working on a side project called
-              Don't Look at Me! - a fashion exploration project designing
-              clothes inspired by big fashion houses that is worn by the average
-              office worker, and attached with quiet distinct branding (think
-              RSVP from Paris, The Row, etc.).
-            </p>
+            </section>
           </div>
         </div>
+
+        <section style={{ paddingTop: "40px" }}>
+          <h2>Technologies</h2>
+        </section>
       </div>
     </div>
   );

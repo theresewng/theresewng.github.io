@@ -12,20 +12,23 @@ body {
   background-color: #ffffff;
 }
 
+/* The container holding both the filters and the projects */
 .two-column-layout-homepage {
-  /* padding-top: 80px; */
-  display: grid;
-  align-items: start;
-  align-content: center;
-  width: 100%;
-  grid-template-columns: 20% 80%;
-  gap: 2rem;
+  display: flex;
+  gap: 1rem; /* Space between the left panel and right panel */
+  align-items: flex-start;
 }
 
-/* 2. Left Sidebar Styling (Sticky setup) */
+/* Update your Left Column */
 .left-panel-filters {
-  position: sticky;
-  top: 40px; /* Pins the filter panel 40px from the viewport top when scrolling */
+  flex: 0 0 320px;
+  position: sticky; /* Keep this if you want it to scroll with the page */
+  top: 40px;
+}
+
+/* Update your Right Column */
+.right-panel-projects {
+  flex: 1; /* Takes up all the remaining space on the right */
 }
 
 .filter-bar-label {
@@ -40,8 +43,9 @@ body {
 
 .filter-bar-buttons {
   display: flex;
-  flex-direction: column; /* Stacks the filter buttons into a clean vertical list */
-  gap: 12px;
+  flex-direction: row; /* Change from column to row so they sit next to each other */
+  flex-wrap: wrap;     /* Allows them to gracefully drop to the next line when they run out of space */
+  gap: 12px;           /* Keeps a clean, uniform gap between the rows and columns */
 }
 
 .filter-bar-btn {
@@ -92,7 +96,7 @@ body {
   max-width: 1350px;
   display: flex;
   flex-direction: column;
-  padding-top: 80px;
+  /* padding-top: 80px; */
 }
 
 .two-column-layout {
@@ -130,6 +134,7 @@ h2 {
   color: rgb(0, 0, 0);
   font-size: 80px;
   width: 100%;
+  padding-top: 40px;
 }
 
 .h2-project-subtitle {
@@ -488,7 +493,7 @@ h3 {
   padding: 8px 18px;
   border: 1px solid #000000;
   border-radius: 9999px; /* Creates the perfect rounded pill shape */
-  white-space: nowrap;
+  /* white-space: nowrap; */
 }
 
 /* --- Buttons --- */
@@ -505,7 +510,7 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 30px;
+  padding: 20px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -516,16 +521,17 @@ h3 {
 
 .button-text {
   font-family: "Inter", sans-serif;
-  font-size: 24px;
+  font-size: 1rem;
   font-weight: 500;
   color: black;
-  padding-right: 15px;
+  /* padding-right: 15px; */
 }
 
 .button-arrow {
   display: flex;
   align-items: center;
   transition: transform 0.3s ease-in-out;
+  padding-left: 10px;
 }
 
 .button:hover .button-arrow {
@@ -538,13 +544,11 @@ h3 {
   background-color: #ffffff;
 }
 
-/* THE FULL BLEED BANNER */
 .project-detail-banner {
   width: 100vw;
-  height: 720px;
+  aspect-ratio: 28 / 9; 
   overflow: hidden;
   position: relative;
-  /* Standard 'breakout' logic to ensure it hits screen edges */
   left: 50%;
   margin-left: -50vw;
 }
@@ -553,16 +557,14 @@ h3 {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: top left;
+  /* 'center' ensures that if it crops, it cuts evenly from all sides */
+  object-position: center; 
+  display: block;
 }
 
 /* Optional: If it's a temporary placeholder, you can give it a subtle mesh or lighter tone */
 .project-detail-banner.is-placeholder {
   background-color: rgba(0, 0, 0, 0.3);
-}
-
-.project-detail-banner img {
-  opacity: 1;
 }
 
 .project-detail-title {
@@ -701,7 +703,7 @@ h3 {
 
 /* Spacing out the right panel sections so the scrolling feels natural */
 .case-study-section {
-  padding-bottom: 80px;
+  padding-bottom: 40px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -818,7 +820,8 @@ h3 {
   margin-top: 40px;
 }
 
-/* Image Carousel */.carousel-container {
+/* Image Carousel */
+.carousel-container {
   position: relative;
   width: 100%;
   max-width: 1100px;
@@ -893,7 +896,7 @@ h3 {
 .carousel-dots {
   position: absolute;
   bottom: 24px; /* Slightly pushed up to accommodate the gradient overlay */
-  right: 24px;  /* Moved to the bottom right corner so it doesn't overlap text layout */
+  right: 24px; /* Moved to the bottom right corner so it doesn't overlap text layout */
   left: auto;
   transform: none;
   display: flex;
@@ -940,8 +943,8 @@ h3 {
   left: 0;
   width: 100%;
   /* Dark smooth gradient overlay to ensure text is always readable */
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8)); 
-  padding: 48px 32px 24px 32px;
+  background: rgba(0, 0, 0, 0.644);
+  padding: 28px 32px 24px 32px;
   box-sizing: border-box;
   z-index: 5;
 }
@@ -955,4 +958,3 @@ h3 {
   line-height: 1.4;
   max-width: 75%; /* Stops text from colliding with the navigation dots */
 }
-

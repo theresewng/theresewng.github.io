@@ -8,12 +8,12 @@ function ProjectHero({ title, description, bannerImage }) {
           <img
             src={bannerImage}
             alt={`${title} Banner`}
-            // style={{ width: "100%", height: "100%", objectFit: "cover" }}
+            // Removed inline width/height/objectFit so CSS takes over
           />
         )}
         <div className="project-hero-text-wrapper">
-          <h1 className="project-detail-title">{title}</h1>
-          <p className="project-detail-body">{description}</p>
+          {/* <h1 className="project-detail-title">{title}</h1> */}
+          {/* <p className="project-detail-body">{description}</p> */}
         </div>
       </div>
     </div>

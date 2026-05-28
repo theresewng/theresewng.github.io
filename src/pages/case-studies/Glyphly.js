@@ -1,4 +1,6 @@
 import React from "react";
+import { useNavigate, Link } from "react-router-dom";
+
 import { projectData } from "../../data/projectData";
 import CaseStudyLayout from "../../pages/CaseStudy.js";
 import TLDR from "../../components/tldr.js";
@@ -11,8 +13,10 @@ import DesignGuidelines from "../../../src/images/DesignGuidelines.png";
 import UXMap from "../../../src/images/GlyphlyArchitecture.png";
 import Mockups from "../../../src/images/AppSketches.png";
 import GlyphlyBanner from "../../../src/images/Glyphlybanner.png";
+import Button from "../../components/button.js";
 
 function Glyphly() {
+  const navigate = useNavigate();
   const data = projectData.find((p) => p.slug === "glyphly");
 
   // Define the specific sidebar links for this project
@@ -61,6 +65,18 @@ function Glyphly() {
           referrerpolicy="strict-origin-when-cross-origin"
           allowfullscreen
         ></iframe>
+
+        <Button
+          text="Final Presentation Deck"
+          showArrow={false}
+          onClick={() =>
+            window.open(
+              "https://www.figma.com/proto/w83HiLegMwb4CK72VIr3Fb/Website?page-id=1615%3A227&node-id=1615-243&p=f&viewport=101%2C616%2C0.11&t=Lf1AsoVOzgz5ocTt-1&scaling=contain&content-scaling=fixed",
+              "_blank",
+              "noopener,noreferrer",
+            )
+          }
+        />
       </section>
       <section id="tldr" className="case-study-section">
         <h3 className="project-detail-label">TLDR</h3>
@@ -109,6 +125,12 @@ function Glyphly() {
           {/* inspo placeholder put a slideshow here */}
           <Carousel images={images} />
         </div>
+
+        <p className="project-body-copy">
+          We wanted to create an app that was a combination of the three, where
+          users could search for fonts, look at font pairings, see how they look
+          in real life contexts, and save them to their profile.
+        </p>
       </section>
 
       <section id="artdirection" className="case-study-section">
@@ -136,6 +158,11 @@ function Glyphly() {
         <h3 className="project-detail-label" style={{ marginBottom: "20px" }}>
           PART 3: MAKING THE APP
         </h3>
+
+        <p>
+          After creating key components, we designed our app mockups in Figma,
+          creating first a basic UX Map to figure out our user flow.
+        </p>
         <div>
           <img
             src={UXMap}
@@ -145,6 +172,8 @@ function Glyphly() {
           <p className="image-caption">
             <i>Our UX Map and Architecture</i>
           </p>
+
+          <p>From here, we converted our designs into code</p>
         </div>
 
         <div>
@@ -172,8 +201,10 @@ function Glyphly() {
           Designer.
         </p>
         <p className="project-body-copy">
-          ​Right now, Glyphly is still a proof of concept, but I hope that one
-          day I can launch it in the app store.
+          We were limited by a few technical constraints of creating our app. If
+          I was to add onto this project, with the rise in AI, I would like to
+          explore if it is possible for AI to identify fonts based on images and
+          suggest font pairings based on that.
         </p>
       </section>
     </CaseStudyLayout>

@@ -20,7 +20,7 @@ function AppnovationCaseStudy() {
 
   return (
     <CaseStudyLayout
-      project={{ ...data, image: "/images/appnobanner2.png" }}
+      project={{ ...data, image: "/images/appnobanner.png" }}
       navLinks={projectNavLinks}
     >
       <section id="tldr" className="case-study-section">
