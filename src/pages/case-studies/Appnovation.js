@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { projectData } from "../../data/projectData";
 import CaseStudyLayout from "../../pages/CaseStudy.js";
 import TLDR from "../../components/tldr.js";
@@ -7,6 +7,9 @@ import ThankYouCards from "../../images/card.png";
 
 function AppnovationCaseStudy() {
   const data = projectData.find((p) => p.slug === "appnovation");
+
+  // Track the active image asset object { src, alt } currently blown up full screen
+  const [activeExpandedImage, setActiveExpandedImage] = useState(null);
 
   // Define the specific sidebar links for this project
   const projectNavLinks = [
@@ -17,6 +20,10 @@ function AppnovationCaseStudy() {
     { id: "webdesign", label: "WEB DESIGN" },
     { id: "learnings", label: "LEARNINGS" },
   ];
+
+  const handleOpenImage = (src, alt) => {
+    setActiveExpandedImage({ src, alt });
+  };
 
   return (
     <CaseStudyLayout
@@ -66,10 +73,10 @@ function AppnovationCaseStudy() {
               height="315"
               src="https://www.youtube.com/embed/iuI6FcfOU5c?si=dSxM6OO4gYrM8oFP"
               title="YouTube video player"
-              frameborder="0"
+              frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
             ></iframe>
             {/* Animation Reel Placeholder */}
           </div>
@@ -92,23 +99,29 @@ function AppnovationCaseStudy() {
           overseeing it from end-to-end, from design, to ordering, packing, and
           mailing it out.
         </p>
-        <div className="small-two-column-layout">
-          <div>
+        <div className="small-two-column-layout" style={{ marginTop: "20px" }}>
+          <div 
+            className="cs-gallery-item" 
+            onClick={() => handleOpenImage(AppnoSwag, "AppnoSwag Package Delivery Showcase")}
+          >
             <img
               src={AppnoSwag}
               alt="AppnoSwag"
-              style={{ width: "100%", height: "auto", marginTop: "20px" }}
+              className="cs-responsive-img"
             />
             <p className="image-caption">
               An Appno Swag package being sent off to our newest clients in the
               US!
             </p>
           </div>
-          <div>
+          <div 
+            className="cs-gallery-item" 
+            onClick={() => handleOpenImage(ThankYouCards, "Appnovation Branded Corporate Thank You Cards")}
+          >
             <img
               src={ThankYouCards}
               alt="Thank You Cards"
-              style={{ width: "100%", height: "auto", marginTop: "20px" }}
+              className="cs-responsive-img"
             />
           </div>
         </div>
@@ -127,6 +140,7 @@ function AppnovationCaseStudy() {
           Graphic Design Placeholder
         </div>
       </section>
+      
       <section id="webdesign" className="case-study-section">
         <h3 className="project-detail-label" style={{ marginBottom: "20px" }}>
           WEB DESIGN
@@ -145,6 +159,7 @@ function AppnovationCaseStudy() {
           Web Design Placeholder
         </div>
       </section>
+      
       <section id="learnings" className="case-study-section">
         <h3 className="project-detail-label" style={{ marginBottom: "20px" }}>
           LEARNINGS
@@ -160,6 +175,19 @@ function AppnovationCaseStudy() {
           intersection of consulting and experience design.
         </p>
       </section>
+
+      {/* Universal Lightbox Modal Layer */}
+      {activeExpandedImage && (
+        <div className="cs-lightbox" onClick={() => setActiveExpandedImage(null)}>
+          <button className="cs-close-btn" onClick={() => setActiveExpandedImage(null)}>
+            &times;
+          </button>
+          <div className="cs-lightbox-content" onClick={(e) => e.stopPropagation()}>
+            <img src={activeExpandedImage.src} alt={activeExpandedImage.alt} />
+            <p className="cs-lightbox-meta">{activeExpandedImage.alt}</p>
+          </div>
+        </div>
+      )}
     </CaseStudyLayout>
   );
 }

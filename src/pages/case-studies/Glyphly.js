@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { projectData } from "../../data/projectData";
 import CaseStudyLayout from "../../pages/CaseStudy.js";
@@ -17,6 +17,9 @@ import GlyphlyBanner from "../../../src/images/Glyphlybanner.png";
 function Glyphly() {
   const data = projectData.find((p) => p.slug === "glyphly");
 
+  // Track which image asset object { src, alt } is currently blown up full screen
+  const [activeExpandedImage, setActiveExpandedImage] = useState(null);
+
   // Define the specific sidebar links for this project
   const projectNavLinks = [
     { id: "walkthrough", label: "WALKTHROUGH VIDEO  " },
@@ -27,6 +30,10 @@ function Glyphly() {
     { id: "making", label: "PART 3: MAKING THE APP" },
     { id: "learnings", label: "REFLECTION" },
   ];
+
+  const handleOpenImage = (src, alt) => {
+    setActiveExpandedImage({ src, alt });
+  };
 
   const images = [
     {
@@ -39,7 +46,6 @@ function Glyphly() {
       caption:
         "We liked that Typewolf gave users a description about each font, offer font pairings and similar fonts, and how it looks like.",
     },
-
     {
       url: imageThree,
       caption:
@@ -58,10 +64,10 @@ function Glyphly() {
           height="315"
           src="https://www.youtube.com/embed/g0tyK3pwzD8?si=FM4ByjOU2nRlw7AZ"
           title="YouTube video player"
-          frameborder="0"
+          frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
         ></iframe>
 
         <Button
@@ -76,6 +82,7 @@ function Glyphly() {
           }
         />
       </section>
+      
       <section id="tldr" className="case-study-section">
         <h3 className="project-detail-label">TLDR</h3>
         <p className="project-body-copy">{data.description}</p>
@@ -86,6 +93,7 @@ function Glyphly() {
           designFocuses={data.category}
         />
       </section>
+      
       <section id="introduction" className="case-study-section">
         <h3 className="project-detail-label" style={{ marginBottom: "20px" }}>
           INTRODUCTION{" "}
@@ -99,11 +107,15 @@ function Glyphly() {
           were wondering if there was a similar app on the App Store.
         </p>
 
-        <div>
+        <div 
+          className="cs-gallery-item standalone-image-wrapper"
+          onClick={() => handleOpenImage(GlyphlyBanner, "Glyphly Typography Mobile App Interface Banner")}
+        >
           <img
             src={GlyphlyBanner}
             alt="Glyphly Banner"
-            style={{ width: "100%", height: "100%", objectFit: "cover" }}
+            className="cs-responsive-img"
+            style={{ objectFit: "cover" }}
           />
         </div>
       </section>
@@ -123,7 +135,7 @@ function Glyphly() {
           <Carousel images={images} />
         </div>
 
-        <p className="project-body-copy">
+        <p className="project-body-copy" style={{ marginTop: "20px" }}>
           We wanted to create an app that was a combination of the three, where
           users could search for fonts, look at font pairings, see how they look
           in real life contexts, and save them to their profile.
@@ -141,14 +153,19 @@ function Glyphly() {
           to follow mobile best practices.
         </p>
 
-        <div>
+        <div 
+          className="cs-gallery-item standalone-image-wrapper"
+          onClick={() => handleOpenImage(DesignGuidelines, "Glyphly Comprehensive Art Direction and Design Style Guidelines")}
+        >
           <img
             src={DesignGuidelines}
             alt="Our Design Guidelines"
-            style={{ width: "100%", height: "auto" }}
+            className="cs-responsive-img"
           />{" "}
-          (show how we used material 3 to translate into our art direction){" "}
         </div>
+        <p className="image-caption" style={{ marginTop: "8px" }}>
+          <i>Showing how we translated Material 3 guidelines into our final product art direction.</i>
+        </p>
       </section>
 
       <section id="making" className="case-study-section">
@@ -156,33 +173,40 @@ function Glyphly() {
           PART 3: MAKING THE APP
         </h3>
 
-        <p>
+        <p className="project-body-copy">
           After creating key components, we designed our app mockups in Figma,
           creating first a basic UX Map to figure out our user flow.
         </p>
-        <div>
+        
+        <div 
+          className="cs-gallery-item standalone-image-wrapper"
+          onClick={() => handleOpenImage(UXMap, "Information Architecture and User Experience Navigation Flow Map")}
+        >
           <img
             src={UXMap}
             alt="UX Map and Architecture of the app"
-            style={{ width: "100%", height: "auto", marginTop: "20px" }}
+            className="cs-responsive-img"
           />
-          <p className="image-caption">
-            <i>Our UX Map and Architecture</i>
-          </p>
-
-          <p>From here, we converted our designs into code</p>
         </div>
+        <p className="image-caption" style={{ marginTop: "8px", marginBottom: "24px" }}>
+          <i>Our UX Map and Architecture</i>
+        </p>
 
-        <div>
+        <p className="project-body-copy">From here, we converted our designs into code.</p>
+
+        <div 
+          className="cs-gallery-item standalone-image-wrapper"
+          onClick={() => handleOpenImage(Mockups, "High Fidelity Wireframes and Mobile Application Screen Mockups")}
+        >
           <img
             src={Mockups}
             alt="Mockups of the app"
-            style={{ width: "100%", height: "auto", marginTop: "20px" }}
+            className="cs-responsive-img"
           />
-          <p className="image-caption">
-            <i>Our Mockups</i>
-          </p>
         </div>
+        <p className="image-caption" style={{ marginTop: "8px" }}>
+          <i>Our Mockups</i>
+        </p>
       </section>
 
       <section id="learnings" className="case-study-section">
@@ -204,6 +228,19 @@ function Glyphly() {
           suggest font pairings based on that.
         </p>
       </section>
+
+      {/* Universal Lightbox Modal Layer */}
+      {activeExpandedImage && (
+        <div className="cs-lightbox" onClick={() => setActiveExpandedImage(null)}>
+          <button className="cs-close-btn" onClick={() => setActiveExpandedImage(null)}>
+            &times;
+          </button>
+          <div className="cs-lightbox-content" onClick={(e) => e.stopPropagation()}>
+            <img src={activeExpandedImage.src} alt={activeExpandedImage.alt} />
+            <p className="cs-lightbox-meta">{activeExpandedImage.alt}</p>
+          </div>
+        </div>
+      )}
     </CaseStudyLayout>
   );
 }

@@ -44,8 +44,8 @@ body {
 .filter-bar-buttons {
   display: flex;
   flex-direction: row; /* Change from column to row so they sit next to each other */
-  flex-wrap: wrap;     /* Allows them to gracefully drop to the next line when they run out of space */
-  gap: 12px;           /* Keeps a clean, uniform gap between the rows and columns */
+  flex-wrap: wrap; /* Allows them to gracefully drop to the next line when they run out of space */
+  gap: 12px; /* Keeps a clean, uniform gap between the rows and columns */
 }
 
 .filter-bar-btn {
@@ -550,7 +550,7 @@ h3 {
 
 .project-detail-banner {
   width: 100vw;
-  aspect-ratio: 28 / 9; 
+  aspect-ratio: 28 / 9;
   overflow: hidden;
   position: relative;
   left: 50%;
@@ -562,7 +562,7 @@ h3 {
   height: 100%;
   object-fit: cover;
   /* 'center' ensures that if it crops, it cuts evenly from all sides */
-  object-position: center; 
+  object-position: center;
   display: block;
 }
 
@@ -971,9 +971,144 @@ h3 {
   margin-top: 40px;
 }
 
+.four-column-layout {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+}
+
+/* Add this rule to control the images inside the grid */
+/* --- Base Layout Sizing Fixes --- */
+.four-column-layout {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin: 24px 0;
+}
+
+/* Stop image assets from overflowing or zooming past margins */
+.cs-responsive-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Optional wrapper styling to cleanly space out the big singular standalone poster */
+.standalone-poster-wrapper {
+  max-width: 100%;
+  margin-top: 24px;
+}
+
+/* --- Interactive Hover Zoom Triggers --- */
+.cs-gallery-item {
+  position: relative;
+  cursor: zoom-in;
+  overflow: hidden;
+  border-radius: 6px;
+  border: 1px solid #eaeaea; /* clean outline edge if posters have white backgrounds */
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cs-gallery-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* --- Overlay Modal Lightbox System --- */
+.cs-lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(
+    18,
+    20,
+    24,
+    0.96
+  ); /* Elegant premium near-black shade */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999; /* Makes certain it loads past navigation wrappers */
+  cursor: zoom-out;
+  animation: csFadeIn 0.2s ease-out;
+}
+
+.cs-lightbox-content {
+  max-width: 85%;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: default;
+}
+
+.cs-lightbox-content img {
+  max-width: 100%;
+  max-height: 75vh;
+  object-fit: contain;
+  box-shadow: 0px 12px 40px rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+  animation: csScaleUp 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cs-lightbox-meta {
+  margin-top: 14px;
+  font-family: "Inter", sans-serif;
+  font-size: 0.9rem;
+  color: #94a3b8;
+  letter-spacing: 0.02em;
+}
+
+.cs-close-btn {
+  position: absolute;
+  top: 24px;
+  right: 32px;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 3.5rem;
+  font-weight: 300;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+.cs-close-btn:hover {
+  opacity: 1;
+}
+
+/* --- Animation keyframes --- */
+@keyframes csFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes csScaleUp {
+  from {
+    transform: scale(0.97);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 .case-study-image {
   width: 100%;
   height: auto;
   background-color: #d9d9d9;
   /* object-fit: cover; */
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
 }

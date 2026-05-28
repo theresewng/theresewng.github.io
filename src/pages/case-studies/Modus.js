@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "../../components/button.js";
 
 import { projectData } from "../../data/projectData";
@@ -18,10 +18,13 @@ import CustomerData from "../../../src/images/customerdata.png";
 
 import cardBreakdown from "../../../src/images/breakdown.png";
 import cards from "../../../src/images/cards.png";
+
 function Modus() {
   const data = projectData.find((p) => p.slug === "modus");
 
-  // Define the specific sidebar links for this project
+  // Track the active image asset object { src, alt } currently blown up full screen
+  const [activeExpandedImage, setActiveExpandedImage] = useState(null);
+
   const projectNavLinks = [
     { id: "tldr", label: "TLDR" },
     { id: "introduction", label: "INTRODUCTION" },
@@ -30,6 +33,10 @@ function Modus() {
     { id: "finaldesign", label: "PART 3: FINAL DESIGN" },
     { id: "learnings", label: "LEARNINGS" },
   ];
+
+  const handleOpenImage = (src, alt) => {
+    setActiveExpandedImage({ src, alt });
+  };
 
   const imagePrecedents = [
     {
@@ -70,7 +77,6 @@ function Modus() {
         </>
       ),
     },
-
     {
       url: PrecedentThree,
       caption: (
@@ -107,7 +113,7 @@ function Modus() {
         />
 
         <div className="three-image-layout" style={{ marginTop: "20px" }}>
-          <div>
+          <div className="cs-gallery-item" onClick={() => handleOpenImage(imageOne, "Modus Coffee Cards Display Line Location")}>
             <img
               src={imageOne}
               alt="Potential location of Modus Coffee Cards, which is by the display people line up."
@@ -115,7 +121,7 @@ function Modus() {
             />
           </div>
 
-          <div>
+          <div className="cs-gallery-item" onClick={() => handleOpenImage(imageTwo, "User holding Modus Coffee Cards")}>
             <img
               src={imageTwo}
               alt="User holding Modus Coffee Cards"
@@ -123,7 +129,7 @@ function Modus() {
             />
           </div>
 
-          <div>
+          <div className="cs-gallery-item" onClick={() => handleOpenImage(imageThree, "Modus Coffee Cards Seating Location")}>
             <img
               src={imageThree}
               alt="Another location for Modus Coffee Cards, where the customers sit"
@@ -144,6 +150,7 @@ function Modus() {
           }
         />
       </section>
+      
       <section id="introduction" className="case-study-section">
         <h3 className="project-detail-label" style={{ marginBottom: "20px" }}>
           INTRODUCTION{" "}
@@ -174,7 +181,7 @@ function Modus() {
           observing menu explanations, barista–customer interactions, and
           ordering behaviours.
         </p>
-        <div>
+        <div className="cs-gallery-item standalone-image-wrapper" onClick={() => handleOpenImage(CustomerData, "Customer Data Infographics")}>
           <img
             src={CustomerData}
             alt="Customer Data"
@@ -182,7 +189,7 @@ function Modus() {
           />
         </div>
 
-        <h4 className="project-detail-label" style={{ marginBottom: "20px" }}>
+        <h4 className="project-detail-label" style={{ marginBottom: "20px", marginTop: "40px" }}>
           DESIGN WORKSHOP
         </h4>
         <p className="project-body-copy">
@@ -200,18 +207,16 @@ function Modus() {
         <p className="project-body-copy">
           1. Customers want to understand the menu before visiting the café.
         </p>
-
         <p className="project-body-copy">
           2. Customers are interested in trying new coffee profiles but feel
           overwhelmed by the menu.
         </p>
-
         <p className="project-body-copy">
           3. Customers value barista recommendations but want more confidence in
           their choices.
         </p>
 
-        <h4 className="project-detail-label" style={{ marginBottom: "20px" }}>
+        <h4 className="project-detail-label" style={{ marginBottom: "20px", marginTop: "40px" }}>
           CHOSEN PERSONA: THE ONE-TRICK PONY{" "}
         </h4>
         <p className="project-body-copy">
@@ -237,21 +242,21 @@ function Modus() {
           profiles and so it felt important to highlight that within our user
           journey map.
         </p>
-        <div>
+        <div className="cs-gallery-item standalone-image-wrapper" onClick={() => handleOpenImage(CustomerJourneyMap, "User Journey Mapping Graph")}>
           <img
             src={CustomerJourneyMap}
             alt="Customer Journey Map"
             className="case-study-image"
           />
         </div>
-        <p className="project-body-copy">
+        <p className="project-body-copy" style={{ marginTop: "40px" }}>
           From there, I lead the team through a round of Affinity Diagramming,
           where we took all of our customer research and data and came up with
           ideas. After, we sorted them by overarching theme and voted on which
           ideas we liked the most:
         </p>
 
-        <div>
+        <div className="cs-gallery-item standalone-image-wrapper" onClick={() => handleOpenImage(AffinityDiagram, "Affinity Diagram Design Sticky Notes")}>
           <img
             src={AffinityDiagram}
             alt="Affinity Diagram"
@@ -259,7 +264,7 @@ function Modus() {
           />
         </div>
 
-        <p className="project-body-copy">
+        <p className="project-body-copy" style={{ marginTop: "40px" }}>
           Overall, we were drawn to these three ideas:
         </p>
         <div className="three-image-layout" style={{ marginTop: "20px" }}>
@@ -287,7 +292,7 @@ function Modus() {
           </div>
         </div>
 
-        <h4>NARROWING IT DOWN</h4>
+        <h4 style={{ marginTop: "40px" }}>NARROWING IT DOWN</h4>
         <p className="project-body-copy">
           After testing our three initial prototypes with peers, the personal
           log received the strongest feedback. Our teaching team encouraged us
@@ -313,16 +318,16 @@ function Modus() {
           PART 3: FINAL DESIGN
         </h3>
         <div className="two-column-layout">
-          <div>
+          <div className="cs-gallery-item" onClick={() => handleOpenImage(cards, "Modus Collectible Coffee Cards Overview")}>
             <img
               src={cards}
               alt="Potential location of Modus Coffee Cards, which is by the display people line up."
               className="case-study-image"
-              style={{ scale: "1.5" }}
+              // Removed the style scale: 1.5 because it was causing image zoom clipping
             />
           </div>
 
-          <div>
+          <div className="cs-gallery-item" onClick={() => handleOpenImage(cardBreakdown, "Detailed Infographic Card Design Breakdown")}>
             <img
               src={cardBreakdown}
               alt="Breakdown of the card design"
@@ -330,7 +335,7 @@ function Modus() {
             />
           </div>
         </div>
-        <p className="project-body-copy">
+        <p className="project-body-copy" style={{ marginTop: "30px" }}>
           Our final iteration became Modus Cards, collectible cards that
           highlight individual coffee notes to lower the barrier to specialty
           coffee knowledge.
@@ -411,6 +416,19 @@ function Modus() {
           </div>
         </div>
       </section>
+
+      {/* Universal Lightbox Modal Layer */}
+      {activeExpandedImage && (
+        <div className="cs-lightbox" onClick={() => setActiveExpandedImage(null)}>
+          <button className="cs-close-btn" onClick={() => setActiveExpandedImage(null)}>
+            &times;
+          </button>
+          <div className="cs-lightbox-content" onClick={(e) => e.stopPropagation()}>
+            <img src={activeExpandedImage.src} alt={activeExpandedImage.alt} />
+            <p className="cs-lightbox-meta">{activeExpandedImage.alt}</p>
+          </div>
+        </div>
+      )}
     </CaseStudyLayout>
   );
 }

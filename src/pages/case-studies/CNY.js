@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { projectData } from "../../data/projectData";
 import CaseStudyLayout from "../../pages/CaseStudy.js";
 import TLDR from "../../components/tldr.js";
@@ -11,6 +11,9 @@ import WellWishes from "../../images/wellwishes.mov";
 function CNYCaseStudy() {
   const data = projectData.find((p) => p.slug === "cny");
 
+  // Track the active image asset object { src, alt } currently blown up full screen
+  const [activeExpandedImage, setActiveExpandedImage] = useState(null);
+
   // Define the specific sidebar links for this project
   const projectNavLinks = [
     { id: "tldr", label: "TLDR" },
@@ -20,6 +23,10 @@ function CNYCaseStudy() {
     { id: "theotherside", label: "PART 3: THE RECEIVING END" },
     { id: "learnings", label: "LEARNINGS" },
   ];
+
+  const handleOpenImage = (src, alt) => {
+    setActiveExpandedImage({ src, alt });
+  };
 
   return (
     <CaseStudyLayout project={data} navLinks={projectNavLinks}>
@@ -51,18 +58,15 @@ function CNYCaseStudy() {
         </h3>
         <p className="project-body-copy">
           As a child, I eagerly awaited Lunar New Year for the red envelope,
-          which felt like my "yearly earnings." </p>
-
- <p className="project-body-copy">
-
+          which felt like my "yearly earnings." 
+        </p>
+        <p className="project-body-copy">
           With e-transfers becoming common in Canada, my mom started putting
           Monopoly money in our envelopes, promising to transfer the real amount
           within 24–48 hours. This led me to joke that relatives abroad could
           just e-transfer directly. ​
-          </p>
-
- <p className="project-body-copy">
-
+        </p>
+        <p className="project-body-copy">
           Talking with a friend who never received red packets made me consider
           how families could celebrate Lunar New Year together even when apart.
         </p>
@@ -81,26 +85,32 @@ function CNYCaseStudy() {
           experience of giving and receiving red packets into a digital context.
         </p>
 
-        <div>
+        <div 
+          className="cs-gallery-item standalone-image-wrapper" 
+          onClick={() => handleOpenImage(CustomerJourneyMap, "Lunar New Year Red Packet Customer Journey Map")}
+        >
           <img
             src={CustomerJourneyMap}
             alt="Customer Journey Map"
-            style={{ width: "100%", height: "auto", marginTop: "20px" }}
+            className="cs-responsive-img"
           />{" "}
         </div>
 
         <div>
-          <p className="project-body-copy" style={{ marginTop: "20px" }}>
+          <p className="project-body-copy" style={{ marginTop: "40px" }}>
             I added a Lunar New Year extension to the 'Send Money' tab, making
             it red to differentiate it from the other options and by using a
             colour familiar to the tradition.
           </p>
 
-          <div>
+          <div 
+            className="cs-gallery-item standalone-image-wrapper" 
+            onClick={() => handleOpenImage(initialUIs, "Initial Mobile Interface Wireframes for Red Packets")}
+          >
             <img
               src={initialUIs}
               alt="Initial Design for the red packets"
-              style={{ width: "100%", height: "auto", marginTop: "20px" }}
+              className="cs-responsive-img"
             />
           </div>
         </div>
@@ -119,26 +129,28 @@ function CNYCaseStudy() {
               Red packets (红包) symbolize good luck, blessings, and wealth. To
               honor this tradition, I designed a series of classic red envelopes
               in Figma, including a Year of the Rabbit theme, for senders to
-              choose from. ​</p>
-
- <p className="project-body-copy">
-
+              choose from. ​
+            </p>
+            <p className="project-body-copy">
               Traditionally given in pairs to represent both parents, I
               incorporated an option to send two envelopes, either by splitting
               a total amount or sending two envelopes of the same value.
             </p>
           </div>
 
-          <div>
+          <div 
+            className="cs-gallery-item" 
+            onClick={() => handleOpenImage(RedPackets, "Figma Art Direction - Red Packet Visual Designs")}
+          >
             <img
               src={RedPackets}
               alt="Red Packet Designs"
-              style={{ width: "100%", height: "auto" }}
+              className="cs-responsive-img"
             />
           </div>
         </div>
 
-        <h2>WELL WISHES</h2>
+        <h2 style={{ marginTop: "40px" }}>WELL WISHES</h2>
 
         <div className="two-column-layout">
           <div>
@@ -151,10 +163,12 @@ function CNYCaseStudy() {
           </div>
 
           <div>
-            <img
-              src={WellWishes}
-              alt="Well Wishes Designs"
-              style={{ width: "100%", height: "auto" }}
+            {/* Kept intact as a standard video item block */}
+            <video 
+              src={WellWishes} 
+              className="cs-responsive-img" 
+              controls 
+              muted
             />
           </div>
         </div>
@@ -178,10 +192,10 @@ function CNYCaseStudy() {
           </div>
 
           <div>
-            <img
-              alt="Gif of etransfer"
-              style={{ width: "100%", height: "auto" }}
-            />
+            {/* Empty source placeholder image hidden from lightbox array until source is defined */}
+            <div style={{ width: "100%", height: "200px", background: "#f5f5f7", borderRadius: "6px", display: "flex", alignItems: "center", justifyContent: "center", color: "#86868b" }}>
+              E-Transfer Animation Placeholder
+            </div>
           </div>
         </div>
       </section>
@@ -195,10 +209,9 @@ function CNYCaseStudy() {
           reimagine and preserve cultural traditions. It also made me think
           about how we can use design to foster connection and celebration even
           when physically apart.
-          </p>
-
- <p className="project-body-copy">
-I have to thank my friend for saying that one sentence, a
+        </p>
+        <p className="project-body-copy">
+          I have to thank my friend for saying that one sentence, a
           sentence that started it all. While my more traditional parents found
           the concept as non-traditional and confusing, the new generation
           thought it was quirky idea. This concept came to me during a period of
@@ -208,22 +221,33 @@ I have to thank my friend for saying that one sentence, a
           and do a bit more motion design, something that I would say I have a
           love/hate relationship with. And although this project isn't
           affiliated with the TD Brand, it was fun trying playing within TD's
-          branding guidelines. </p>
-
- <p className="project-body-copy">
-
+          branding guidelines. 
+        </p>
+        <p className="project-body-copy">
           On a more personal note, now that I am older, I recognise that money
           isn’t the purpose of Lunar New Year, but it is to honour the history
           of of our elders and really celebrate culture that has been cultivated
-          to what we know today. ​</p>
-
- <p className="project-body-copy">
-
+          to what we know today. ​
+        </p>
+        <p className="project-body-copy">
           Given the short timeline I had with this project, I am overall pleased
           with the end result. I have a lot to learn and I plan to revisit this
           project when I have gained some more knowledge
         </p>
       </section>
+
+      {/* Universal Lightbox Modal Layer */}
+      {activeExpandedImage && (
+        <div className="cs-lightbox" onClick={() => setActiveExpandedImage(null)}>
+          <button className="cs-close-btn" onClick={() => setActiveExpandedImage(null)}>
+            &times;
+          </button>
+          <div className="cs-lightbox-content" onClick={(e) => e.stopPropagation()}>
+            <img src={activeExpandedImage.src} alt={activeExpandedImage.alt} />
+            <p className="cs-lightbox-meta">{activeExpandedImage.alt}</p>
+          </div>
+        </div>
+      )}
     </CaseStudyLayout>
   );
 }
