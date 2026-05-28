@@ -45,9 +45,9 @@ function AboutMe() {
           </div>
         </div>
 
-        <section style={{ paddingTop: "40px" }}>
+        {/* <section style={{ paddingTop: "40px" }}>
           <h2>Technologies</h2>
-        </section>
+        </section> */}
       </div>
     </div>
   );
