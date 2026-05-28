@@ -26,7 +26,8 @@ export const projectData = [
       "Brand Designer",
       "Web Designer",
     ],
-    description: "Digital branding and skincare product analysis.",
+    description:
+      "Worked on a variety of design projects supporting various teams at a global digital consultancy.",
     tools: ["Adobe Creative Suite", "Figma", "Webflow"],
   },
 
