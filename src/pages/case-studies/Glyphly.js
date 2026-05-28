@@ -1,9 +1,9 @@
 import React from "react";
-import { useNavigate} from "react-router-dom";
 
 import { projectData } from "../../data/projectData";
 import CaseStudyLayout from "../../pages/CaseStudy.js";
 import TLDR from "../../components/tldr.js";
+import Button from "../../components/button.js";
 import Carousel from "../../components/carousel.js";
 
 import imageOne from "../../../src/images/Pinterest.png";
@@ -13,10 +13,8 @@ import DesignGuidelines from "../../../src/images/DesignGuidelines.png";
 import UXMap from "../../../src/images/GlyphlyArchitecture.png";
 import Mockups from "../../../src/images/AppSketches.png";
 import GlyphlyBanner from "../../../src/images/Glyphlybanner.png";
-import Button from "../../components/button.js";
 
 function Glyphly() {
-  const navigate = useNavigate();
   const data = projectData.find((p) => p.slug === "glyphly");
 
   // Define the specific sidebar links for this project
@@ -67,7 +65,7 @@ function Glyphly() {
         ></iframe>
 
         <Button
-          text="Final Presentation Deck"
+          text="Final Presentation Deck (Opens in New Tab)"
           showArrow={false}
           onClick={() =>
             window.open(
@@ -121,8 +119,7 @@ function Glyphly() {
           app.
         </p>
 
-        <div style={{}}>
-          {/* inspo placeholder put a slideshow here */}
+        <div>
           <Carousel images={images} />
         </div>
 

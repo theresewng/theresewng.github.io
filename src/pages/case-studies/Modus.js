@@ -1,8 +1,23 @@
 import React from "react";
+import Button from "../../components/button.js";
+
 import { projectData } from "../../data/projectData";
 import CaseStudyLayout from "../../pages/CaseStudy.js";
 import TLDR from "../../components/tldr.js";
+import Carousel from "../../components/carousel.js";
 
+import imageOne from "../../../src/images/IMG_One.png";
+import imageTwo from "../../../src/images/IMG_Two.png";
+import imageThree from "../../../src/images/IMG_Three.png";
+import CustomerJourneyMap from "../../../src/images/customer journey.png";
+import PrecedentOne from "../../../src/images/PrecedentOne.png";
+import PrecedentTwo from "../../../src/images/PrecedentTwo.png";
+import PrecedentThree from "../../../src/images/PrecedentThree.png";
+import AffinityDiagram from "../../../src/images/affinitydiagram.png";
+import CustomerData from "../../../src/images/customerdata.png";
+
+import cardBreakdown from "../../../src/images/breakdown.png";
+import cards from "../../../src/images/cards.png";
 function Modus() {
   const data = projectData.find((p) => p.slug === "modus");
 
@@ -14,6 +29,66 @@ function Modus() {
     { id: "ideation", label: "PART 2: IDEATION" },
     { id: "finaldesign", label: "PART 3: FINAL DESIGN" },
     { id: "learnings", label: "LEARNINGS" },
+  ];
+
+  const imagePrecedents = [
+    {
+      url: PrecedentOne,
+      caption: (
+        <>
+          <a
+            href="https://laurelgeddes.com/starbucks-reserve-coffee"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Source: Laurel Geddes
+          </a>
+          <br />
+          Made by Starbucks Reserve, they act as takeaway cards for coffee
+          lovers to highlight the stories behind each coffee origin using
+          expressive illustration and custom type and highlighting distinctive
+          tasting notes.
+        </>
+      ),
+    },
+    {
+      url: PrecedentTwo,
+      caption: (
+        <>
+          <a
+            href="https://standartmag.com/products/standart-playing-cards"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Source: Standart Coffee Magazine
+          </a>
+          <br />
+          Made for Starbucks Reserve, they act as takeaway cards for coffee
+          lovers to highlight the stories behind each coffee origin using
+          expressive illustration and custom type and highlighting distinctive
+          tasting notes.
+        </>
+      ),
+    },
+
+    {
+      url: PrecedentThree,
+      caption: (
+        <>
+          <a
+            href="https://www.lenez.com/coffret/vin/grand-modele-54/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Source: Le Nez du Vin
+          </a>
+          <br />
+          Le Nez du Vin's book explains wine aromas and their classification in
+          a playing card format to summarise the real link between aromas and
+          wines and scent bottles of every wine note
+        </>
+      ),
+    },
   ];
 
   return (
@@ -29,6 +104,44 @@ function Modus() {
           timeline={data.year}
           toolsUsed={data.tools}
           designFocuses={data.category}
+        />
+
+        <div className="three-image-layout" style={{ marginTop: "20px" }}>
+          <div>
+            <img
+              src={imageOne}
+              alt="Potential location of Modus Coffee Cards, which is by the display people line up."
+              className="case-study-image"
+            />
+          </div>
+
+          <div>
+            <img
+              src={imageTwo}
+              alt="User holding Modus Coffee Cards"
+              className="case-study-image"
+            />
+          </div>
+
+          <div>
+            <img
+              src={imageThree}
+              alt="Another location for Modus Coffee Cards, where the customers sit"
+              className="case-study-image"
+            />
+          </div>
+        </div>
+
+        <Button
+          text="Final Presentation Deck (Opens in New Tab)"
+          showArrow={false}
+          onClick={() =>
+            window.open(
+              "https://www.figma.com/proto/w83HiLegMwb4CK72VIr3Fb/Website?page-id=1618%3A358&node-id=1618-388&viewport=267%2C527%2C0.05&t=A7VTjLqMQqmOXrcR-1&scaling=contain&content-scaling=fixed",
+              "_blank",
+              "noopener,noreferrer",
+            )
+          }
         />
       </section>
       <section id="introduction" className="case-study-section">
@@ -46,6 +159,7 @@ function Modus() {
           greater confidence.
         </p>
         <h3>The problem</h3>
+        <p>insert text here</p>
       </section>
 
       <section id="research" className="case-study-section">
@@ -60,8 +174,12 @@ function Modus() {
           observing menu explanations, barista–customer interactions, and
           ordering behaviours.
         </p>
-        <div style={{ height: "300px", background: "#333", marginTop: "20px" }}>
-          customer breakdown placeholder{" "}
+        <div>
+          <img
+            src={CustomerData}
+            alt="Customer Data"
+            className="case-study-image"
+          />
         </div>
 
         <h4 className="project-detail-label" style={{ marginBottom: "20px" }}>
@@ -119,8 +237,12 @@ function Modus() {
           profiles and so it felt important to highlight that within our user
           journey map.
         </p>
-        <div style={{ height: "300px", background: "#333", marginTop: "20px" }}>
-          Journey Map Placeholder
+        <div>
+          <img
+            src={CustomerJourneyMap}
+            alt="Customer Journey Map"
+            className="case-study-image"
+          />
         </div>
         <p className="project-body-copy">
           From there, I lead the team through a round of Affinity Diagramming,
@@ -129,15 +251,40 @@ function Modus() {
           ideas we liked the most:
         </p>
 
-        <div style={{ height: "300px", background: "#333", marginTop: "20px" }}>
-          Affinity Diagram Placeholder
+        <div>
+          <img
+            src={AffinityDiagram}
+            alt="Affinity Diagram"
+            className="case-study-image"
+          />
         </div>
 
         <p className="project-body-copy">
           Overall, we were drawn to these three ideas:
         </p>
-        <div style={{ height: "300px", background: "#333", marginTop: "20px" }}>
-          3 ideas placeholder
+        <div className="three-image-layout" style={{ marginTop: "20px" }}>
+          <div>
+            <h4>1. Redesigned Packaging</h4>
+            <p>
+              Redesigning the coffee packaging to show brew instructions,
+              caffeine acidity, sweetness and roast profiles on the packaging
+            </p>
+          </div>
+          <div>
+            <h4>2. Personal Log</h4>
+            <p>
+              A booklet where customers can collect stamps for each types of
+              coffee that they have tried and get rewards/discounts base on the
+              number of stamps
+            </p>
+          </div>
+          <div>
+            <h4>3. Memo Board</h4>
+            <p>
+              Customers can leave their comment or their feeling there to create
+              a sense of belonging and community
+            </p>
+          </div>
         </div>
 
         <h4>NARROWING IT DOWN</h4>
@@ -155,8 +302,9 @@ function Modus() {
           <br></br>
           We were down to the following precedents for our card design:
         </p>
-        <div style={{ height: "300px", background: "#333", marginTop: "20px" }}>
-          precedents placeholder
+
+        <div>
+          <Carousel images={imagePrecedents} />
         </div>
       </section>
 
@@ -164,14 +312,34 @@ function Modus() {
         <h3 className="project-detail-label" style={{ marginBottom: "20px" }}>
           PART 3: FINAL DESIGN
         </h3>
+        <div className="two-column-layout">
+          <div>
+            <img
+              src={cards}
+              alt="Potential location of Modus Coffee Cards, which is by the display people line up."
+              className="case-study-image"
+              style={{ scale: "1.5" }}
+            />
+          </div>
+
+          <div>
+            <img
+              src={cardBreakdown}
+              alt="Breakdown of the card design"
+              className="case-study-image"
+            />
+          </div>
+        </div>
         <p className="project-body-copy">
           Our final iteration became Modus Cards, collectible cards that
           highlight individual coffee notes to lower the barrier to specialty
           coffee knowledge.
-          <br></br>​ Taking the playful language of Standart, the classification
-          system of Le Nez, and educational layout of Starbucks Reserve, each
-          card includes a radar chart showing the relative acidity, aroma,
-          taste, and sweetness of each note within its profile.
+        </p>
+        <p className="project-body-copy">
+          Taking the playful language of Standart, the classification system of
+          Le Nez, and educational layout of Starbucks Reserve, each card
+          includes a radar chart showing the relative acidity, aroma, taste, and
+          sweetness of each note within its profile.
         </p>{" "}
       </section>
 

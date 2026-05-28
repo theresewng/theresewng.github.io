@@ -150,6 +150,10 @@ p {
   width: 80%;
 }
 
+a {
+  color: rgb(255, 255, 255);
+}
+
 .project-copy {
   color: rgb(0, 0, 0);
   font-size: 24px;
@@ -713,7 +717,7 @@ h3 {
   align-content: center;
   width: 72vw;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  /* gap: rem; */
 }
 
 /* Four Column Layout */
@@ -957,4 +961,19 @@ h3 {
   margin: 0;
   line-height: 1.4;
   max-width: 75%; /* Stops text from colliding with the navigation dots */
+}
+
+.three-image-layout {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  /* width: 70%; */
+  margin-top: 40px;
+}
+
+.case-study-image {
+  width: 100%;
+  height: auto;
+  background-color: #d9d9d9;
+  /* object-fit: cover; */
 }
