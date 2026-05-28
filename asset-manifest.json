@@ -1,12 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.1422ea44.css",
-    "main.js": "/static/js/main.2b1f1e58.js",
+    "main.css": "/static/css/main.ad1f8ab6.css",
+    "main.js": "/static/js/main.698985af.js",
     "static/media/IMG_Two.png": "/static/media/IMG_Two.5302bc63040ce5896251.png",
     "static/media/IMG_Three.png": "/static/media/IMG_Three.b9c00596815445f2643a.png",
     "static/media/IMG_One.png": "/static/media/IMG_One.b35efa5c364e938eaf75.png",
     "static/media/UGRS_Poster.png": "/static/media/UGRS_Poster.be2f97e546a4319ca380.png",
     "static/media/cards.png": "/static/media/cards.61cb647e2da43aa78da3.png",
+    "static/media/AZ.png": "/static/media/AZ.2e1b1368523557c42b3e.png",
     "static/media/customer journey.png": "/static/media/customer journey.8e55501972df010f0864.png",
     "static/media/Pinterest.png": "/static/media/Pinterest.643d97eb7ece86165ef8.png",
     "static/media/PrecedentThree.png": "/static/media/PrecedentThree.f618e2d18a66b3c0ddbd.png",
@@ -26,18 +27,21 @@
     "static/media/Customer Journey Map.png": "/static/media/Customer Journey Map.28250ec565a97d3486d8.png",
     "static/media/DesignGuidelines.png": "/static/media/DesignGuidelines.5788a5c9d6135cffb675.png",
     "static/media/affinitydiagram.png": "/static/media/affinitydiagram.ce81add4e3bedc3b1316.png",
+    "static/media/contentful.png": "/static/media/contentful.31d865d8842524ad4c90.png",
+    "static/media/InsightEngine Banner.png": "/static/media/InsightEngine Banner.a275ccf383cc9c16749d.png",
     "static/media/Typewolf.png": "/static/media/Typewolf.f3a6eaa0084f159e50f2.png",
     "static/media/breakdown.png": "/static/media/breakdown.53dba84e33e4c5e5c04d.png",
     "static/media/GlyphlyArchitecture.png": "/static/media/GlyphlyArchitecture.80dd845551a706d8b463.png",
     "static/media/redpackets.png": "/static/media/redpackets.3e9ece17cc4c2ce1adaa.png",
     "static/media/initialUIs.png": "/static/media/initialUIs.056911d1da386211b943.png",
     "static/media/customerdata.png": "/static/media/customerdata.0e1461a4348596ba816b.png",
+    "static/media/MTR.png": "/static/media/MTR.c3a0b8ead11484f68e6e.png",
     "index.html": "/index.html",
-    "main.1422ea44.css.map": "/static/css/main.1422ea44.css.map",
-    "main.2b1f1e58.js.map": "/static/js/main.2b1f1e58.js.map"
+    "main.ad1f8ab6.css.map": "/static/css/main.ad1f8ab6.css.map",
+    "main.698985af.js.map": "/static/js/main.698985af.js.map"
   },
   "entrypoints": [
-    "static/css/main.1422ea44.css",
-    "static/js/main.2b1f1e58.js"
+    "static/css/main.ad1f8ab6.css",
+    "static/js/main.698985af.js"
   ]
 }
