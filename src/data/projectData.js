@@ -72,19 +72,19 @@ export const projectData = [
     tools: ["Figma", "VS Code", "React Native", "Firebase"],
   },
 
-  {
-    slug: "dataviz",
-    path: "/work/dataviz",
-    imageSrc: "/images/appnobanner2.png",
-    component: DataViz,
-    title: "An Overview of Vancouver's Restaurant Scene",
-    year: "October - December 2025",
-    category: ["Data Visualization"],
-    role: ["Web Developer"],
-    description:
-      "A data visualization on how the restaurant industry has changed over time in downtown Vancouver, looking at the changes in culture, economics and consumer habits.",
-    tools: ["Figma"],
-  },
+  // {
+  //   slug: "dataviz",
+  //   path: "/work/dataviz",
+  //   imageSrc: "/images/appnobanner2.png",
+  //   component: DataViz,
+  //   title: "An Overview of Vancouver's Restaurant Scene",
+  //   year: "October - December 2025",
+  //   category: ["Data Visualization"],
+  //   role: ["Web Developer"],
+  //   description:
+  //     "A data visualization on how the restaurant industry has changed over time in downtown Vancouver, looking at the changes in culture, economics and consumer habits.",
+  //   tools: ["Figma"],
+  // },
 
   {
     slug: "cny",
