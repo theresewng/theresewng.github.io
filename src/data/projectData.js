@@ -98,7 +98,7 @@ export const projectData = [
     category: ["Mobile Design", "UI/UX Design", "Motion Design"],
     role: ["UI/UX Designer", "Motion Designer"],
     description:
-      "I designed an imaginary banking extension that incorporates the traditional practice of giving and receiving red packets to family members when physically apart.",
+      "A conceptual banking extension that incorporates the traditional practice of giving and receiving red packets to family members when physically apart.",
     tools: ["Figma", "After Effects", "Premiere Pro"],
   },
 ];
