@@ -35,9 +35,8 @@ function CNYCaseStudy() {
       {/* Everything below this line automatically becomes the 'children' and gets placed in the right panel! */}
 
       <section id="tldr" className="case-study-section">
-        <h3 className="project-detail-label" style={{ marginBottom: "20px" }}>
-          TLDR
-        </h3>
+        <h3 className="project-detail-label">tldr</h3>
+
         <p className="project-body-copy">{data.description}</p>
         <p className="mini-text" style={{ marginTop: "20px" }}>
           (Please note that this is just a hypothetical project. As a TD Bank

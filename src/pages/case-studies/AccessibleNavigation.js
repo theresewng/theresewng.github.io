@@ -31,9 +31,8 @@ function AccessibleNavigationCaseStudy() {
       navLinks={projectNavLinks}
     >
       <section id="tldr" className="case-study-section">
-        <h3 className="project-detail-label" style={{ marginBottom: "20px" }}>
-          TLDR
-        </h3>
+        <h3 className="project-detail-label">tldr</h3>
+
         <p className="project-body-copy">{data.description}</p>
         <TLDR
           role={data.role}

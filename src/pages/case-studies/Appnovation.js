@@ -23,7 +23,7 @@ function AppnovationCaseStudy() {
     { id: "brandpromotionaldesign", label: "BRAND & PROMOTIONAL DESIGN" },
     { id: "graphicdesign", label: "GRAPHIC DESIGN" },
     // { id: "webdesign", label: "WEB DESIGN" },
-    { id: "learnings", label: "LEARNINGS" },
+    { id: "reflections", label: "LEARNINGS" },
   ];
 
   const handleOpenImage = (src, alt) => {
@@ -36,11 +36,9 @@ function AppnovationCaseStudy() {
       navLinks={projectNavLinks}
     >
       <section id="tldr" className="case-study-section">
-        <h3 className="project-detail-label">TLDR</h3>
+        <h3 className="project-detail-label">tldr</h3>
         <p className="project-body-copy">
-          Did a series of graphics, branding, animations and deck designs
-          supporting the Marketing, Business Development, Client Services, and
-          Partnership Teams
+          <p className="project-body-copy">{data.description}</p>
         </p>
         <TLDR
           role={data.role}
@@ -52,7 +50,7 @@ function AppnovationCaseStudy() {
 
       <section id="animationdesign" className="case-study-section">
         <h3 className="project-detail-label" style={{ marginBottom: "20px" }}>
-          PROMOTIONAL REEL
+          Promotional Reel
         </h3>
         <p className="mini-text">
           Tools Used: Figma, Adobe Illustrator, Adobe Photoshop, Adobe After
@@ -64,12 +62,15 @@ function AppnovationCaseStudy() {
         >
           <div>
             <p className="project-body-copy">
-              One of my biggest achievements was leading the creation of a
-              promotional reel for <i>InsightEngine</i>, Appnovation’s AI
-              Clinical Insight Tool to be used in future pitch decks. To start,
-              I created a storyboard on Figma to get a rough idea of how the
-              reel would pan out, then created the complete animation on Adobe
-              Illustrator and After Effects.
+              I led the creative direction, storyboarding, and motion design for
+              a high-fidelity promotional reel showcasing InsightEngine,
+              Appnovation's proprietary AI Clinical Insights tool.
+            </p>
+            <p className="project-body-copy">
+              I created storyboards in Figma, highlighting key features, then rebuilt the UI and key components
+              using Illustrator and created motion graphics in After Effects.
+              The final asset directly equips global teams with a powerful
+              storytelling tool for future client acquisitions.
             </p>
           </div>
           <div>
@@ -83,27 +84,32 @@ function AppnovationCaseStudy() {
               referrerPolicy="strict-origin-when-cross-origin"
               allowFullScreen
             ></iframe>
-            {/* Animation Reel Placeholder */}
           </div>
         </div>
       </section>
 
       <section id="brandpromotionaldesign" className="case-study-section">
         <h3 className="project-detail-label" style={{ marginBottom: "20px" }}>
-          APPNOSWAG: EXPANDING APPNOVATION'S BRAND LANGUAGE FOR PROMOTIONAL
-          MATERIALS
+          AppnoSwag: Designing a Touchpoint System for Client Experience
         </h3>
         <p className="mini-text">Tools Used: Figma, Adobe Illustrator</p>
+
         <p className="project-body-copy">
-          AppnoSwag was an initiative started by the Go To Market and Marketing
-          teams as a way to increase brand awareness and further promote
-          Appnovation to potential clients at networking events and conferences,
-          as well as sending gifts to new and recurring clients as a thank you
-          for partnering with Appnovation. I lead the initial ideation of how
-          the system would be in place, creating the initial process maps and
-          overseeing it from end-to-end, from design, to ordering, packing, and
-          mailing it out.
+          A collaboration between the Go-To-Market and Marketing teams,
+          AppnoSwag is a strategic physical-to-digital touchpoint initiative
+          aimed at driving client retention and brand awareness at global
+          conferences.{" "}
         </p>
+
+        <p className="project-body-copy">
+          I mapped out the end-to-end service delivery pipeline—from initial
+          asset ideation and process mapping to procurement, fulfillment
+          strategy, and international logistics. This system streamlined how
+          Appnovation welcomes new clients and builds long-term partnership
+          rapport. In addition, I oversaw the design and ordering of all
+          physical items, including branded apparel and thank you cards
+        </p>
+
         <div className="small-two-column-layout" style={{ marginTop: "20px" }}>
           <div
             className="cs-gallery-item"
@@ -141,12 +147,15 @@ function AppnovationCaseStudy() {
 
       <section id="graphicdesign" className="case-study-section">
         <h3 className="project-detail-label" style={{ marginBottom: "20px" }}>
-          GRAPHIC DESIGN
+          Global Campaign Collateral & Partnership Support{" "}
         </h3>
         <p className="mini-text">Tools Used: Figma</p>
         <p className="project-body-copy">
-          I worked with the Marketing team on social media posts and promotional
-          branding materials to be used at global conferences
+          Partnered with the Marketing team to design high-visibility digital
+          assets, conference materials, and partnership banners for major global
+          accounts, including Contentful and the AstraZeneca x NHL campaign. I
+          maintained strict adherence to partner brand guidelines while ensuring
+          all public-facing assets met modern web accessibility requirements.
         </p>
         <div className="two-column-layout">
           {/* Module 1: MTR */}
@@ -198,7 +207,7 @@ function AppnovationCaseStudy() {
           </div>
         </div>
 
-        <div className="two-column-layout" style={{ marginTop: "30px" }}>
+        <div className="two-column-layout">
           {/* Module 3: Contentful */}
           <div className="cs-layout-card">
             <div
@@ -241,7 +250,7 @@ function AppnovationCaseStudy() {
                 className="cs-responsive-img"
               />
             </div>
-            <p className="image-caption" >
+            <p className="image-caption">
               <a
                 href="https://www.appnovation.com/services/insightengine-appnovation"
                 target="_blank"
@@ -273,19 +282,32 @@ function AppnovationCaseStudy() {
         </div>
       </section> */}
 
-      <section id="learnings" className="case-study-section">
-        <h3 className="project-detail-label" style={{ marginBottom: "20px" }}>
-          LEARNINGS
+      <section id="reflections" className="case-study-section">
+        <h3 className="project-detail-label" >
+          Reflections
         </h3>
+
+        <h4>The Agency Ecosystem:</h4>
         <p className="project-body-copy">
-          I got to leave Appnovation with knowledge of how the Experience and
-          Strategy teams work together to tackle problems, which will be
-          beneficial for me for future classes and even in future career work
-          that involve clients and stakeholders. I also gained more first-hand
-          knowledge about UI/UX, web accessibility, and cross-team
-          collaboration. In addition, I found that I enjoyed the consulting
-          environment, which has allowed me to consider pursuing a career at the
-          intersection of consulting and experience design.
+          I gained deep insight into how Experience Design and Business Strategy
+          teams intersect to solve enterprise-level problems. Working in a
+          fast-paced consulting environment taught me to balance creative vision
+          with real-world stakeholder requirements.
+        </p>
+
+        <h4>Bridging Design and Execution:</h4>
+        <p className="project-body-copy">
+          Collaborating closely with cross-functional product teams matured my
+          understanding of UI/UX best practices, system scalability, and the
+          vital importance of web accessibility (WCAG compliance) in production
+          environments.
+        </p>
+
+        <h4>Future Focus:</h4>
+        <p className="project-body-copy">
+          This experience solidified my passion for digital consulting, proving
+          that the best design solutions are born where strategic business goals
+          and user-centered interaction design meet.{" "}
         </p>
       </section>
 

@@ -38,18 +38,56 @@ function Glyphly() {
   const images = [
     {
       url: imageOne,
-      caption:
-        "We were inspired by the grid format that Pinterest's homepage presented, offering designers with a variety of different designs, as well as how the user could search for what you want, and the ability to save images.",
+      caption: (
+        <>
+          <a
+            href="https://ca.pinterest.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Source: Pinterest
+          </a>
+          <br />
+          Inspired by Pinterest's home feed layout. We adapted its staggered
+          grid layout to offer visual variety, alongside taking inspiration from
+          their search and collection-saving features.
+        </>
+      ),
     },
     {
       url: imageTwo,
-      caption:
-        "We liked that Typewolf gave users a description about each font, offer font pairings and similar fonts, and how it looks like.",
+      caption: (
+        <>
+          <a
+            href="https://typewolf.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Source: TypeWolf
+          </a>
+          <br />
+          Inspired by how TypeWolf provides font descriptions, curated font
+          pairings, and alternative typeface recommendations.
+        </>
+      ),
     },
     {
       url: imageThree,
-      caption:
-        "We enjoyed how it showed fonts used in real-life contexts and the ability to filter by what kind of branding you want to do (Book Cover vs Movie Poster, etc.)",
+      caption: (
+        <>
+          <a
+            href="https://www.fontsinuse.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Source: Fonts in Use
+          </a>
+          <br />
+          Inspired by how Fonts in Use shows how fonts are applied to various
+          forms of media (e.g., book covers, movie posters) and implemented
+          similar contextual tagging and filtering systems.
+        </>
+      ),
     },
   ];
 
@@ -82,9 +120,9 @@ function Glyphly() {
           }
         />
       </section>
-      
+
       <section id="tldr" className="case-study-section">
-        <h3 className="project-detail-label">TLDR</h3>
+        <h3 className="project-detail-label">tldr</h3>
         <p className="project-body-copy">{data.description}</p>
         <TLDR
           role={data.role}
@@ -93,23 +131,32 @@ function Glyphly() {
           designFocuses={data.category}
         />
       </section>
-      
+
       <section id="introduction" className="case-study-section">
         <h3 className="project-detail-label" style={{ marginBottom: "20px" }}>
           INTRODUCTION{" "}
         </h3>
         <p className="project-body-copy">
-          Created as a final project for my Mobile Computing class, Glyphly is a
-          cross-platform React Native app for iOS and Android featuring user
-          authentication, data persistence, native functionality, and
-          third-party API integration. Created with Summayyah Memon, the idea
-          came when we were browsing TypeWolf for a different project and we
-          were wondering if there was a similar app on the App Store.
+          Created as a final capstone for a Mobile Computing course, Glyphly
+          addresses a gap in the mobile ecosystem. While web-based typography
+          resources like TypeWolf are staple tools for designers on desktop, an
+          optimized, native mobile equivalent was missing from the iOS and
+          Android App Stores.
+        </p>
+        <p className="project-body-copy">
+          Our goal was to build a cross-platform product featuring user
+          authentication, real-time data persistence, and clean native
+          performance.
         </p>
 
-        <div 
+        <div
           className="cs-gallery-item standalone-image-wrapper"
-          onClick={() => handleOpenImage(GlyphlyBanner, "Glyphly Typography Mobile App Interface Banner")}
+          onClick={() =>
+            handleOpenImage(
+              GlyphlyBanner,
+              "Glyphly Typography Mobile App Interface Banner",
+            )
+          }
         >
           <img
             src={GlyphlyBanner}
@@ -121,21 +168,19 @@ function Glyphly() {
       </section>
 
       <section id="research" className="case-study-section">
-        <h3 className="project-detail-label" style={{ marginBottom: "20px" }}>
-          PART 1: RESEARCH/COMPETITIVE ANALYSIS
+        <h3 className="project-detail-label">
+          Part 1: Research and Competitive Analysis
         </h3>
         <p className="project-body-copy">
-          First, we figured out what we wanted our app to be capable of doing.
-          Looking to different sites, such as Pinterest, TypeWolf, FontsInUse,
-          we identified overlapping features that we think would be good for our
-          app.
+          We analyzed three leading visual platforms to distill their core value
+          propositions into mobile-friendly feature sets:
         </p>
 
         <div>
           <Carousel images={images} />
         </div>
 
-        <p className="project-body-copy" style={{ marginTop: "20px" }}>
+        <p className="project-body-copy">
           We wanted to create an app that was a combination of the three, where
           users could search for fonts, look at font pairings, see how they look
           in real life contexts, and save them to their profile.
@@ -143,19 +188,35 @@ function Glyphly() {
       </section>
 
       <section id="artdirection" className="case-study-section">
-        <h3 className="project-detail-label" style={{ marginBottom: "20px" }}>
-          PART 2: ART DIRECTION
+        <h3 className="project-detail-label">
+          Part 2: Art Direction/Design Systems
         </h3>
         <p className="project-body-copy">
-          We then defined an art direction with a light, neutral color palette
-          to ensure accessibility and avoid harsh contrast with imagery. We
-          chose simple, readable fonts and referenced Material Design UI Kit 3
-          to follow mobile best practices.
+          Designing an app about design requires radical visual restraint. We
+          established an intentional art direction focused on content
+          prioritization:
         </p>
 
-        <div 
+        <p className="project-body-copy">
+          We engineered a light, high-contrast, yet neutral palette adhering
+          strictly to accessible color ratios. This ensured that third-party
+          font imagery and complex text characters remained legible and free
+          from background color bias.
+        </p>
+        <p className="project-body-copy">
+          We also leveraged the Material 3 UI framework to map out native
+          component hierarchies, responsive touch targets, and systematic
+          spacing behaviors for both iOS and Android viewports.
+        </p>
+
+        <div
           className="cs-gallery-item standalone-image-wrapper"
-          onClick={() => handleOpenImage(DesignGuidelines, "Glyphly Comprehensive Art Direction and Design Style Guidelines")}
+          onClick={() =>
+            handleOpenImage(
+              DesignGuidelines,
+              "Glyphly Comprehensive Art Direction and Design Style Guidelines",
+            )
+          }
         >
           <img
             src={DesignGuidelines}
@@ -164,23 +225,50 @@ function Glyphly() {
           />{" "}
         </div>
         <p className="image-caption" style={{ marginTop: "8px" }}>
-          <i>Showing how we translated Material 3 guidelines into our final product art direction.</i>
+          <i>
+            Showing how we translated Material 3 guidelines into our final
+            product art direction.
+          </i>
         </p>
       </section>
 
       <section id="making" className="case-study-section">
-        <h3 className="project-detail-label" style={{ marginBottom: "20px" }}>
-          PART 3: MAKING THE APP
+        <h3 className="project-detail-label">
+          🛠️ Part 3: System Architecture & Implementation
         </h3>
 
         <p className="project-body-copy">
-          After creating key components, we designed our app mockups in Figma,
-          creating first a basic UX Map to figure out our user flow.
+          Transitioning from Figma wireframes to a live deployment in VS Code
+          required balancing visual intent with technical performance.
         </p>
-        
-        <div 
+
+        <div className="small-two-column-layout">
+          <div>
+            <h3>Authentication & Persistence:</h3>
+            <p className="project-body-copy">
+              Implemented Firebase Auth for secure user onboarding and utilized
+              Firestore to allow users to save bespoke font pairings to their
+              personal profiles in real time.
+            </p>
+          </div>
+          <div>
+            <h3>Creating Components</h3>
+            <p className="project-body-copy">
+              Translated Material 3 design tokens into modular, reusable React
+              Native components, managing cross-platform layout discrepancies
+              between iOS and Android styling engines.
+            </p>
+          </div>
+        </div>
+
+        <div
           className="cs-gallery-item standalone-image-wrapper"
-          onClick={() => handleOpenImage(UXMap, "Information Architecture and User Experience Navigation Flow Map")}
+          onClick={() =>
+            handleOpenImage(
+              UXMap,
+              "Information Architecture and User Experience Navigation Flow Map",
+            )
+          }
         >
           <img
             src={UXMap}
@@ -188,15 +276,25 @@ function Glyphly() {
             className="cs-responsive-img"
           />
         </div>
-        <p className="image-caption" style={{ marginTop: "8px", marginBottom: "24px" }}>
+        <p
+          className="image-caption"
+          style={{ marginTop: "8px", marginBottom: "24px" }}
+        >
           <i>Our UX Map and Architecture</i>
         </p>
 
-        <p className="project-body-copy">From here, we converted our designs into code.</p>
+        <p className="project-body-copy">
+          From here, we converted our designs into code.
+        </p>
 
-        <div 
+        <div
           className="cs-gallery-item standalone-image-wrapper"
-          onClick={() => handleOpenImage(Mockups, "High Fidelity Wireframes and Mobile Application Screen Mockups")}
+          onClick={() =>
+            handleOpenImage(
+              Mockups,
+              "High Fidelity Wireframes and Mobile Application Screen Mockups",
+            )
+          }
         >
           <img
             src={Mockups}
@@ -210,32 +308,40 @@ function Glyphly() {
       </section>
 
       <section id="learnings" className="case-study-section">
-        <h3 className="project-detail-label" style={{ marginBottom: "20px" }}>
-          REFLECTION
-        </h3>
+        <h3 className="project-detail-label">Reflection</h3>
         <p className="project-body-copy">
-          This was my first major project working within a mobile space. I
-          enjoyed that I got to experience what it was like to work as a Full
-          Stack Developer, working on both the front-end and the back-end. It
-          gave me and idea of design-development handoffs and putting yourself
-          in the developers' shoes when working in consulting roles as a UX
-          Designer.
+          As my first major end-to-end mobile build, this project offered
+          invaluable insight into the realities of full-stack product creation.
+          Writing the frontend layout patterns and back-end logic myself allowed
+          me to rethink how I approach design-to-development handoffs.
         </p>
+
+        <h3>Next Steps</h3>
         <p className="project-body-copy">
-          We were limited by a few technical constraints of creating our app. If
-          I was to add onto this project, with the rise in AI, I would like to
-          explore if it is possible for AI to identify fonts based on images and
-          suggest font pairings based on that.
+          If expanding on Glyphly, the next priority would be integrating
+          on-device machine learning. Leveraging computer vision APIs would
+          allow users to snapshot a physical font in public, automatically
+          identify the typeface, and instantly serve dynamic font-pairing
+          recommendations directly on their mobile device.
         </p>
       </section>
 
       {/* Universal Lightbox Modal Layer */}
       {activeExpandedImage && (
-        <div className="cs-lightbox" onClick={() => setActiveExpandedImage(null)}>
-          <button className="cs-close-btn" onClick={() => setActiveExpandedImage(null)}>
+        <div
+          className="cs-lightbox"
+          onClick={() => setActiveExpandedImage(null)}
+        >
+          <button
+            className="cs-close-btn"
+            onClick={() => setActiveExpandedImage(null)}
+          >
             &times;
           </button>
-          <div className="cs-lightbox-content" onClick={(e) => e.stopPropagation()}>
+          <div
+            className="cs-lightbox-content"
+            onClick={(e) => e.stopPropagation()}
+          >
             <img src={activeExpandedImage.src} alt={activeExpandedImage.alt} />
             <p className="cs-lightbox-meta">{activeExpandedImage.alt}</p>
           </div>

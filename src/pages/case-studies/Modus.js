@@ -63,25 +63,6 @@ function Modus() {
       caption: (
         <>
           <a
-            href="https://standartmag.com/products/standart-playing-cards"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Source: Standart Coffee Magazine
-          </a>
-          <br />
-          Made for Starbucks Reserve, they act as takeaway cards for coffee
-          lovers to highlight the stories behind each coffee origin using
-          expressive illustration and custom type and highlighting distinctive
-          tasting notes.
-        </>
-      ),
-    },
-    {
-      url: PrecedentThree,
-      caption: (
-        <>
-          <a
             href="https://www.lenez.com/coffret/vin/grand-modele-54/"
             target="_blank"
             rel="noopener noreferrer"
@@ -95,6 +76,24 @@ function Modus() {
         </>
       ),
     },
+    {
+      url: PrecedentThree,
+      caption: (
+        <>
+          <a
+            href="https://standartmag.com/products/standart-playing-cards"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Source: Standart Coffee Magazine
+          </a>
+          <br />
+          The playfulness of the text is a phrase about specialty coffee, made
+          to test your coffee knowledge and enhance your understanding of coffee
+          jargon, while making the art direction not too coffee-focused.
+        </>
+      ),
+    },
   ];
 
   return (
@@ -103,7 +102,7 @@ function Modus() {
       navLinks={projectNavLinks}
     >
       <section id="tldr" className="case-study-section">
-        <h3 className="project-detail-label">TLDR</h3>
+        <h3 className="project-detail-label">tldr</h3>
         <p className="project-body-copy">{data.description}</p>
         <TLDR
           role={data.role}
@@ -113,7 +112,15 @@ function Modus() {
         />
 
         <div className="three-image-layout" style={{ marginTop: "20px" }}>
-          <div className="cs-gallery-item" onClick={() => handleOpenImage(imageOne, "Modus Coffee Cards Display Line Location")}>
+          <div
+            className="cs-gallery-item"
+            onClick={() =>
+              handleOpenImage(
+                imageOne,
+                "Modus Coffee Cards Display Line Location",
+              )
+            }
+          >
             <img
               src={imageOne}
               alt="Potential location of Modus Coffee Cards, which is by the display people line up."
@@ -121,7 +128,12 @@ function Modus() {
             />
           </div>
 
-          <div className="cs-gallery-item" onClick={() => handleOpenImage(imageTwo, "User holding Modus Coffee Cards")}>
+          <div
+            className="cs-gallery-item"
+            onClick={() =>
+              handleOpenImage(imageTwo, "User holding Modus Coffee Cards")
+            }
+          >
             <img
               src={imageTwo}
               alt="User holding Modus Coffee Cards"
@@ -129,7 +141,12 @@ function Modus() {
             />
           </div>
 
-          <div className="cs-gallery-item" onClick={() => handleOpenImage(imageThree, "Modus Coffee Cards Seating Location")}>
+          <div
+            className="cs-gallery-item"
+            onClick={() =>
+              handleOpenImage(imageThree, "Modus Coffee Cards Seating Location")
+            }
+          >
             <img
               src={imageThree}
               alt="Another location for Modus Coffee Cards, where the customers sit"
@@ -150,7 +167,7 @@ function Modus() {
           }
         />
       </section>
-      
+
       <section id="introduction" className="case-study-section">
         <h3 className="project-detail-label" style={{ marginBottom: "20px" }}>
           INTRODUCTION{" "}
@@ -166,73 +183,75 @@ function Modus() {
           greater confidence.
         </p>
         <h3>The problem</h3>
-        <p>insert text here</p>
+        <p>
+          Modus Coffee Roasters bypasses traditional industry labels (like
+          origin country or roast level) in favor of six rotating, perennial
+          flavor profiles. While innovative, mixed customer feedback revealed an
+          experience gap: new customers felt overwhelmed by the abstract menu
+          vocabulary, creating a barrier to ordering and reducing confidence in
+          their choices.
+        </p>
+
+        <h3>
+          <i>
+            How might we lower the barrier to specialty coffee knowledge at the
+            point-of-sale, transforming an intimidating menu into an accessible,
+            conversational experience?{" "}
+          </i>
+        </h3>
       </section>
 
       <section id="research" className="case-study-section">
         <h3 className="project-detail-label" style={{ marginBottom: "20px" }}>
-          PART 1: UNDERSTANDING THE CUSTOMER
+          Part 1: Understanding The Average Joe
         </h3>
         <p className="project-body-copy">
-          We interviewed 16 coffee drinkers, including three former baristas.
-          All eight Modus customers felt prior coffee knowledge was needed,
-          reinforcing a misalignment between Modus’ mission and customer
-          experience. We also conducted ethnographic research at nearby cafés,
-          observing menu explanations, barista–customer interactions, and
-          ordering behaviours.
+          To diagnose the friction points in the café environment, we deployed a
+          mixed-method research strategy to capture both behavioral and
+          attitudinal data:
         </p>
-        <div className="cs-gallery-item standalone-image-wrapper" onClick={() => handleOpenImage(CustomerData, "Customer Data Infographics")}>
+        <p className="project-body-copy">
+          <b>16 In-Depth Interviews: </b>Spanning casual drinkers to former
+          baristas to map out structural industry friction.
+        </p>
+        <p className="project-body-copy">
+          <b>Contextual Inquiry & Ethnography: </b>Observed live
+          barista-customer micro-interactions and purchasing flows across local
+          Vancouver specialty cafés.
+        </p>
+        <p className="project-body-copy">
+          <b>Co-Design Workshop: </b>Hosted 7 users new to the Modus brand to
+          evaluate digital onboarding, structural clarity, and mental models.
+        </p>
+        <div
+          className="cs-gallery-item standalone-image-wrapper"
+          onClick={() =>
+            handleOpenImage(CustomerData, "Customer Data Infographics")
+          }
+        >
           <img
             src={CustomerData}
             alt="Customer Data"
             className="case-study-image"
           />
         </div>
-
-        <h4 className="project-detail-label" style={{ marginBottom: "20px", marginTop: "40px" }}>
-          DESIGN WORKSHOP
-        </h4>
         <p className="project-body-copy">
-          We also recruited seven coffee drinkers who have never heard of Modus
-          Coffee for our design workshop. They were first asked to explore the
-          website and share their first impressions. We aimed to understand what
-          stood out to them, what felt unclear, and what factors might encourage
-          or discourage them from visiting the café. Many of our participants
-          found the website confusing, stating:
+          Our synthesis yielded a primary persona: The One-Trick Pony. This
+          segment values morning routine, predictability, and flavor
+          consistency. They possess a "go-to" order and stick to it out of a
+          fear of ordering a specialty cup they might dislike.
         </p>
 
-        <h4 className="project-detail-label" style={{ marginBottom: "20px" }}>
-          KEY INSIGHTS
-        </h4>
         <p className="project-body-copy">
-          1. Customers want to understand the menu before visiting the café.
-        </p>
-        <p className="project-body-copy">
-          2. Customers are interested in trying new coffee profiles but feel
-          overwhelmed by the menu.
-        </p>
-        <p className="project-body-copy">
-          3. Customers value barista recommendations but want more confidence in
-          their choices.
-        </p>
-
-        <h4 className="project-detail-label" style={{ marginBottom: "20px", marginTop: "40px" }}>
-          CHOSEN PERSONA: THE ONE-TRICK PONY{" "}
-        </h4>
-        <p className="project-body-copy">
-          From our initial interviews, we were able to come up with a persona
-          that would guide our design decisions, The One Trick Pony. They are
-          seasoned coffee drinker who values consistency, routine, and a
-          reliable caffeine fix before they go to work. They have a go to drink,
-          coffee notes they prefer, and/or a cafe they go to. They appreciate
-          coffee with similar / predictable notes, and feel most comfortable
-          sticking with what they know.
+          Customers didn't want to become expert baristas; they wanted a safety
+          net. They valued staff recommendations but needed a physical or visual
+          anchor to feel autonomous and confident in trying something new.
         </p>
       </section>
 
       <section id="ideation" className="case-study-section">
         <h3 className="project-detail-label" style={{ marginBottom: "20px" }}>
-          PART 2: IDEATION
+          Part 2: Iteration & Tangible Interface Precedents{" "}
         </h3>
         <p className="project-body-copy">
           With that information, we proceeded to make a User Journey Map to go
@@ -242,7 +261,12 @@ function Modus() {
           profiles and so it felt important to highlight that within our user
           journey map.
         </p>
-        <div className="cs-gallery-item standalone-image-wrapper" onClick={() => handleOpenImage(CustomerJourneyMap, "User Journey Mapping Graph")}>
+        <div
+          className="cs-gallery-item standalone-image-wrapper"
+          onClick={() =>
+            handleOpenImage(CustomerJourneyMap, "User Journey Mapping Graph")
+          }
+        >
           <img
             src={CustomerJourneyMap}
             alt="Customer Journey Map"
@@ -256,7 +280,15 @@ function Modus() {
           ideas we liked the most:
         </p>
 
-        <div className="cs-gallery-item standalone-image-wrapper" onClick={() => handleOpenImage(AffinityDiagram, "Affinity Diagram Design Sticky Notes")}>
+        <div
+          className="cs-gallery-item standalone-image-wrapper"
+          onClick={() =>
+            handleOpenImage(
+              AffinityDiagram,
+              "Affinity Diagram Design Sticky Notes",
+            )
+          }
+        >
           <img
             src={AffinityDiagram}
             alt="Affinity Diagram"
@@ -297,14 +329,18 @@ function Modus() {
           After testing our three initial prototypes with peers, the personal
           log received the strongest feedback. Our teaching team encouraged us
           to continue developing this idea and redesign it into a more portable,
-          shareable format, something closer to a wallet-sized card. ​<br></br>
+          shareable format, something closer to a wallet-sized card. ​
+        </p>
+
+        <p className="project-body-copy">
           Considering Modus Coffee’s profile-based approach and the challenge
           new customers may face when choosing a coffee that matches their
           preferences, how might we guide them toward a suitable profile while
           also encouraging them to explore others? This led us to evolve the
           personal log/booklet concept into a card-based format that better
           supports discovery and conversation.
-          <br></br>
+        </p>
+        <p className="project-body-copy">
           We were down to the following precedents for our card design:
         </p>
 
@@ -315,10 +351,15 @@ function Modus() {
 
       <section id="finaldesign" className="case-study-section">
         <h3 className="project-detail-label" style={{ marginBottom: "20px" }}>
-          PART 3: FINAL DESIGN
+          Part 3: Final Design - Modus Coffee Cards
         </h3>
         <div className="two-column-layout">
-          <div className="cs-gallery-item" onClick={() => handleOpenImage(cards, "Modus Collectible Coffee Cards Overview")}>
+          <div
+            className="cs-gallery-item"
+            onClick={() =>
+              handleOpenImage(cards, "Modus Collectible Coffee Cards Overview")
+            }
+          >
             <img
               src={cards}
               alt="Potential location of Modus Coffee Cards, which is by the display people line up."
@@ -327,7 +368,15 @@ function Modus() {
             />
           </div>
 
-          <div className="cs-gallery-item" onClick={() => handleOpenImage(cardBreakdown, "Detailed Infographic Card Design Breakdown")}>
+          <div
+            className="cs-gallery-item"
+            onClick={() =>
+              handleOpenImage(
+                cardBreakdown,
+                "Detailed Infographic Card Design Breakdown",
+              )
+            }
+          >
             <img
               src={cardBreakdown}
               alt="Breakdown of the card design"
@@ -335,22 +384,34 @@ function Modus() {
             />
           </div>
         </div>
-        <p className="project-body-copy" style={{ marginTop: "30px" }}>
-          Our final iteration became Modus Cards, collectible cards that
-          highlight individual coffee notes to lower the barrier to specialty
-          coffee knowledge.
-        </p>
         <p className="project-body-copy">
-          Taking the playful language of Standart, the classification system of
-          Le Nez, and educational layout of Starbucks Reserve, each card
-          includes a radar chart showing the relative acidity, aroma, taste, and
-          sweetness of each note within its profile.
-        </p>{" "}
+          The final design introduces Modus Cards: a physical, collectible card
+          system integrated directly into the café’s daily service workflow.
+        </p>
+        <div className="small-two-column-layout">
+          <div>
+            <h3>Data Visualization</h3>
+            <p>
+              Each card features a standardized radar chart mapping relative
+              acidity, aroma, body, and sweetness. This translates abstract
+              profile names into an immediate, universal visual language
+              customers can look at while ordering.
+            </p>
+          </div>
+          <div>
+            <h3>Playful, Conversational Copy</h3>
+            <p>
+              Each card includes playful, conversational copy that helps
+              customers understand and connect with the coffee profiles in a
+              more engaging way.
+            </p>
+          </div>
+        </div>
       </section>
 
       <section id="learnings" className="case-study-section">
         <h3 className="project-detail-label" style={{ marginBottom: "20px" }}>
-          LEARNINGS
+          Final Thoughts
         </h3>
         <p className="project-body-copy">
           This project was a great opportunity to practice leading the design
@@ -372,58 +433,63 @@ function Modus() {
         </p>
 
         <h4 className="project-detail-label" style={{ marginBottom: "20px" }}>
-          KEY LEARNINGS
+          Key Takeaways{" "}
         </h4>
 
         <div className="small-two-column-layout">
           <div>
-            <h3 className="project-detail-label">Balancing Personal Biases</h3>
+            <h3 className="project-detail-label">
+              Mitigating Personal Bias in UX Research
+            </h3>
             <p className="project-body-copy">
-              As a coffee drinker and someone who would consider themselves to
-              be a One Trick Pony, I had to maintain a balance of sharing
-              personal experiences and not jumping straight into a solution or
-              thinking that I know what the solution is from the start. I also
-              had to make sure my biases on all coffee shops that we did
-              ethnographic studies were neutral.
-            </p>
-            <p className="project-body-copy">
-              One example is when creating the Customer Journey Map for our
-              One-Trick Pony, I had to make sure that the map was inclusive of
-              all the data we gathered and disconnect myself from that persona
-              and journey map.
+              As a dedicated coffee consumer who matches the "One-Trick Pony"
+              archetype, this project was a masterclass in researcher
+              neutrality. I intentionally detached my personal café preferences
+              during ethnographic charting and journey mapping, ensuring our
+              design choices were strictly grounded in synthesized user data
+              rather than personal routine.
             </p>
           </div>
 
           <div>
             <h3 className="project-detail-label">
-              The Importance of Direct User Interaction
+              Evolving from Scripted Interviews to Dynamic Inquiries
             </h3>
             <p className="project-body-copy">
-              While this might seem obvious, talking to people has always been
-              scary for me. Stepping outside of my comfort zone and engaging
-              directly with strangers helped me build stronger research skills.
-              By asking spontaneous follow-up questions and digging deeper into
-              participants’ responses, I gained more meaningful insights than a
-              scripted interview alone could provide.
-            </p>
-
-            <p className="project-body-copy">
-              This was especially important during our client meetings when we
-              would meet and the team has a list of questions to ask but we did
-              not just want the meetings to just be a back and forth question
-              and answer session.
+              Stepping out of my comfort zone to conduct contextual inquiries
+              with strangers radically matured my user research capabilities. I
+              learned to move past rigid scripts to chase spontaneous,
+              non-linear insights through active listening and tactical
+              follow-up questions. A skill that directly improved the depth of
+              our client discovery sessions.
             </p>
           </div>
         </div>
+        <h3 className="project-detail-label">The Reality of UX Consulting</h3>
+        <p className="project-body-copy">
+          Unlike structured academic briefs, partnering with Modus required us
+          to define our own scope, unpack a real-world non-traditional business
+          model, and negotiate a balance between operational constraints and
+          creative user interventions.
+        </p>
       </section>
 
       {/* Universal Lightbox Modal Layer */}
       {activeExpandedImage && (
-        <div className="cs-lightbox" onClick={() => setActiveExpandedImage(null)}>
-          <button className="cs-close-btn" onClick={() => setActiveExpandedImage(null)}>
+        <div
+          className="cs-lightbox"
+          onClick={() => setActiveExpandedImage(null)}
+        >
+          <button
+            className="cs-close-btn"
+            onClick={() => setActiveExpandedImage(null)}
+          >
             &times;
           </button>
-          <div className="cs-lightbox-content" onClick={(e) => e.stopPropagation()}>
+          <div
+            className="cs-lightbox-content"
+            onClick={(e) => e.stopPropagation()}
+          >
             <img src={activeExpandedImage.src} alt={activeExpandedImage.alt} />
             <p className="cs-lightbox-meta">{activeExpandedImage.alt}</p>
           </div>

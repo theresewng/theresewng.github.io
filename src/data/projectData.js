@@ -19,6 +19,7 @@ export const projectData = [
       "Motion Design",
       "Brand Design",
       "Web Design",
+      "Marketing Design",
     ],
     role: [
       "Graphic Designer",
@@ -27,7 +28,7 @@ export const projectData = [
       "Web Designer",
     ],
     description:
-      "Worked on a variety of design projects supporting various teams at a global digital consultancy.",
+      "Led end-to-end visual execution, interactive collateral, and motion design assets across global teams to accelerate client acquisition and elevate Appnovation's brand presence.",
     tools: ["Adobe Creative Suite", "Figma", "Webflow"],
   },
 
@@ -38,7 +39,7 @@ export const projectData = [
     component: AccessibleNavCaseStudy,
     title: "Reimagining Accessible Navigation",
     year: "Ongoing",
-    category: ["UX Research", "Service Design", "Mobile Design"],
+    category: ["UX Research", "Service Design", "Mobile Design", "UX Design"],
     role: ["UX Designer"],
     description:
       "          Reimagined how navigation would look like if accessibility specifically accessibility for users in wheelchairs came first.",
@@ -52,10 +53,10 @@ export const projectData = [
     component: Modus,
     title: "Modus Coffee Cards",
     year: "September - December 2024",
-    category: ["UX Research", "Service Design"],
-    role: ["UX Designer"],
+    category: ["Consulting", "UX Design", "CX Design", "Graphic Design"],
+    role: ["Project Manager", "Graphic Designer", "Copywriter"],
     description:
-      "Helping customers choose a coffee profile that matches their preferences through cards.",
+      "Designed an in-store, tangible menu companion system for Modus Coffee Roasters to bridge the gap between casual drinkers and specialty coffee profiles.",
     tools: ["Figma"],
   },
 
@@ -69,7 +70,7 @@ export const projectData = [
     category: ["Mobile Design"],
     role: ["Mobile Designer", "Developer"],
     description:
-      "Inspired by websites such as FontsinUse and TypeWolf, me and my partner created this app to see how fonts are being used around the world.",
+      "Inspired by websites such as FontsinUse and TypeWolf, Glyphly is a mobile app designed to help users discover and explore different fonts and how they are used around the world.",
     tools: ["Figma", "VS Code", "React Native", "Firebase"],
   },
 
