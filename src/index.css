@@ -330,12 +330,11 @@ h3 {
 .dropdown-menu {
   position: absolute;
   top: 100%;
-  left: 50%;
-  transform: translateX(
-    -50%
-  ); /* Center dropdown elements overlaying standard mobile viewports */
+  left: 0; 
+  transform: none; 
+  
   background-color: #ffffff;
-  min-width: 240px;
+  min-width: 260px;
   margin: 12px 0 0 0;
   padding: 10px 0;
   list-style: none;
@@ -420,7 +419,7 @@ h3 {
   width: 100%;
   max-width: 1240px;
   display: flex;
-  flex-direction: column-reverse; /* Put copyright under links on narrow screens */
+  flex-direction: column-reverse; 
   gap: 24px;
   justify-content: space-between;
   align-items: center;
@@ -586,7 +585,7 @@ h3 {
 
 @media (min-width: 768px) {
   .pc-tags {
-    margin-top: auto; /* Only lock tags to absolute bottom on wide layouts */
+    margin-top: auto; 
     gap: 12px;
   }
 }
@@ -660,7 +659,7 @@ h3 {
 
 .project-detail-banner {
   width: 100%;
-  aspect-ratio: 21 / 9; /* Scaled aspect ratio prevents banner data cropping on screens */
+  aspect-ratio: 21 / 9; 
   overflow: hidden;
 }
 
