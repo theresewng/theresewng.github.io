@@ -3,9 +3,8 @@
 * {
   scroll-behavior: smooth;
   box-sizing: border-box; /* Crucial: ensures padding doesn't cause horizontal overflow */
-max-width: 100vw;
+  max-width: 100vw;
 }
-
 
 body {
   margin: 0;
@@ -104,7 +103,7 @@ body {
   min-height: 100vh;
   display: flex;
   justify-content: center;
-  padding-left: 20px;  /* Fluid margins for mobile screens */
+  padding-left: 20px; /* Fluid margins for mobile screens */
   padding-right: 20px;
 }
 
@@ -140,7 +139,8 @@ body {
   }
 }
 
-.left-panel, .right-panel {
+.left-panel,
+.right-panel {
   width: 100%;
 }
 
@@ -179,7 +179,8 @@ h2 {
 
 /* Desktop typography expansion scales up smoothly via media breakpoints */
 @media (min-width: 768px) {
-  h2, .h2-homepage {
+  h2,
+  .h2-homepage {
     font-size: 80px;
   }
   .h2-project-subtitle {
@@ -187,14 +188,16 @@ h2 {
   }
 }
 
-p, .project-copy {
+p,
+.project-copy {
   color: rgb(0, 0, 0);
   font-size: 18px; /* Slightly refined baseline sizing for legibility on phone displays */
-  width: 100%;    /* Breaks out from limiting 80% boundaries on small screens */
+  width: 100%; /* Breaks out from limiting 80% boundaries on small screens */
 }
 
 @media (min-width: 768px) {
-  p, .project-copy {
+  p,
+  .project-copy {
     font-size: 24px;
     width: 80%;
   }
@@ -328,7 +331,9 @@ h3 {
   position: absolute;
   top: 100%;
   left: 50%;
-  transform: translateX(-50%); /* Center dropdown elements overlaying standard mobile viewports */
+  transform: translateX(
+    -50%
+  ); /* Center dropdown elements overlaying standard mobile viewports */
   background-color: #ffffff;
   min-width: 240px;
   margin: 12px 0 0 0;
@@ -370,7 +375,9 @@ h3 {
   font-family: "Inter", sans-serif;
   font-size: 16px;
   opacity: 0.7;
-  transition: background-color 0.2s ease, opacity 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    opacity 0.2s ease;
 }
 
 .dropdown-link-item:hover {
@@ -382,7 +389,9 @@ h3 {
   font-size: 14px;
   opacity: 0;
   transform: translateX(-4px);
-  transition: transform 0.2s ease, opacity 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
 }
 
 .dropdown-link-item:hover span {
@@ -391,7 +400,7 @@ h3 {
 }
 
 .nav-divider {
-  width: 100%;
+  width: 100vw;
   height: 1px;
   background: rgb(49, 49, 49);
   margin-top: 20px;
@@ -461,7 +470,8 @@ h3 {
   }
 }
 
-.projct-card-container, .projct-card-container-small {
+.projct-card-container,
+.projct-card-container-small {
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -543,7 +553,8 @@ h3 {
   }
 }
 
-.pc-meta, .pc-description {
+.pc-meta,
+.pc-description {
   color: #000;
   font-family: Inter;
   font-size: 1.1rem;
@@ -552,7 +563,8 @@ h3 {
 }
 
 @media (min-width: 768px) {
-  .pc-meta, .pc-description {
+  .pc-meta,
+  .pc-description {
     font-size: 1.29338rem;
   }
 }
@@ -680,6 +692,13 @@ h3 {
   }
 }
 
+.divider-case-study {
+  width: 100%;
+  height: 1px;
+  background: rgb(49, 49, 49);
+  margin-top: 20px;
+}
+
 .two-column-layout-case-study {
   display: flex;
   flex-direction: column; /* Stack side-nav under or above on small screens */
@@ -694,29 +713,6 @@ h3 {
     display: grid;
     grid-template-columns: 220px 1fr; /* Clean standard fixed sidebar mapping blueprint */
     margin-top: 109px;
-  }
-}
-
-.case-study-left {
-  position: static;
-  width: 100%;
-  max-width: 100%;
-  padding-right: 0;
-  border-right: none;
-  border-bottom: 1px solid rgba(46, 46, 46, 0.2);
-  padding-bottom: 24px;
-}
-
-@media (min-width: 1024px) {
-  .case-study-left {
-    position: sticky;
-    top: 100px;
-    max-height: calc(100vh - 100px);
-    overflow-y: auto;
-    padding-right: 40px;
-    border-right: 1px solid rgba(46, 46, 46, 0.2);
-    border-bottom: none;
-    padding-bottom: 0;
   }
 }
 
@@ -739,6 +735,40 @@ h3 {
     flex-direction: column;
     flex-wrap: nowrap;
   }
+}
+
+.case-study-left {
+  position: static;
+  width: 100%;
+  max-width: 100%;
+  padding-right: 0;
+  padding-bottom: 24px;
+  /* Remove the border from here entirely */
+}
+
+@media (min-width: 1024px) {
+  .case-study-left {
+    position: sticky;
+    top: 100px;
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+    padding-right: 40px;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+}
+
+/* Add or update your menu container to anchor the border */
+.vertical-nav-menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 15px;
+
+  /* Apply the border here instead */
+  border-right: 1px solid rgba(46, 46, 46, 0.2);
+  padding-right: 16px; /* Adds clean spacing between the text and your new border */
+  width: fit-content; /* Ensures the container shrinks perfectly to the size of its links */
 }
 
 .vertical-nav-link {
@@ -793,7 +823,10 @@ h3 {
 
 .four-column-layout {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2x2 grid layout format optimization for small touch items */
+  grid-template-columns: repeat(
+    2,
+    1fr
+  ); /* 2x2 grid layout format optimization for small touch items */
   gap: 12px;
   margin: 24px 0;
   width: 100%;
@@ -823,7 +856,9 @@ h3 {
   color: #4f4f4f63;
   text-decoration: none;
   letter-spacing: 1px;
-  transition: color 0.2s ease, transform 0.2s ease;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
   margin-bottom: 12px;
 }
 
@@ -910,12 +945,20 @@ h3 {
   }
 }
 
-.carousel-arrow.prev { left: 8px; }
-.carousel-arrow.next { right: 8px; }
+.carousel-arrow.prev {
+  left: 8px;
+}
+.carousel-arrow.next {
+  right: 8px;
+}
 
 @media (min-width: 640px) {
-  .carousel-arrow.prev { left: 16px; }
-  .carousel-arrow.next { right: 16px; }
+  .carousel-arrow.prev {
+    left: 16px;
+  }
+  .carousel-arrow.next {
+    right: 16px;
+  }
 }
 
 .carousel-dots {
@@ -992,7 +1035,11 @@ h3 {
 }
 
 /* Fluid responsive layout configurations for asset elements */
-.cs-responsive-img, .case-study-image, img, video, iframe {
+.cs-responsive-img,
+.case-study-image,
+img,
+video,
+iframe {
   width: 100%;
   max-width: 100%;
   height: auto;

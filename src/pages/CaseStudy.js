@@ -67,7 +67,7 @@ function CaseStudy({ project, navLinks, children }) {
     </div>
 
                 {/* Thin divider line (Optional) */}
-                <hr className="nav-divider" />
+                <hr className="divider-case-study" />
 
                 {navLinks.map((link) => (
                   <a
