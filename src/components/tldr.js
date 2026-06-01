@@ -38,7 +38,6 @@ function TLDR({ role, timeline, toolsUsed, designFocuses }) {
         ) : (
           <p className="project-body-copy">{toolsUsed}</p>
         )}
-        {/* <p className="project-body-copy">{toolsUsed}</p> */}
       </div>
       <div>
         <h3 className="project-detail-label">Design Focuses</h3>

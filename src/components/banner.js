@@ -12,8 +12,6 @@ function ProjectHero({ title, description, bannerImage }) {
           />
         )}
         <div className="project-hero-text-wrapper">
-          {/* <h1 className="project-detail-title">{title}</h1> */}
-          {/* <p className="project-detail-body">{description}</p> */}
         </div>
       </div>
     </div>
