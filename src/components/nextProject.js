@@ -1,10 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function ProjectPagination({ lastPath, lastTitle, nextPath, nextTitle }) {
+function nextProject({ lastPath, lastTitle, nextPath, nextTitle }) {
   return (
-    <div className="two-column-layout">
-      <div>
+    <div className="two-column-layout pagination-layout">
+      {/* 1. Only render the Last Project column if lastPath actually exists */}
+      {lastPath ? (
         <div className="last-project-section">
           <hr className="pc-divider" />
           <div className="next-project-container">
@@ -15,9 +16,13 @@ function ProjectPagination({ lastPath, lastTitle, nextPath, nextTitle }) {
             </Link>
           </div>
         </div>
-      </div>
+      ) : (
+        /* 2. Empty placeholder div keeps the "Next Project" on the right side when grid splits 50/50 */
+        <div className="last-project-placeholder-desktop" />
+      )}
 
-      <div>
+      {/* Next Project Column */}
+      {nextPath && (
         <div className="next-project-section">
           <hr className="pc-divider" />
           <div className="next-project-container">
@@ -28,9 +33,9 @@ function ProjectPagination({ lastPath, lastTitle, nextPath, nextTitle }) {
             </Link>
           </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }
 
-export default ProjectPagination;
+export default nextProject;

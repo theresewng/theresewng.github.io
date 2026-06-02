@@ -34,6 +34,9 @@ function AppnovationCaseStudy() {
     <CaseStudyLayout
       project={{ ...data, image: "/images/appnobanner.png" }}
       navLinks={projectNavLinks}
+  
+      nextPath="/work/accessible-navigation"
+      nextTitle="Reimagining Accessible Navigation"
     >
       <section id="tldr" className="case-study-section">
         <h3 className="project-detail-label">tldr</h3>
@@ -67,10 +70,11 @@ function AppnovationCaseStudy() {
               Appnovation's proprietary AI Clinical Insights tool.
             </p>
             <p className="project-body-copy">
-              I created storyboards in Figma, highlighting key features, then rebuilt the UI and key components
-              using Illustrator and created motion graphics in After Effects.
-              The final asset directly equips global teams with a powerful
-              storytelling tool for future client acquisitions.
+              I created storyboards in Figma, highlighting key features, then
+              rebuilt the UI and key components using Illustrator and created
+              motion graphics in After Effects. The final asset directly equips
+              global teams with a powerful storytelling tool for future client
+              acquisitions.
             </p>
           </div>
           <div>
@@ -283,9 +287,7 @@ function AppnovationCaseStudy() {
       </section> */}
 
       <section id="reflections" className="case-study-section">
-        <h3 className="project-detail-label" >
-          Reflections
-        </h3>
+        <h3 className="project-detail-label">Reflections</h3>
 
         <h4>The Agency Ecosystem:</h4>
         <p className="project-body-copy">

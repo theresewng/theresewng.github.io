@@ -95,6 +95,11 @@ function Glyphly() {
     <CaseStudyLayout
       project={{ ...data, image: "/images/glyphlybanner.png" }}
       navLinks={projectNavLinks}
+
+            lastPath="/work/accessible-navigation"
+      lastTitle="Reimagining Accessible Navigation"
+      nextPath="/work/modus"
+      nextTitle="Modus Coffee Cards"
     >
       <section id="walkthrough" className="case-study-section">
         <iframe

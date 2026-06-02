@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { projectData } from "../../data/projectData";
 import CaseStudyLayout from "../../pages/CaseStudy.js";
 import TLDR from "../../components/tldr.js";
-import nextProject from "../../components/nextProject.js";
 
 import ImageOne from "../../images/Tabloid1.png";
 import ImageTwo from "../../images/Tabloid2.png";

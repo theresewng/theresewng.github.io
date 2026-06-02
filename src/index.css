@@ -127,7 +127,7 @@ body {
   display: grid;
   align-items: start;
   width: 100%;
-  grid-template-columns: 1fr; /* Default to single column mobile stack */
+  grid-template-columns: 1fr 1fr; /* Default to single column mobile stack */
   gap: 2rem;
 }
 
@@ -1147,3 +1147,27 @@ iframe {
 .cs-close-btn:hover {
   opacity: 1;
 }
+
+/* Two Column Layout blocks used for inner copy sections */
+.two-column-layout-next-project {
+  padding-top: 40px;
+  display: grid;
+  align-items: start;
+  width: 100%;
+  grid-template-columns: 1fr 1fr; /* Default to single column mobile stack */
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .two-column-layout {
+    padding-top: 80px;
+    grid-template-columns: calc(40% - 0.9rem) calc(60% - 0.6rem);
+    gap: 4rem;
+  }
+}
+
+.next-project-arrow {
+  color: rgb(0, 0, 0);
+}
+
+

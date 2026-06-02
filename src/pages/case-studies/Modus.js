@@ -100,6 +100,8 @@ function Modus() {
     <CaseStudyLayout
       project={{ ...data, image: "/images/modusbanner.png" }}
       navLinks={projectNavLinks}
+      lastPath="/work/glyphly"
+      lastTitle="Glyphly Mobile App"
     >
       <section id="tldr" className="case-study-section">
         <h3 className="project-detail-label">tldr</h3>
