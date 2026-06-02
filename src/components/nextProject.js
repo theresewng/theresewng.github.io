@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function nextProject({ lastPath, lastTitle, nextPath, nextTitle }) {
   return (
-    <div className="two-column-layout pagination-layout">
+    <div className="two-column-layout-next-project">
       {/* 1. Only render the Last Project column if lastPath actually exists */}
       {lastPath ? (
         <div className="last-project-section">
