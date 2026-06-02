@@ -710,7 +710,7 @@ h3 {
 @media (min-width: 1024px) {
   .two-column-layout-case-study {
     display: grid;
-    grid-template-columns: 220px 1fr; /* Clean standard fixed sidebar mapping blueprint */
+    grid-template-columns: 250px 1fr; /* Clean standard fixed sidebar mapping blueprint */
     margin-top: 109px;
   }
 }
@@ -722,17 +722,12 @@ h3 {
   max-width: 100%;
 }
 
-.vertical-nav-menu {
-  display: flex;
-  flex-direction: row; /* Horizontal scrolling navigation links on touch display formats */
-  flex-wrap: wrap;
-  gap: 15px;
-}
-
 @media (min-width: 1024px) {
   .vertical-nav-menu {
     flex-direction: column;
     flex-wrap: nowrap;
+      padding-right: 10px;
+
   }
 }
 
@@ -740,9 +735,9 @@ h3 {
   position: static;
   width: 100%;
   max-width: 100%;
-  padding-right: 0;
+  padding-right: 20px;
+  /* padding-left: 30px; */
   padding-bottom: 24px;
-  /* Remove the border from here entirely */
 }
 
 @media (min-width: 1024px) {
@@ -760,14 +755,24 @@ h3 {
 /* Add or update your menu container to anchor the border */
 .vertical-nav-menu {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   gap: 15px;
 
   /* Apply the border here instead */
-  border-right: 1px solid rgba(46, 46, 46, 0.2);
-  padding-right: 16px; /* Adds clean spacing between the text and your new border */
+  border-right: 1px solid rgba(46, 46, 46, 0.671);
+  padding-right: 26px; /* Adds clean spacing between the text and your new border */
   width: fit-content; /* Ensures the container shrinks perfectly to the size of its links */
+}
+
+/* --- Vertical Navigation Menu (Merged & Cleaned) --- */
+.vertical-nav-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border-right: 1px solid rgba(46, 46, 46, 0.671);
+  width: fit-content;
+  max-width: 100%;
 }
 
 .vertical-nav-link {
@@ -778,7 +783,11 @@ h3 {
   opacity: 0.6;
   text-transform: uppercase;
   transition: opacity 0.3s ease;
-  white-space: nowrap;
+  
+  /* Text wrap additions */
+  white-space: normal;
+  line-height: 1.4;
+  display: block;
 }
 
 .vertical-nav-link:hover,
