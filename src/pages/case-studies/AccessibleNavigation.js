@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { projectData } from "../../data/projectData";
 import CaseStudyLayout from "../../pages/CaseStudy.js";
 import TLDR from "../../components/tldr.js";
+import nextProject from "../../components/nextProject.js";
 
 import ImageOne from "../../images/Tabloid1.png";
 import ImageTwo from "../../images/Tabloid2.png";
@@ -29,6 +30,11 @@ function AccessibleNavigationCaseStudy() {
     <CaseStudyLayout
       project={{ ...data, image: "/images/AccessibilityBanner.png" }}
       navLinks={projectNavLinks}
+      /* Paste these 4 lines right here: */
+      lastPath="/work/appnovation"
+      lastTitle="Appnovation Technologies"
+      nextPath="/work/glyphly"
+      nextTitle="Glyphly Mobile App"
     >
       <section id="tldr" className="case-study-section">
         <h3 className="project-detail-label">tldr</h3>

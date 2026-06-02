@@ -1,8 +1,17 @@
 import React, { useState, useEffect } from "react"; // Added useState and useEffect
 import ProjectHero from "../components/banner.js";
+import NextProject from "../components/nextProject.js";
 import { Link } from "react-router-dom";
 
-function CaseStudy({ project, navLinks, children }) {
+function CaseStudy({
+  project,
+  navLinks,
+  lastPath,
+  lastTitle,
+  nextPath,
+  nextTitle,
+  children,
+}) {
   // 1. Create state to track which section ID is currently visible
   const [activeId, setActiveId] = useState("");
 
@@ -44,6 +53,23 @@ function CaseStudy({ project, navLinks, children }) {
     return () => observer.disconnect();
   }, [navLinks]);
 
+  // inside components/CaseStudy.js
+  useEffect(() => {
+    if (project && project.title) {
+      document.title = `${project.title} | Therese Wong`;
+    }
+
+    // ADD THIS LINE: Instantly snaps the viewport back to the top on page load
+    window.scrollTo({
+      top: 0,
+      behavior: "instant",
+    });
+
+    return () => {
+      document.title = "Therese Wong's Portfolio";
+    };
+  }, [project]); // Runs every time a new project object is mounted
+
   if (!project)
     return <div style={{ color: "white" }}>Project data not found.</div>;
 
@@ -62,9 +88,7 @@ function CaseStudy({ project, navLinks, children }) {
                 </Link>
 
                 {/* Project Title Display */}
-    <div className="nav-project-title">
-      {project.title}
-    </div>
+                <div className="nav-project-title">{project.title}</div>
 
                 {/* Thin divider line (Optional) */}
                 <hr className="divider-case-study" />
@@ -89,6 +113,13 @@ function CaseStudy({ project, navLinks, children }) {
 
             <div className="case-study-right">{children}</div>
           </div>
+
+          <NextProject
+            lastPath={lastPath}
+            lastTitle={lastTitle}
+            nextPath={nextPath}
+            nextTitle={nextTitle}
+          />
         </div>
       </div>
     </div>

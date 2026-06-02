@@ -22,9 +22,7 @@ function Navigation() {
             onMouseLeave={() => setIsOpen(false)}
           >
             {/* Kept cleanly on one line to ensure no layout wrapping shifts */}
-            <div className="nav-link">
-              {`work ${isOpen ? "▴" : "▾"}`}
-            </div>
+            <div className="nav-link">{`work ${isOpen ? "▴" : "▾"}`}</div>
 
             {isOpen && (
               <ul className="dropdown-menu">
@@ -54,8 +52,17 @@ function Navigation() {
           >
             linkedin
           </a>
-          <span className="nav-link">resume</span>
-          <span className="nav-link">email</span>
+          <a
+            href="https://drive.google.com/file/d/1fqY3R1R9hylYPJdCtde2oJIa6vCYofoJ/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="nav-link"
+          >
+            resume
+          </a>
+          <a href="mailto:theresewong03@gmail.com" className="nav-link">
+            email
+          </a>
         </div>
       </div>
       <div className="nav-divider" />
