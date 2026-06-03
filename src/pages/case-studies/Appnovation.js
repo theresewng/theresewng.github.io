@@ -34,12 +34,11 @@ function AppnovationCaseStudy() {
     <CaseStudyLayout
       project={{ ...data, image: "/images/appnobanner.png" }}
       navLinks={projectNavLinks}
-  
       nextPath="/work/accessible-navigation"
       nextTitle="Reimagining Accessible Navigation"
     >
       <section id="tldr" className="case-study-section">
-        <h3 className="project-detail-label">tldr</h3>
+        <h2 className="project-detail-label">tldr</h2>
         <p className="project-body-copy">
           <p className="project-body-copy">{data.description}</p>
         </p>
@@ -52,13 +51,14 @@ function AppnovationCaseStudy() {
       </section>
 
       <section id="animationdesign" className="case-study-section">
-        <h3 className="project-detail-label" style={{ marginBottom: "20px" }}>
+        <h2 className="project-detail-label" style={{ marginBottom: "20px" }}>
           Promotional Reel
-        </h3>
+        </h2>
         <p className="mini-text">
           Tools Used: Figma, Adobe Illustrator, Adobe Photoshop, Adobe After
           Effects, Adobe Premiere Pro
         </p>
+
         <div
           className="small-two-column-layout"
           style={{ alignItems: "start" }}
@@ -93,9 +93,9 @@ function AppnovationCaseStudy() {
       </section>
 
       <section id="brandpromotionaldesign" className="case-study-section">
-        <h3 className="project-detail-label" style={{ marginBottom: "20px" }}>
+        <h2 className="project-detail-label" style={{ marginBottom: "20px" }}>
           AppnoSwag: Designing a Touchpoint System for Client Experience
-        </h3>
+        </h2>
         <p className="mini-text">Tools Used: Figma, Adobe Illustrator</p>
 
         <p className="project-body-copy">
@@ -150,9 +150,9 @@ function AppnovationCaseStudy() {
       </section>
 
       <section id="graphicdesign" className="case-study-section">
-        <h3 className="project-detail-label" style={{ marginBottom: "20px" }}>
+        <h2 className="project-detail-label" style={{ marginBottom: "20px" }}>
           Global Campaign Collateral & Partnership Support{" "}
-        </h3>
+        </h2>
         <p className="mini-text">Tools Used: Figma</p>
         <p className="project-body-copy">
           Partnered with the Marketing team to design high-visibility digital
@@ -268,9 +268,9 @@ function AppnovationCaseStudy() {
       </section>
 
       {/* <section id="webdesign" className="case-study-section">
-        <h3 className="project-detail-label" style={{ marginBottom: "20px" }}>
+        <h2 className="project-detail-label" style={{ marginBottom: "20px" }}>
           WEB DESIGN
-        </h3>
+        </h2>
         <p className="mini-text">Tools Used: Figma</p>
         <p className="project-body-copy">
           After undergoing a recent brand refresh, Appnovation’s website was not
@@ -287,9 +287,9 @@ function AppnovationCaseStudy() {
       </section> */}
 
       <section id="reflections" className="case-study-section">
-        <h3 className="project-detail-label">Reflections</h3>
+        <h2 className="project-detail-label">Reflections</h2>
 
-        <h4>The Agency Ecosystem:</h4>
+        <h3>The Agency Ecosystem:</h3>
         <p className="project-body-copy">
           I gained deep insight into how Experience Design and Business Strategy
           teams intersect to solve enterprise-level problems. Working in a
@@ -297,7 +297,7 @@ function AppnovationCaseStudy() {
           with real-world stakeholder requirements.
         </p>
 
-        <h4>Bridging Design and Execution:</h4>
+        <h3>Bridging Design and Execution:</h3>
         <p className="project-body-copy">
           Collaborating closely with cross-functional product teams matured my
           understanding of UI/UX best practices, system scalability, and the
@@ -305,7 +305,7 @@ function AppnovationCaseStudy() {
           environments.
         </p>
 
-        <h4>Future Focus:</h4>
+        <h3>Future Focus:</h3>
         <p className="project-body-copy">
           This experience solidified my passion for digital consulting, proving
           that the best design solutions are born where strategic business goals

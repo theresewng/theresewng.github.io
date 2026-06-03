@@ -55,7 +55,7 @@ body {
 }
 
 .filter-bar-label {
-  font-family: "Inter", sans-serif;
+  font-family: "PP Neue Montreal", sans-serif;
   font-weight: 700;
   font-size: 12px;
   text-transform: uppercase;
@@ -154,7 +154,7 @@ body {
 /* --- Typography & Elements --- */
 
 h2 {
-  font-family: "Inter", sans-serif;
+  font-family: "PP Neue Montreal", sans-serif;
   font-weight: 400;
   color: rgb(0, 0, 0);
   font-size: 2.5rem; /* Dynamic layout text scaling using rem layout modules */
@@ -188,69 +188,45 @@ h2 {
   }
 }
 
-p,
-.project-copy {
+.project-body-copy {
   color: rgb(0, 0, 0);
   font-size: 18px; /* Slightly refined baseline sizing for legibility on phone displays */
   width: 100%; /* Breaks out from limiting 80% boundaries on small screens */
+  font-family: "PP Neue Montreal Book", sans-serif;
 }
 
 @media (min-width: 768px) {
   p,
-  .project-copy {
+  .project-body-copy {
     font-size: 24px;
     width: 80%;
   }
 }
 
-a {
-  color: rgb(255, 255, 255);
+.project-detail-label {
+  font-family: "PP Neue Montreal Medium", sans-serif;
 }
 
-.microcopy {
+a {
   color: rgb(0, 0, 0);
-  font-size: 14px;
+  text-decoration: none;  
+}
+
+p{
+  color: rgb(255, 21, 21);
+  font-size: 4px;
   width: 100%;
+  font-family: "PP Neue Montreal Mono", sans-serif;
 }
 
 .image-caption {
   color: rgb(0, 0, 0);
-  font-family: "Inter", sans-serif;
+  font-family: "PP Neue Montreal Mono", sans-serif;
   font-size: 0.75rem;
   width: 100%;
   margin-top: 8px;
   font-style: italic;
   text-align: center;
-}
-
-h3 {
-  color: rgb(0, 0, 0);
-}
-
-.project-description-box {
-  padding-top: 20px;
-  padding-left: 0;
-}
-
-@media (min-width: 768px) {
-  .project-description-box {
-    padding-top: 80px;
-    padding-left: 20px;
-  }
-}
-
-.project-description-text {
-  color: rgb(0, 0, 0);
-  font-family: "Inter", sans-serif;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  max-width: 100%;
-}
-
-@media (min-width: 768px) {
-  .project-description-text {
-    max-width: 90%;
-  }
 }
 
 /* --- Navigation --- */
@@ -330,9 +306,9 @@ h3 {
 .dropdown-menu {
   position: absolute;
   top: 100%;
-  left: 0; 
-  transform: none; 
-  
+  left: 0;
+  transform: none;
+
   background-color: #ffffff;
   min-width: 260px;
   margin: 12px 0 0 0;
@@ -371,7 +347,7 @@ h3 {
   padding: 12px 20px;
   color: rgb(0, 0, 0);
   text-decoration: none;
-  font-family: "Inter", sans-serif;
+  font-family: "PP Neue Montreal", sans-serif;
   font-size: 16px;
   opacity: 0.7;
   transition:
@@ -419,7 +395,7 @@ h3 {
   width: 100%;
   max-width: 1240px;
   display: flex;
-  flex-direction: column-reverse; 
+  flex-direction: column-reverse;
   gap: 24px;
   justify-content: space-between;
   align-items: center;
@@ -585,7 +561,7 @@ h3 {
 
 @media (min-width: 768px) {
   .pc-tags {
-    margin-top: auto; 
+    margin-top: auto;
     gap: 12px;
   }
 }
@@ -659,7 +635,7 @@ h3 {
 
 .project-detail-banner {
   width: 100%;
-  aspect-ratio: 21 / 9; 
+  aspect-ratio: 21 / 9;
   overflow: hidden;
 }
 
@@ -726,8 +702,7 @@ h3 {
   .vertical-nav-menu {
     flex-direction: column;
     flex-wrap: nowrap;
-      padding-right: 10px;
-
+    padding-right: 10px;
   }
 }
 
@@ -783,7 +758,7 @@ h3 {
   opacity: 0.6;
   text-transform: uppercase;
   transition: opacity 0.3s ease;
-  
+
   /* Text wrap additions */
   white-space: normal;
   line-height: 1.4;
@@ -1165,5 +1140,3 @@ iframe {
 .next-project-arrow {
   color: rgb(0, 0, 0);
 }
-
-
