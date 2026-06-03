@@ -30,7 +30,7 @@ export const projectData = [
     title: "Reimagining Accessible Navigation",
     year: "Ongoing",
     category: ["Accessible Design", "UX Research", "Service Design"],
-    role: ["Inclusive Product Designer"],
+    role: ["Product Designer"],
     description:
       "Reimagined how navigation would look like if accessibility, specifically for users in wheelchairs, came first.",
     tools: ["Figma"],

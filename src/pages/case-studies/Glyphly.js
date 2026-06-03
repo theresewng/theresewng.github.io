@@ -126,7 +126,7 @@ function Glyphly() {
       </section>
 
       <section id="tldr" className="case-study-section">
-        <h3 className="project-detail-label">tldr</h3>
+        <h2 className="project-detail-label">tldr</h2>
         <p className="project-body-copy">{data.description}</p>
         <TLDR
           role={data.role}
@@ -137,9 +137,9 @@ function Glyphly() {
       </section>
 
       <section id="introduction" className="case-study-section">
-        <h3 className="project-detail-label" style={{ marginBottom: "20px" }}>
+        <h2 className="project-detail-label" style={{ marginBottom: "20px" }}>
           INTRODUCTION{" "}
-        </h3>
+        </h2>
         <p className="project-body-copy">
           Created as a final capstone for a Mobile Computing course, Glyphly
           addresses a gap in the mobile ecosystem. While web-based typography
@@ -172,9 +172,9 @@ function Glyphly() {
       </section>
 
       <section id="research" className="case-study-section">
-        <h3 className="project-detail-label">
+        <h2 className="project-detail-label">
           Part 1: Research and Competitive Analysis
-        </h3>
+        </h2>
         <p className="project-body-copy">
           We analyzed three leading visual platforms to distill their core value
           propositions into mobile-friendly feature sets:
@@ -192,9 +192,9 @@ function Glyphly() {
       </section>
 
       <section id="artdirection" className="case-study-section">
-        <h3 className="project-detail-label">
+        <h2 className="project-detail-label">
           Part 2: Art Direction/Design Systems
-        </h3>
+        </h2>
         <p className="project-body-copy">
           Designing an app about design requires radical visual restraint. We
           established an intentional art direction focused on content
@@ -229,17 +229,17 @@ function Glyphly() {
           />{" "}
         </div>
         <p className="image-caption" style={{ marginTop: "8px" }}>
-          <i>
+          {/* <i>
             Showing how we translated Material 3 guidelines into our final
             product art direction.
-          </i>
+          </i> */}
         </p>
       </section>
 
       <section id="making" className="case-study-section">
-        <h3 className="project-detail-label">
-          🛠️ Part 3: System Architecture & Implementation
-        </h3>
+        <h2 className="project-detail-label">
+          Part 3: System Architecture & Implementation
+        </h2>
 
         <p className="project-body-copy">
           Transitioning from Figma wireframes to a live deployment in VS Code
@@ -248,7 +248,7 @@ function Glyphly() {
 
         <div className="small-two-column-layout">
           <div>
-            <h3>Authentication & Persistence:</h3>
+            <h2>Authentication & Persistence:</h2>
             <p className="project-body-copy">
               Implemented Firebase Auth for secure user onboarding and utilized
               Firestore to allow users to save bespoke font pairings to their
@@ -256,7 +256,7 @@ function Glyphly() {
             </p>
           </div>
           <div>
-            <h3>Creating Components</h3>
+            <h2>Creating Components</h2>
             <p className="project-body-copy">
               Translated Material 3 design tokens into modular, reusable React
               Native components, managing cross-platform layout discrepancies
@@ -312,7 +312,7 @@ function Glyphly() {
       </section>
 
       <section id="learnings" className="case-study-section">
-        <h3 className="project-detail-label">Reflection</h3>
+        <h2 className="project-detail-label">Reflection</h2>
         <p className="project-body-copy">
           As my first major end-to-end mobile build, this project offered
           invaluable insight into the realities of full-stack product creation.
@@ -320,7 +320,7 @@ function Glyphly() {
           me to rethink how I approach design-to-development handoffs.
         </p>
 
-        <h3>Next Steps</h3>
+        <h2>Next Steps</h2>
         <p className="project-body-copy">
           If expanding on Glyphly, the next priority would be integrating
           on-device machine learning. Leveraging computer vision APIs would

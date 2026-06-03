@@ -36,7 +36,7 @@ function AccessibleNavigationCaseStudy() {
       nextTitle="Glyphly Mobile App"
     >
       <section id="tldr" className="case-study-section">
-        <h3 className="project-detail-label">tldr</h3>
+        <h2 className="project-detail-label">tldr</h2>
 
         <p className="project-body-copy">{data.description}</p>
         <TLDR

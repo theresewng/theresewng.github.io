@@ -4,7 +4,7 @@ function TLDR({ role, timeline, toolsUsed, designFocuses }) {
   return (
     <div className="four-column-layout">
       <div>
-        <h3 className="project-detail-label">Role</h3>
+        <h3 className="tldr-label">Role</h3>
         {Array.isArray(role) ? (
           role.map((r, index) => (
             <p
@@ -20,11 +20,11 @@ function TLDR({ role, timeline, toolsUsed, designFocuses }) {
         )}{" "}
       </div>
       <div>
-        <h3 className="project-detail-label">Timeline</h3>
+        <h3 className="tldr-label">Timeline</h3>
         <p className="project-body-copy">{timeline}</p>
       </div>
       <div>
-        <h3 className="project-detail-label">Tools Used</h3>
+        <h3 className="tldr-label">Tools Used</h3>
         {Array.isArray(toolsUsed) ? (
           toolsUsed.map((tool, index) => (
             <p
@@ -40,7 +40,7 @@ function TLDR({ role, timeline, toolsUsed, designFocuses }) {
         )}
       </div>
       <div>
-        <h3 className="project-detail-label">Design Focuses</h3>
+        <h3 className="tldr-label">Design Focuses</h3>
         {/* 2. Map through the array to output each focus on its own line */}
         {Array.isArray(designFocuses) ? (
           designFocuses.map((focus, index) => (

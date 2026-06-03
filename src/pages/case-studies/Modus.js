@@ -104,7 +104,7 @@ function Modus() {
       lastTitle="Glyphly Mobile App"
     >
       <section id="tldr" className="case-study-section">
-        <h3 className="project-detail-label">tldr</h3>
+        <h2 className="project-detail-label">tldr</h2>
         <p className="project-body-copy">{data.description}</p>
         <TLDR
           role={data.role}
@@ -171,9 +171,9 @@ function Modus() {
       </section>
 
       <section id="introduction" className="case-study-section">
-        <h3 className="project-detail-label" style={{ marginBottom: "20px" }}>
+        <h2 className="project-detail-label" style={{ marginBottom: "20px" }}>
           INTRODUCTION{" "}
-        </h3>
+        </h2>
         <p className="project-body-copy">
           Modus Coffee Roasters, a specialty café in Vancouver, wanted a clearer
           way to explain their menu to bridge the gap between casual coffee
@@ -184,7 +184,7 @@ function Modus() {
           Cards encourages customers to explore and try new coffee profiles with
           greater confidence.
         </p>
-        <h3>The problem</h3>
+        <h2>The problem</h2>
         <p>
           Modus Coffee Roasters bypasses traditional industry labels (like
           origin country or roast level) in favor of six rotating, perennial
@@ -194,19 +194,19 @@ function Modus() {
           their choices.
         </p>
 
-        <h3>
+        <h2>
           <i>
             How might we lower the barrier to specialty coffee knowledge at the
             point-of-sale, transforming an intimidating menu into an accessible,
             conversational experience?{" "}
           </i>
-        </h3>
+        </h2>
       </section>
 
       <section id="research" className="case-study-section">
-        <h3 className="project-detail-label" style={{ marginBottom: "20px" }}>
+        <h2 className="project-detail-label" style={{ marginBottom: "20px" }}>
           Part 1: Understanding The Average Joe
-        </h3>
+        </h2>
         <p className="project-body-copy">
           To diagnose the friction points in the café environment, we deployed a
           mixed-method research strategy to capture both behavioral and
@@ -252,9 +252,9 @@ function Modus() {
       </section>
 
       <section id="ideation" className="case-study-section">
-        <h3 className="project-detail-label" style={{ marginBottom: "20px" }}>
+        <h2 className="project-detail-label" style={{ marginBottom: "20px" }}>
           Part 2: Iteration & Tangible Interface Precedents{" "}
-        </h3>
+        </h2>
         <p className="project-body-copy">
           With that information, we proceeded to make a User Journey Map to go
           through typical interactions that happen and identify possibilities to
@@ -352,9 +352,9 @@ function Modus() {
       </section>
 
       <section id="finaldesign" className="case-study-section">
-        <h3 className="project-detail-label" style={{ marginBottom: "20px" }}>
+        <h2 className="project-detail-label" style={{ marginBottom: "20px" }}>
           Part 3: Final Design - Modus Coffee Cards
-        </h3>
+        </h2>
         <div className="two-column-layout">
           <div
             className="cs-gallery-item"
@@ -392,7 +392,7 @@ function Modus() {
         </p>
         <div className="small-two-column-layout">
           <div>
-            <h3>Data Visualization</h3>
+            <h2>Data Visualization</h2>
             <p>
               Each card features a standardized radar chart mapping relative
               acidity, aroma, body, and sweetness. This translates abstract
@@ -401,7 +401,7 @@ function Modus() {
             </p>
           </div>
           <div>
-            <h3>Playful, Conversational Copy</h3>
+            <h2>Playful, Conversational Copy</h2>
             <p>
               Each card includes playful, conversational copy that helps
               customers understand and connect with the coffee profiles in a
@@ -412,9 +412,9 @@ function Modus() {
       </section>
 
       <section id="learnings" className="case-study-section">
-        <h3 className="project-detail-label" style={{ marginBottom: "20px" }}>
+        <h2 className="project-detail-label" style={{ marginBottom: "20px" }}>
           Final Thoughts
-        </h3>
+        </h2>
         <p className="project-body-copy">
           This project was a great opportunity to practice leading the design
           process from end-to-end, from research, to ideation, to prototyping,
@@ -440,9 +440,9 @@ function Modus() {
 
         <div className="small-two-column-layout">
           <div>
-            <h3 className="project-detail-label">
+            <h2 className="project-detail-label">
               Mitigating Personal Bias in UX Research
-            </h3>
+            </h2>
             <p className="project-body-copy">
               As a dedicated coffee consumer who matches the "One-Trick Pony"
               archetype, this project was a masterclass in researcher
@@ -454,9 +454,9 @@ function Modus() {
           </div>
 
           <div>
-            <h3 className="project-detail-label">
+            <h2 className="project-detail-label">
               Evolving from Scripted Interviews to Dynamic Inquiries
-            </h3>
+            </h2>
             <p className="project-body-copy">
               Stepping out of my comfort zone to conduct contextual inquiries
               with strangers radically matured my user research capabilities. I
@@ -467,7 +467,7 @@ function Modus() {
             </p>
           </div>
         </div>
-        <h3 className="project-detail-label">The Reality of UX Consulting</h3>
+        <h2 className="project-detail-label">The Reality of UX Consulting</h2>
         <p className="project-body-copy">
           Unlike structured academic briefs, partnering with Modus required us
           to define our own scope, unpack a real-world non-traditional business
@@ -504,7 +504,7 @@ function Modus() {
 export default Modus;
 
 // <div>
-//   <h3 className="project-detail-label">Designing for Discovery</h3>
+//   <h2 className="project-detail-label">Designing for Discovery</h2>
 //   <p className="project-body-copy">
 //     This project was a great opportunity to practice designing for
 //     discovery, where the goal was to create an experience that would

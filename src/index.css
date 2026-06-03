@@ -152,6 +152,17 @@ body {
 }
 
 /* --- Typography & Elements --- */
+.next-project-title {
+  color: rgb(0, 0, 0);
+  font-size: 1.8rem;
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+  font-family: "PP Neue Montreal Book", sans-serif;
+  font-weight: 400;
+}
+
 
 h2 {
   font-family: "PP Neue Montreal", sans-serif;
@@ -204,24 +215,37 @@ h2 {
 }
 
 .project-detail-label {
-  font-family: "PP Neue Montreal Medium", sans-serif;
+  font-family: "PP Neue Montreal Mono", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.tldr-label {
+  font-family: "PP Neue Montreal Mono Book", sans-serif;
+  font-size: 1rem;
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
 }
 
 a {
   color: rgb(0, 0, 0);
-  text-decoration: none;  
+  text-decoration: none;
 }
 
-p{
-  color: rgb(255, 21, 21);
-  font-size: 4px;
-  width: 100%;
+.mini-text {
+  color: rgb(0, 0, 0);
   font-family: "PP Neue Montreal Mono", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.4;
+  text-transform: uppercase;
 }
 
 .image-caption {
   color: rgb(0, 0, 0);
   font-family: "PP Neue Montreal Mono", sans-serif;
+  text-transform: uppercase;
   font-size: 0.75rem;
   width: 100%;
   margin-top: 8px;
@@ -627,6 +651,7 @@ p{
   transform: rotate(-45deg);
 }
 
+
 /* --- Project Case Study Layout Structure --- */
 .project-detail-page {
   width: 100%;
@@ -819,14 +844,6 @@ p{
   .four-column-layout {
     grid-template-columns: repeat(4, 1fr);
   }
-}
-
-.mini-text {
-  font-family: "Inter", sans-serif;
-  font-size: 14px;
-  color: rgb(0, 0, 0);
-  font-weight: 400;
-  line-height: 1.4;
 }
 
 .back-nav-link {

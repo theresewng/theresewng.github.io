@@ -118,7 +118,7 @@ function AppnovationCaseStudy() {
           <div
             className="cs-gallery-item"
             onClick={() =>
-              handleOpenImage(AppnoSwag, "AppnoSwag Package Delivery Showcase")
+              handleOpenImage(AppnoSwag, "AppnoSwag Package Delivery")
             }
           >
             <img
@@ -289,7 +289,7 @@ function AppnovationCaseStudy() {
       <section id="reflections" className="case-study-section">
         <h2 className="project-detail-label">Reflections</h2>
 
-        <h3>The Agency Ecosystem:</h3>
+        <h2 className="project-detail-label">The Agency Ecosystem:</h2>
         <p className="project-body-copy">
           I gained deep insight into how Experience Design and Business Strategy
           teams intersect to solve enterprise-level problems. Working in a
@@ -297,7 +297,7 @@ function AppnovationCaseStudy() {
           with real-world stakeholder requirements.
         </p>
 
-        <h3>Bridging Design and Execution:</h3>
+        <h2 className="project-detail-label">Bridging Design and Execution:</h2>
         <p className="project-body-copy">
           Collaborating closely with cross-functional product teams matured my
           understanding of UI/UX best practices, system scalability, and the
@@ -305,7 +305,7 @@ function AppnovationCaseStudy() {
           environments.
         </p>
 
-        <h3>Future Focus:</h3>
+        <h2 className="project-detail-label">Future Focus:</h2>
         <p className="project-body-copy">
           This experience solidified my passion for digital consulting, proving
           that the best design solutions are born where strategic business goals
