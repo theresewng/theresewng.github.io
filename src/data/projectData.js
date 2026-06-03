@@ -2,8 +2,6 @@ import AppnovationCaseStudy from "../pages/case-studies/Appnovation";
 import AccessibleNavCaseStudy from "../pages/case-studies/AccessibleNavigation";
 import Modus from "../pages/case-studies/Modus";
 import Glyphly from "../pages/case-studies/Glyphly";
-import CNY from "../pages/case-studies/CNY";
-import DataViz from "../pages/case-studies/DataViz";
 
 export const projectData = [
   {
@@ -65,36 +63,5 @@ export const projectData = [
       "An in-store, tangible menu companion system for Modus Coffee Roasters to bridge the gap between casual drinkers and specialty coffee profiles.",
     tools: ["Figma"],
   },
-
-
-  // {
-  //   slug: "cny",
-  //   path: "/work/cny",
-  //   imageSrc: "/images/cnyimg.png",
-  //   component: CNY,
-  //   title: "Chinese New Year Banking Feature",
-  //   year: "February 2023",
-  //   category: ["Mobile Design", "Interaction Design"],
-  //   role: ["Product Designer"],
-  //   description:
-  //     "A conceptual banking extension that incorporates the traditional practice of giving and receiving red packets to family members when physically apart.",
-  //   tools: ["Figma", "After Effects"],
-  // },
-
-
-  // {
-  //   slug: "dataviz",
-  //   path: "/work/dataviz",
-  //   imageSrc: "/images/appnobanner2.png",
-  //   component: DataViz,
-  //   title: "An Overview of Vancouver's Restaurant Scene",
-  //   year: "October - December 2025",
-  //   category: ["Data Visualization", "Web Development"],
-  //   role: ["Frontend Developer"],
-  //   description:
-  //     "A data visualization on how the restaurant industry has changed over time in downtown Vancouver, looking at the changes in culture, economics and consumer habits.",
-  //   tools: ["Figma", "D3.js"],
-  // },
-
 
 ];
