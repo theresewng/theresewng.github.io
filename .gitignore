@@ -4,3 +4,5 @@ build
 .env
 .cache
 node_modules/.cache/default-development/0.pack
+.vercel
+.env*
