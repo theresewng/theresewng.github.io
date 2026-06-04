@@ -1,101 +1,141 @@
-/* --- Base & Layout --- */
+/* ==========================================================================
+   1. BASE Styles & GLOBAL LAYOUT RESET
+   ========================================================================== */
 
 * {
-  scroll-behavior: smooth;
-  box-sizing: border-box; /* Crucial: ensures padding doesn't cause horizontal overflow */
+  box-sizing: border-box; /* Ensures padding doesn't cause horizontal overflow */
   max-width: 100vw;
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
-  font-family:
-    -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
-    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   background-color: #ffffff;
   overflow-x: hidden; /* Prevents stray child elements from introducing horizontal scrolling */
 }
 
-/* The container holding both the filters and the projects */
-.two-column-layout-homepage {
-  display: flex;
-  flex-direction: column; /* Stacks on mobile viewports */
-  gap: 2rem;
-  align-items: flex-start;
+a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+/* Asset Responsiveness Overrides */
+.cs-responsive-img,
+.case-study-image,
+img,
+video,
+iframe {
   width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
 }
 
-@media (min-width: 1024px) {
-  .two-column-layout-homepage {
-    flex-direction: row; /* Side-by-side grid structure only on desktop viewports */
-    gap: 1rem;
-  }
+iframe {
+  aspect-ratio: 16 / 9; /* Prevents layout collapse bugs across mobile platforms */
 }
 
-/* Left Column Filters Wrapper */
-.left-panel-filters {
-  width: 100%; /* Spans full width on mobile devices */
-  position: static;
-}
 
-@media (min-width: 1024px) {
-  .left-panel-filters {
-    flex: 0 0 320px; /* Snaps back to specific layout metric on wide screens */
-    position: sticky;
-    top: 40px;
-  }
-}
+/* ==========================================================================
+   2. TYPOGRAPHY
+   ========================================================================== */
 
-/* Right Column Project Card Wrapper */
-.right-panel-projects {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  width: 100%;
-}
-
-.filter-bar-label {
+h2 {
   font-family: "PP Neue Montreal", sans-serif;
-  font-weight: 700;
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #666666;
-  margin-bottom: 20px;
+  font-weight: 400;
+  color: rgb(0, 0, 0);
+  font-size: 2.5rem; /* Dynamic layout text scaling using rem layout modules */
+  margin: 0;
+  line-height: 1.1;
+  width: 100%;
 }
 
-.filter-bar-buttons {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 12px;
+.h2-homepage {
+  color: rgb(0, 0, 0);
+  font-size: 2.5rem;
+  width: 100%;
+  padding-top: 40px;
 }
 
-.filter-bar-btn {
-  background: transparent;
-  border: 1px solid #e0e0e0;
-  color: #555555;
-  padding: 10px 16px;
-  font-size: 13px;
-  font-family: "Inter", sans-serif;
-  text-align: left;
-  cursor: pointer;
-  border-radius: 6px;
-  transition: all 0.2s ease-in-out;
-  width: fit-content;
+.h2-project-subtitle {
+  color: rgb(0, 0, 0);
+  font-size: 1.8rem;
+  width: 100%;
+  margin-top: 0;
 }
 
-.filter-bar-btn:hover {
-  border-color: #000000;
-  color: #000000;
+.next-project-title {
+  color: rgb(0, 0, 0);
+  font-size: 1.8rem;
+  font-family: "PP Neue Montreal Book", sans-serif;
+  font-weight: 400;
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
-.filter-bar-btn.active {
-  background: #000000;
-  border-color: #000000;
-  color: #ffffff;
+.project-body-copy {
+  color: rgb(0, 0, 0);
+  font-size: 18px; /* Slightly refined baseline sizing for legibility on phone displays */
+  font-family: "PP Neue Montreal Book", sans-serif;
+  width: 100%; /* Breaks out from limiting 80% boundaries on small screens */
+}
+
+.project-detail-label {
+  font-family: "PP Neue Montreal Mono", sans-serif;
+  font-size: 1.5rem;
   font-weight: 500;
+  text-transform: uppercase;
 }
+
+.tldr-label {
+  font-family: "PP Neue Montreal Mono Book", sans-serif;
+  font-size: 1rem;
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+}
+
+.mini-text {
+  color: rgb(0, 0, 0);
+  font-family: "PP Neue Montreal Mono", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.image-caption {
+  color: rgb(0, 0, 0);
+  font-family: "PP Neue Montreal Mono", sans-serif;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-style: italic;
+  text-align: center;
+  width: 100%;
+  margin-top: 8px;
+}
+
+/* Desktop Typography Scales */
+@media (min-width: 768px) {
+  h2,
+  .h2-homepage {
+    font-size: 80px;
+  }
+  .h2-project-subtitle {
+    font-size: 50px;
+  }
+  p,
+  .project-body-copy {
+    font-size: 24px;
+    width: 80%;
+  }
+}
+
+
+/* ==========================================================================
+   3. CORE STRUCTURAL WRAPPERS & GRID LAYOUTS
+   ========================================================================== */
 
 .homepage-container {
   width: 100%;
@@ -121,21 +161,21 @@ body {
   flex-direction: column;
 }
 
-/* Two Column Layout blocks used for inner copy sections */
+/* Two Column Split (General Copy Layouts) */
 .two-column-layout {
-  padding-top: 40px;
   display: grid;
   align-items: start;
-  width: 100%;
   grid-template-columns: 1fr 1fr; /* Default to single column mobile stack */
   gap: 2rem;
+  width: 100%;
+  padding-top: 40px;
 }
 
 @media (min-width: 768px) {
   .two-column-layout {
-    padding-top: 80px;
     grid-template-columns: calc(40% - 0.9rem) calc(60% - 0.6rem);
     gap: 4rem;
+    padding-top: 80px;
   }
 }
 
@@ -151,109 +191,41 @@ body {
   }
 }
 
-/* --- Typography & Elements --- */
-.next-project-title {
-  color: rgb(0, 0, 0);
-  font-size: 1.8rem;
+/* Two Column Split (Homepage Portfolio Structure) */
+.two-column-layout-homepage {
+  display: flex;
+  flex-direction: column; /* Stacks on mobile viewports */
+  gap: 2rem;
+  align-items: flex-start;
   width: 100%;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-
-  font-family: "PP Neue Montreal Book", sans-serif;
-  font-weight: 400;
 }
 
-
-h2 {
-  font-family: "PP Neue Montreal", sans-serif;
-  font-weight: 400;
-  color: rgb(0, 0, 0);
-  font-size: 2.5rem; /* Dynamic layout text scaling using rem layout modules */
-  width: 100%;
-  margin: 0;
-  line-height: 1.1;
+@media (min-width: 1024px) {
+  .two-column-layout-homepage {
+    flex-direction: row; /* Side-by-side grid structure only on desktop viewports */
+    gap: 1rem;
+  }
 }
 
-.h2-homepage {
-  color: rgb(0, 0, 0);
-  font-size: 2.5rem;
+/* Next Project Split Links */
+.two-column-layout-next-project {
+  display: grid;
+  align-items: start;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
   width: 100%;
   padding-top: 40px;
 }
 
-.h2-project-subtitle {
+.next-project-arrow {
   color: rgb(0, 0, 0);
-  font-size: 1.8rem;
-  width: 100%;
-  margin-top: 0;
 }
 
-/* Desktop typography expansion scales up smoothly via media breakpoints */
-@media (min-width: 768px) {
-  h2,
-  .h2-homepage {
-    font-size: 80px;
-  }
-  .h2-project-subtitle {
-    font-size: 50px;
-  }
-}
 
-.project-body-copy {
-  color: rgb(0, 0, 0);
-  font-size: 18px; /* Slightly refined baseline sizing for legibility on phone displays */
-  width: 100%; /* Breaks out from limiting 80% boundaries on small screens */
-  font-family: "PP Neue Montreal Book", sans-serif;
-}
+/* ==========================================================================
+   4. NAVIGATION COMPONENT
+   ========================================================================== */
 
-@media (min-width: 768px) {
-  p,
-  .project-body-copy {
-    font-size: 24px;
-    width: 80%;
-  }
-}
-
-.project-detail-label {
-  font-family: "PP Neue Montreal Mono", sans-serif;
-  font-size: 1.5rem;
-  font-weight: 500;
-  text-transform: uppercase;
-}
-
-.tldr-label {
-  font-family: "PP Neue Montreal Mono Book", sans-serif;
-  font-size: 1rem;
-  color: rgb(0, 0, 0);
-  text-transform: uppercase;
-}
-
-a {
-  color: rgb(0, 0, 0);
-  text-decoration: none;
-}
-
-.mini-text {
-  color: rgb(0, 0, 0);
-  font-family: "PP Neue Montreal Mono", sans-serif;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.4;
-  text-transform: uppercase;
-}
-
-.image-caption {
-  color: rgb(0, 0, 0);
-  font-family: "PP Neue Montreal Mono", sans-serif;
-  text-transform: uppercase;
-  font-size: 0.75rem;
-  width: 100%;
-  margin-top: 8px;
-  font-style: italic;
-  text-align: center;
-}
-
-/* --- Navigation --- */
 .nav-container {
   width: 100%;
   padding-top: 20px;
@@ -321,7 +293,14 @@ a {
   opacity: 1;
 }
 
-/* Dropdown Container Menu Mechanics */
+.nav-divider {
+  width: 100vw;
+  height: 1px;
+  background: rgb(49, 49, 49);
+  margin-top: 20px;
+}
+
+/* Dropdown Sub-menus */
 .dropdown-wrapper {
   position: relative;
   display: inline-block;
@@ -332,7 +311,6 @@ a {
   top: 100%;
   left: 0;
   transform: none;
-
   background-color: #ffffff;
   min-width: 260px;
   margin: 12px 0 0 0;
@@ -398,63 +376,80 @@ a {
   transform: translateX(0);
 }
 
-.nav-divider {
-  width: 100vw;
-  height: 1px;
-  background: rgb(49, 49, 49);
-  margin-top: 20px;
+
+/* ==========================================================================
+   5. FILTER SYSTEM COMPONENT
+   ========================================================================== */
+
+.left-panel-filters {
+  width: 100%; /* Spans full width on mobile devices */
+  position: static;
 }
 
-/* Footer */
-.footer-container {
-  width: 100%;
-  padding: 20px;
-  color: rgb(0, 0, 0);
+@media (min-width: 1024px) {
+  .left-panel-filters {
+    flex: 0 0 320px; /* Snaps back to specific layout metric on wide screens */
+    position: sticky;
+    top: 40px;
+  }
+}
+
+.filter-bar-label {
+  font-family: "PP Neue Montreal", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #666666;
+  margin-bottom: 20px;
+}
+
+.filter-bar-buttons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.filter-bar-btn {
+  background: transparent;
+  border: 1px solid #e0e0e0;
+  color: #555555;
+  padding: 10px 16px;
+  font-size: 13px;
+  font-family: "Inter", sans-serif;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.2s ease-in-out;
+  width: fit-content;
+}
+
+.filter-bar-btn:hover {
+  border-color: #000000;
+  color: #000000;
+}
+
+.filter-bar-btn.active {
+  background: #000000;
+  border-color: #000000;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+
+/* ==========================================================================
+   6. PROJECTS PANELS & DISPLAY CARDS
+   ========================================================================== */
+
+.right-panel-projects {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
-}
-
-.footer-content {
+  gap: 40px;
   width: 100%;
-  max-width: 1240px;
-  display: flex;
-  flex-direction: column-reverse;
-  gap: 24px;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 50px;
 }
 
-@media (min-width: 640px) {
-  .footer-content {
-    flex-direction: row;
-    gap: 0;
-  }
-}
-
-.footer-links {
-  display: flex;
-  gap: 24px;
-  align-items: center;
-}
-
-.copyright {
-  color: rgb(0, 0, 0);
-  font-size: 18px;
-  margin: 0;
-  width: 100%;
-  text-align: center;
-}
-
-@media (min-width: 640px) {
-  .copyright {
-    font-size: 24px;
-    text-align: left;
-  }
-}
-
-/* --- Project Grid / Showcase Cards --- */
 .two-column-layout-project {
   display: grid;
   grid-template-columns: 1fr; /* Cards default stack on small layouts */
@@ -469,14 +464,14 @@ a {
   }
 }
 
-.projct-card-container,
-.projct-card-container-small {
+.project-card-container,
+.project-card-container-small {
   display: flex;
   flex-direction: column;
   gap: 40px;
+  align-items: center;
   width: 100%;
   height: auto; /* Drops rigid height bounds to allow textual expansion */
-  align-items: center;
 }
 
 .card-link-wrapper {
@@ -496,7 +491,7 @@ a {
 
 .project-card {
   display: flex;
-  flex-direction: column; /* Image sits directly on top of copy content modules on small screen shapes */
+  flex-direction: column; /* Image sits directly on top of copy content modules on small screens */
   background: #ffffff;
   border-radius: 12px;
   padding: 20px;
@@ -606,53 +601,11 @@ a {
   }
 }
 
-/* --- Buttons --- */
-.button-wrapper {
-  width: 100%;
-  display: flex;
-  margin: 30px 0;
-}
 
-.button {
-  background-color: rgb(255, 255, 255);
-  border: 1px solid rgb(0, 0, 0);
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  width: 100%; /* Spans full width on phone touch interfaces */
-}
+/* ==========================================================================
+   7. CASE STUDY TEMPLATE MODULES
+   ========================================================================== */
 
-@media (min-width: 640px) {
-  .button {
-    width: auto;
-    padding: 20px;
-  }
-}
-
-.button-text {
-  font-family: "Inter", sans-serif;
-  font-size: 1rem;
-  font-weight: 500;
-  color: black;
-}
-
-.button-arrow {
-  display: flex;
-  align-items: center;
-  transition: transform 0.3s ease-in-out;
-  padding-left: 10px;
-}
-
-.button:hover .button-arrow {
-  transform: rotate(-45deg);
-}
-
-
-/* --- Project Case Study Layout Structure --- */
 .project-detail-page {
   width: 100%;
   background-color: #ffffff;
@@ -702,10 +655,10 @@ a {
 .two-column-layout-case-study {
   display: flex;
   flex-direction: column; /* Stack side-nav under or above on small screens */
+  gap: 40px;
   width: 100%;
   max-width: 1350px;
   margin-top: 40px;
-  gap: 40px;
 }
 
 @media (min-width: 1024px) {
@@ -716,27 +669,11 @@ a {
   }
 }
 
-.case-study-right {
-  padding-left: 0;
-  padding-right: 0;
-  width: 100%;
-  max-width: 100%;
-}
-
-@media (min-width: 1024px) {
-  .vertical-nav-menu {
-    flex-direction: column;
-    flex-wrap: nowrap;
-    padding-right: 10px;
-  }
-}
-
 .case-study-left {
   position: static;
   width: 100%;
   max-width: 100%;
   padding-right: 20px;
-  /* padding-left: 30px; */
   padding-bottom: 24px;
 }
 
@@ -752,27 +689,60 @@ a {
   }
 }
 
-/* Add or update your menu container to anchor the border */
-.vertical-nav-menu {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  gap: 15px;
-
-  /* Apply the border here instead */
-  border-right: 1px solid rgba(46, 46, 46, 0.671);
-  padding-right: 26px; /* Adds clean spacing between the text and your new border */
-  width: fit-content; /* Ensures the container shrinks perfectly to the size of its links */
+.case-study-right {
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+  max-width: 100%;
 }
 
-/* --- Vertical Navigation Menu (Merged & Cleaned) --- */
+.case-study-section {
+  padding-bottom: 40px;
+  width: 100%;
+}
+
+/* Case Study Inner Nav Elements */
+.back-nav-link {
+  display: flex;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #4f4f4f63;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: color 0.2s ease, transform 0.2s ease;
+  margin-bottom: 12px;
+}
+
+.back-nav-link:hover {
+  color: #000000;
+}
+
+.back-arrow {
+  margin-right: 5px;
+  font-size: 16px;
+  transition: transform 0.2s ease;
+  display: inline-block;
+}
+
+/* Vertical Sticky Menu */
 .vertical-nav-menu {
   display: flex;
   flex-direction: column;
   gap: 15px;
   border-right: 1px solid rgba(46, 46, 46, 0.671);
-  width: fit-content;
+  padding-right: 26px; /* Spacing between the text and border */
+  width: fit-content; /* Container shrinks perfectly to size of its links */
   max-width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .vertical-nav-menu {
+    flex-wrap: nowrap;
+    padding-right: 10px;
+  }
 }
 
 .vertical-nav-link {
@@ -783,8 +753,6 @@ a {
   opacity: 0.6;
   text-transform: uppercase;
   transition: opacity 0.3s ease;
-
-  /* Text wrap additions */
   white-space: normal;
   line-height: 1.4;
   display: block;
@@ -795,15 +763,10 @@ a {
   opacity: 1;
 }
 
-.case-study-section {
-  padding-bottom: 40px;
-  width: 100%;
-}
-
-/* Inner Layout Grid Containers inside case studies */
+/* Internal Nested Custom Layout Columns */
 .small-two-column-layout {
   display: grid;
-  grid-template-columns: 1fr; /* Collapses nested grid components to fit container screens */
+  grid-template-columns: 1fr; /* Collapses nested components to fit container screens */
   gap: 24px;
   width: 100%;
 }
@@ -831,10 +794,7 @@ a {
 
 .four-column-layout {
   display: grid;
-  grid-template-columns: repeat(
-    2,
-    1fr
-  ); /* 2x2 grid layout format optimization for small touch items */
+  grid-template-columns: repeat(2, 1fr); /* 2x2 grid layout format optimization for small touch items */
   gap: 12px;
   margin: 24px 0;
   width: 100%;
@@ -846,34 +806,12 @@ a {
   }
 }
 
-.back-nav-link {
-  display: flex;
-  align-items: center;
-  font-family: "Inter", sans-serif;
-  font-weight: 600;
-  font-size: 13px;
-  text-transform: uppercase;
-  color: #4f4f4f63;
-  text-decoration: none;
-  letter-spacing: 1px;
-  transition:
-    color 0.2s ease,
-    transform 0.2s ease;
-  margin-bottom: 12px;
-}
 
-.back-nav-link:hover {
-  color: #000000;
-}
+/* ==========================================================================
+   8. INTERACTIVE COMPONENTS (CAROUSEL & LIGHTBOX)
+   ========================================================================== */
 
-.back-arrow {
-  margin-right: 5px;
-  font-size: 16px;
-  transition: transform 0.2s ease;
-  display: inline-block;
-}
-
-/* Image Carousel Framework */
+/* Image Carousel System */
 .carousel-container {
   position: relative;
   width: 100%;
@@ -899,7 +837,7 @@ a {
   position: relative;
   min-width: 100%;
   box-sizing: border-box;
-  aspect-ratio: 4 / 3; /* Taller viewport container context for structural scaling safety on mobile devices */
+  aspect-ratio: 4 / 3; /* Mobile safety layout framework */
   background-color: #d9d9d9;
 }
 
@@ -933,28 +871,17 @@ a {
   z-index: 2;
 }
 
+.carousel-arrow.prev { left: 8px; }
+.carousel-arrow.next { right: 8px; }
+
 @media (min-width: 640px) {
   .carousel-arrow {
     width: 44px;
     height: 44px;
     font-size: 18px;
   }
-}
-
-.carousel-arrow.prev {
-  left: 8px;
-}
-.carousel-arrow.next {
-  right: 8px;
-}
-
-@media (min-width: 640px) {
-  .carousel-arrow.prev {
-    left: 16px;
-  }
-  .carousel-arrow.next {
-    right: 16px;
-  }
+  .carousel-arrow.prev { left: 16px; }
+  .carousel-arrow.next { right: 16px; }
 }
 
 .carousel-dots {
@@ -964,14 +891,6 @@ a {
   display: flex;
   gap: 6px;
   z-index: 6;
-}
-
-@media (min-width: 640px) {
-  .carousel-dots {
-    bottom: 24px;
-    right: 24px;
-    gap: 8px;
-  }
 }
 
 .carousel-dot {
@@ -984,16 +903,21 @@ a {
   padding: 0;
 }
 
+.carousel-dot.active {
+  background: #ffffff;
+  transform: scale(1.2);
+}
+
 @media (min-width: 640px) {
+  .carousel-dots {
+    bottom: 24px;
+    right: 24px;
+    gap: 8px;
+  }
   .carousel-dot {
     width: 10px;
     height: 10px;
   }
-}
-
-.carousel-dot.active {
-  background: #ffffff;
-  transform: scale(1.2);
 }
 
 .carousel-caption-overlay {
@@ -1007,12 +931,6 @@ a {
   z-index: 5;
 }
 
-@media (min-width: 640px) {
-  .carousel-caption-overlay {
-    padding: 28px 32px 24px 32px;
-  }
-}
-
 .carousel-caption-text {
   color: #ffffff !important;
   font-family: "Inter", sans-serif;
@@ -1024,30 +942,16 @@ a {
 }
 
 @media (min-width: 640px) {
+  .carousel-caption-overlay {
+    padding: 28px 32px 24px 32px;
+  }
   .carousel-caption-text {
     font-size: 1.1rem;
     max-width: 75%;
   }
 }
 
-/* Fluid responsive layout configurations for asset elements */
-.cs-responsive-img,
-.case-study-image,
-img,
-video,
-iframe {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 4px;
-}
-
-iframe {
-  aspect-ratio: 16 / 9; /* Prevents layout collapse bugs across mobile platforms */
-}
-
-/* --- Interactive Gallery System & Lightbox Modal Layout Overlays --- */
+/* Gallery & Lightbox Interactions */
 .cs-gallery-item {
   position: relative;
   cursor: zoom-in;
@@ -1086,13 +990,6 @@ iframe {
   cursor: default;
 }
 
-@media (min-width: 768px) {
-  .cs-lightbox-content {
-    max-width: 85%;
-    max-height: 85vh;
-  }
-}
-
 .cs-lightbox-content img {
   max-width: 100%;
   max-height: 70vh;
@@ -1124,7 +1021,15 @@ iframe {
   transition: opacity 0.2s;
 }
 
+.cs-close-btn:hover {
+  opacity: 1;
+}
+
 @media (min-width: 768px) {
+  .cs-lightbox-content {
+    max-width: 85%;
+    max-height: 85vh;
+  }
   .cs-close-btn {
     top: 24px;
     right: 32px;
@@ -1132,28 +1037,101 @@ iframe {
   }
 }
 
-.cs-close-btn:hover {
-  opacity: 1;
-}
 
-/* Two Column Layout blocks used for inner copy sections */
-.two-column-layout-next-project {
-  padding-top: 40px;
-  display: grid;
-  align-items: start;
+/* ==========================================================================
+   9. BUTTONS
+   ========================================================================== */
+
+.button-wrapper {
   width: 100%;
-  grid-template-columns: 1fr 1fr; /* Default to single column mobile stack */
-  gap: 2rem;
+  display: flex;
+  margin: 30px 0;
 }
 
-@media (min-width: 768px) {
-  .two-column-layout {
-    padding-top: 80px;
-    grid-template-columns: calc(40% - 0.9rem) calc(60% - 0.6rem);
-    gap: 4rem;
+.button {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%; /* Spans full width on phone touch interfaces */
+}
+
+.button-text {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: black;
+}
+
+.button-arrow {
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+  padding-left: 10px;
+}
+
+.button:hover .button-arrow {
+  transform: rotate(-45deg);
+}
+
+@media (min-width: 640px) {
+  .button {
+    width: auto;
+    padding: 20px;
   }
 }
 
-.next-project-arrow {
+
+/* ==========================================================================
+   10. FOOTER
+   ========================================================================== */
+
+.footer-container {
+  width: 100%;
+  padding: 20px;
   color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-content {
+  width: 100%;
+  max-width: 1240px;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 24px;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 50px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.copyright {
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+}
+
+@media (min-width: 640px) {
+  .footer-content {
+    flex-direction: row;
+    gap: 0;
+  }
+  .copyright {
+    font-size: 24px;
+    text-align: left;
+  }
 }
