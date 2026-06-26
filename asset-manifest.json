@@ -1,8 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.ecf93dd9.css",
-    "main.js": "/static/js/main.5b8907d8.js",
-    "static/media/receiving.gif": "/static/media/receiving.5cf83904eb6de556a346.gif",
+    "main.css": "/static/css/main.0e3bdce7.css",
+    "main.js": "/static/js/main.0b28c1b7.js",
     "static/media/IMG_Two.png": "/static/media/IMG_Two.5302bc63040ce5896251.png",
     "static/media/IMG_Three.png": "/static/media/IMG_Three.b9c00596815445f2643a.png",
     "static/media/IMG_One.png": "/static/media/IMG_One.b35efa5c364e938eaf75.png",
@@ -22,10 +21,8 @@
     "static/media/Tabloid4.png": "/static/media/Tabloid4.2e65932f0e448a5528fb.png",
     "static/media/Tabloid3.png": "/static/media/Tabloid3.00b76f359245c7ebe49c.png",
     "static/media/AppSketches.png": "/static/media/AppSketches.18c7017d1c8d944d7fc6.png",
-    "static/media/wellwishes.mov": "/static/media/wellwishes.94497ccb0da8f9372f6e.mov",
     "static/media/therese.png": "/static/media/therese.9abd651ede507371d222.png",
     "static/media/PrecedentTwo.png": "/static/media/PrecedentTwo.8b58b96239b130de8392.png",
-    "static/media/Customer Journey Map.png": "/static/media/Customer Journey Map.28250ec565a97d3486d8.png",
     "static/media/DesignGuidelines.png": "/static/media/DesignGuidelines.5788a5c9d6135cffb675.png",
     "static/media/affinitydiagram.png": "/static/media/affinitydiagram.ce81add4e3bedc3b1316.png",
     "static/media/contentful.png": "/static/media/contentful.31d865d8842524ad4c90.png",
@@ -33,16 +30,14 @@
     "static/media/Typewolf.png": "/static/media/Typewolf.f3a6eaa0084f159e50f2.png",
     "static/media/breakdown.png": "/static/media/breakdown.53dba84e33e4c5e5c04d.png",
     "static/media/GlyphlyArchitecture.png": "/static/media/GlyphlyArchitecture.80dd845551a706d8b463.png",
-    "static/media/redpackets.png": "/static/media/redpackets.3e9ece17cc4c2ce1adaa.png",
-    "static/media/initialUIs.png": "/static/media/initialUIs.056911d1da386211b943.png",
     "static/media/customerdata.png": "/static/media/customerdata.0e1461a4348596ba816b.png",
     "static/media/MTR.png": "/static/media/MTR.c3a0b8ead11484f68e6e.png",
     "index.html": "/index.html",
-    "main.ecf93dd9.css.map": "/static/css/main.ecf93dd9.css.map",
-    "main.5b8907d8.js.map": "/static/js/main.5b8907d8.js.map"
+    "main.0e3bdce7.css.map": "/static/css/main.0e3bdce7.css.map",
+    "main.0b28c1b7.js.map": "/static/js/main.0b28c1b7.js.map"
   },
   "entrypoints": [
-    "static/css/main.ecf93dd9.css",
-    "static/js/main.5b8907d8.js"
+    "static/css/main.0e3bdce7.css",
+    "static/js/main.0b28c1b7.js"
   ]
 }
